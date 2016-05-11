@@ -18,7 +18,7 @@
   /**
    * The Carrier model module.
    * @module model/Carrier
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -47,11 +47,11 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
       if (data.hasOwnProperty('logo_path')) {
         obj['logo_path'] = ApiClient.convertToType(data['logo_path'], 'String');
+      }
+      if (data.hasOwnProperty('name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
     }
     return obj;
@@ -65,16 +65,16 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * Name of the Carrier
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-
-  /**
    * URL for the Carrier's logo
    * @member {String} logo_path
    */
   exports.prototype['logo_path'] = undefined;
+
+  /**
+   * Name of the Carrier
+   * @member {String} name
+   */
+  exports.prototype['name'] = undefined;
 
 
 

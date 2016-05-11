@@ -4,21 +4,12 @@ All URIs are relative to *https://api.vericred.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**zipCountiesGet**](ZipCountiesApi.md#zipCountiesGet) | **GET** /zip_counties | Find Zip Counties by Zip Code
+[**getZipCounties**](ZipCountiesApi.md#getZipCounties) | **GET** /zip_counties | 
 
 
-<a name="zipCountiesGet"></a>
-# **zipCountiesGet**
-> InlineResponse2002 zipCountiesGet(zipPrefix)
-
-Find Zip Counties by Zip Code
-
-### Finding Zip Code and Fips Code
-
-Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  This is
-because plan pricing requires both of these elements.  Users are unlikely to
-know their fips code, so we provide this endpoint to look up a &#x60;ZipCounty&#x60; by
-zip code and return both the selected zip and fips codes.
+<a name="getZipCounties"></a>
+# **getZipCounties**
+> ZipCountyResponse getZipCounties(zipPrefix)
 
 
 
@@ -38,7 +29,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.zipCountiesGet(zipPrefix, callback);
+apiInstance.getZipCounties(zipPrefix, callback);
 ```
 
 ### Parameters
@@ -49,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**ZipCountyResponse**](ZipCountyResponse.md)
 
 ### Authorization
 

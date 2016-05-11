@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './DrugPackage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./DrugPackage'));
   } else {
     // Browser globals (root is window)
     if (!root.vericred-client) {
       root.vericred-client = {};
     }
-    root.vericred-client.Drug = factory(root.vericred-client.ApiClient);
+    root.vericred-client.Drug = factory(root.vericred-client.ApiClient, root.vericred-client.DrugPackage);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, DrugPackage) {
   'use strict';
 
   /**
    * The Drug model module.
    * @module model/Drug
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -27,6 +27,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -47,11 +48,14 @@
       if (data.hasOwnProperty('ndc')) {
         obj['ndc'] = ApiClient.convertToType(data['ndc'], 'String');
       }
-      if (data.hasOwnProperty('proprietary_name')) {
-        obj['proprietary_name'] = ApiClient.convertToType(data['proprietary_name'], 'String');
-      }
       if (data.hasOwnProperty('non_proprietary_name')) {
         obj['non_proprietary_name'] = ApiClient.convertToType(data['non_proprietary_name'], 'String');
+      }
+      if (data.hasOwnProperty('packages')) {
+        obj['packages'] = ApiClient.convertToType(data['packages'], [DrugPackage]);
+      }
+      if (data.hasOwnProperty('proprietary_name')) {
+        obj['proprietary_name'] = ApiClient.convertToType(data['proprietary_name'], 'String');
       }
     }
     return obj;
@@ -65,16 +69,22 @@
   exports.prototype['ndc'] = undefined;
 
   /**
-   * Proprietary name of drug
-   * @member {String} proprietary_name
-   */
-  exports.prototype['proprietary_name'] = undefined;
-
-  /**
    * Non-proprietary name of drug
    * @member {String} non_proprietary_name
    */
   exports.prototype['non_proprietary_name'] = undefined;
+
+  /**
+   * Available retail/prescription packages for this drug
+   * @member {Array.<module:model/DrugPackage>} packages
+   */
+  exports.prototype['packages'] = undefined;
+
+  /**
+   * Proprietary name of drug
+   * @member {String} proprietary_name
+   */
+  exports.prototype['proprietary_name'] = undefined;
 
 
 

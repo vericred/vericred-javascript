@@ -1,8 +1,8 @@
-# vericred-client.InlineResponse2001
+# vericred-client.Meta
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**provider** | [**Provider**](Provider.md) |  | [optional] 
+**count** | **Integer** | Number of entities returned | [optional] 
 
 

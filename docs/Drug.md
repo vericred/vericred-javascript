@@ -4,7 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ndc** | **String** | National Drug Code ID | [optional] 
-**proprietaryName** | **String** | Proprietary name of drug | [optional] 
 **nonProprietaryName** | **String** | Non-proprietary name of drug | [optional] 
+**packages** | [**[DrugPackage]**](DrugPackage.md) | Available retail/prescription packages for this drug | [optional] 
+**proprietaryName** | **String** | Proprietary name of drug | [optional] 
 
 

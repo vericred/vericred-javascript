@@ -18,7 +18,7 @@
   /**
    * The Pricing model module.
    * @module model/Pricing
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -27,6 +27,12 @@
    * @class
    */
   var exports = function() {
+
+
+
+
+
+
 
 
 
@@ -58,8 +64,26 @@
       if (data.hasOwnProperty('plan_id')) {
         obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'Integer');
       }
+      if (data.hasOwnProperty('premium_child_only')) {
+        obj['premium_child_only'] = ApiClient.convertToType(data['premium_child_only'], 'Number');
+      }
+      if (data.hasOwnProperty('premium_family')) {
+        obj['premium_family'] = ApiClient.convertToType(data['premium_family'], 'Number');
+      }
+      if (data.hasOwnProperty('premium_single')) {
+        obj['premium_single'] = ApiClient.convertToType(data['premium_single'], 'Number');
+      }
+      if (data.hasOwnProperty('premium_single_and_children')) {
+        obj['premium_single_and_children'] = ApiClient.convertToType(data['premium_single_and_children'], 'Number');
+      }
+      if (data.hasOwnProperty('premium_single_and_spouse')) {
+        obj['premium_single_and_spouse'] = ApiClient.convertToType(data['premium_single_and_spouse'], 'Number');
+      }
+      if (data.hasOwnProperty('premium_single_smoker')) {
+        obj['premium_single_smoker'] = ApiClient.convertToType(data['premium_single_smoker'], 'Number');
+      }
       if (data.hasOwnProperty('rating_area_id')) {
-        obj['rating_area_id'] = ApiClient.convertToType(data['rating_area_id'], 'Integer');
+        obj['rating_area_id'] = ApiClient.convertToType(data['rating_area_id'], 'String');
       }
     }
     return obj;
@@ -91,8 +115,44 @@
   exports.prototype['plan_id'] = undefined;
 
   /**
+   * Child-only premium
+   * @member {Number} premium_child_only
+   */
+  exports.prototype['premium_child_only'] = undefined;
+
+  /**
+   * Family premium
+   * @member {Number} premium_family
+   */
+  exports.prototype['premium_family'] = undefined;
+
+  /**
+   * Single-person premium
+   * @member {Number} premium_single
+   */
+  exports.prototype['premium_single'] = undefined;
+
+  /**
+   * Single person including children premium
+   * @member {Number} premium_single_and_children
+   */
+  exports.prototype['premium_single_and_children'] = undefined;
+
+  /**
+   * Person with spouse premium
+   * @member {Number} premium_single_and_spouse
+   */
+  exports.prototype['premium_single_and_spouse'] = undefined;
+
+  /**
+   * Premium for single smoker
+   * @member {Number} premium_single_smoker
+   */
+  exports.prototype['premium_single_smoker'] = undefined;
+
+  /**
    * Foreign key to rating areas
-   * @member {Integer} rating_area_id
+   * @member {String} rating_area_id
    */
   exports.prototype['rating_area_id'] = undefined;
 

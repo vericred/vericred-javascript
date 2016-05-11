@@ -18,7 +18,7 @@
   /**
    * The DrugCoverage model module.
    * @module model/DrugCoverage
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -47,34 +47,28 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('plan_id')) {
-        obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'String');
-      }
       if (data.hasOwnProperty('ndc_package_code')) {
         obj['ndc_package_code'] = ApiClient.convertToType(data['ndc_package_code'], 'String');
       }
-      if (data.hasOwnProperty('tier')) {
-        obj['tier'] = ApiClient.convertToType(data['tier'], 'String');
-      }
-      if (data.hasOwnProperty('quantity_limit')) {
-        obj['quantity_limit'] = ApiClient.convertToType(data['quantity_limit'], 'Boolean');
+      if (data.hasOwnProperty('plan_id')) {
+        obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'String');
       }
       if (data.hasOwnProperty('prior_authorization')) {
         obj['prior_authorization'] = ApiClient.convertToType(data['prior_authorization'], 'Boolean');
       }
+      if (data.hasOwnProperty('quantity_limit')) {
+        obj['quantity_limit'] = ApiClient.convertToType(data['quantity_limit'], 'Boolean');
+      }
       if (data.hasOwnProperty('step_therapy')) {
         obj['step_therapy'] = ApiClient.convertToType(data['step_therapy'], 'Boolean');
+      }
+      if (data.hasOwnProperty('tier')) {
+        obj['tier'] = ApiClient.convertToType(data['tier'], 'String');
       }
     }
     return obj;
   }
 
-
-  /**
-   * Health Insurance Oversight System id
-   * @member {String} plan_id
-   */
-  exports.prototype['plan_id'] = undefined;
 
   /**
    * NDC package code
@@ -83,28 +77,37 @@
   exports.prototype['ndc_package_code'] = undefined;
 
   /**
-   * Tier Name
-   * @member {String} tier
+   * Health Insurance Oversight System id
+   * @member {String} plan_id
    */
-  exports.prototype['tier'] = undefined;
-
-  /**
-   * Quantity limit exists
-   * @member {Boolean} quantity_limit
-   */
-  exports.prototype['quantity_limit'] = undefined;
+  exports.prototype['plan_id'] = undefined;
 
   /**
    * Prior authorization required
    * @member {Boolean} prior_authorization
+   * @default false
    */
-  exports.prototype['prior_authorization'] = undefined;
+  exports.prototype['prior_authorization'] = false;
+
+  /**
+   * Quantity limit exists
+   * @member {Boolean} quantity_limit
+   * @default false
+   */
+  exports.prototype['quantity_limit'] = false;
 
   /**
    * Step Treatment required
    * @member {Boolean} step_therapy
+   * @default false
    */
-  exports.prototype['step_therapy'] = undefined;
+  exports.prototype['step_therapy'] = false;
+
+  /**
+   * Tier Name
+   * @member {String} tier
+   */
+  exports.prototype['tier'] = undefined;
 
 
 
