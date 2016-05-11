@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/InlineResponse2002'], factory);
+    define(['../ApiClient', '../model/ZipCountyResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse2002'));
+    module.exports = factory(require('../ApiClient'), require('../model/ZipCountyResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.vericred-client) {
       root.vericred-client = {};
     }
-    root.vericred-client.ZipCountiesApi = factory(root.vericred-client.ApiClient, root.vericred-client.InlineResponse2002);
+    root.vericred-client.ZipCountiesApi = factory(root.vericred-client.ApiClient, root.vericred-client.ZipCountyResponse);
   }
-}(this, function(ApiClient, InlineResponse2002) {
+}(this, function(ApiClient, ZipCountyResponse) {
   'use strict';
 
   /**
    * ZipCounties service.
    * @module api/ZipCountiesApi
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -33,33 +33,24 @@
 
 
     /**
-     * Callback function to receive the result of the zipCountiesGet operation.
-     * @callback module:api/ZipCountiesApi~zipCountiesGetCallback
+     * Callback function to receive the result of the getZipCounties operation.
+     * @callback module:api/ZipCountiesApi~getZipCountiesCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
+     * @param {module:model/ZipCountyResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Find Zip Counties by Zip Code
-     * ### Finding Zip Code and Fips Code
-
-Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  This is
-because plan pricing requires both of these elements.  Users are unlikely to
-know their fips code, so we provide this endpoint to look up a &#x60;ZipCounty&#x60; by
-zip code and return both the selected zip and fips codes.
-
-
      * @param {String} zipPrefix Partial five-digit Zip
-     * @param {module:api/ZipCountiesApi~zipCountiesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/InlineResponse2002}
+     * @param {module:api/ZipCountiesApi~getZipCountiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ZipCountyResponse}
      */
-    this.zipCountiesGet = function(zipPrefix, callback) {
+    this.getZipCounties = function(zipPrefix, callback) {
       var postBody = null;
 
       // verify the required parameter 'zipPrefix' is set
       if (zipPrefix == undefined || zipPrefix == null) {
-        throw "Missing the required parameter 'zipPrefix' when calling zipCountiesGet";
+        throw "Missing the required parameter 'zipPrefix' when calling getZipCounties";
       }
 
 
@@ -76,7 +67,7 @@ zip code and return both the selected zip and fips codes.
       var authNames = [];
       var contentTypes = [];
       var accepts = [];
-      var returnType = InlineResponse2002;
+      var returnType = ZipCountyResponse;
 
       return this.apiClient.callApi(
         '/zip_counties', 'GET',

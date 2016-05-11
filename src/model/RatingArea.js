@@ -18,7 +18,7 @@
   /**
    * The RatingArea model module.
    * @module model/RatingArea
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -44,10 +44,10 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
       if (data.hasOwnProperty('state_id')) {
-        obj['state_id'] = ApiClient.convertToType(data['state_id'], 'Integer');
+        obj['state_id'] = ApiClient.convertToType(data['state_id'], 'String');
       }
     }
     return obj;
@@ -55,14 +55,14 @@
 
 
   /**
-   * Primary key
-   * @member {Integer} id
+   * Name of the Rating Area
+   * @member {String} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Foreign key to state
-   * @member {Integer} state_id
+   * State Code
+   * @member {String} state_id
    */
   exports.prototype['state_id'] = undefined;
 

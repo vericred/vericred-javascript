@@ -18,7 +18,7 @@
   /**
    * The Applicant model module.
    * @module model/Applicant
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -48,11 +48,11 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
-      }
       if (data.hasOwnProperty('dob')) {
         obj['dob'] = ApiClient.convertToType(data['dob'], 'Date');
+      }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('member_id')) {
         obj['member_id'] = ApiClient.convertToType(data['member_id'], 'String');
@@ -75,16 +75,16 @@
 
 
   /**
-   * Primary key
-   * @member {Integer} id
-   */
-  exports.prototype['id'] = undefined;
-
-  /**
    * Date of Birth
    * @member {Date} dob
    */
   exports.prototype['dob'] = undefined;
+
+  /**
+   * Primary key
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
 
   /**
    * Foreign key to members
@@ -107,8 +107,9 @@
   /**
    * Does the Applicant smoke?
    * @member {Boolean} smoker
+   * @default false
    */
-  exports.prototype['smoker'] = undefined;
+  exports.prototype['smoker'] = false;
 
   /**
    * Applicant's Social Security Number

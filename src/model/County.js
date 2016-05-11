@@ -18,7 +18,7 @@
   /**
    * The County model module.
    * @module model/County
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -48,11 +48,11 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
-      }
       if (data.hasOwnProperty('fips_code')) {
         obj['fips_code'] = ApiClient.convertToType(data['fips_code'], 'String');
+      }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -75,16 +75,16 @@
 
 
   /**
-   * Primary key
-   * @member {Integer} id
-   */
-  exports.prototype['id'] = undefined;
-
-  /**
    * State FIPS code
    * @member {String} fips_code
    */
   exports.prototype['fips_code'] = undefined;
+
+  /**
+   * Primary key
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
 
   /**
    * Human-readable name
@@ -105,18 +105,18 @@
   exports.prototype['state_id'] = undefined;
 
   /**
-   * Is the state containing this county active for consumers?
-                  *deprecated in favor of last_date_for_individual
+   * Is the state containing this county active for consumers?(deprecated in favor of last_date_for_individual)
    * @member {Boolean} state_live
+   * @default false
    */
-  exports.prototype['state_live'] = undefined;
+  exports.prototype['state_live'] = false;
 
   /**
-   * Is the state containing this county active for business?
-                  *deprecated in favor of last_date_for_shop
+   * Is the state containing this county active for business?(deprecated in favor of last_date_for_shop)
    * @member {Boolean} state_live_for_business
+   * @default false
    */
-  exports.prototype['state_live_for_business'] = undefined;
+  exports.prototype['state_live_for_business'] = false;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * The PlanCounty model module.
    * @module model/PlanCounty
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -44,19 +44,25 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('county_id')) {
+        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Integer');
+      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('plan_id')) {
         obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'Integer');
       }
-      if (data.hasOwnProperty('county_id')) {
-        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Integer');
-      }
     }
     return obj;
   }
 
+
+  /**
+   * Foreign key to county
+   * @member {Integer} county_id
+   */
+  exports.prototype['county_id'] = undefined;
 
   /**
    * Primary key
@@ -69,12 +75,6 @@
    * @member {Integer} plan_id
    */
   exports.prototype['plan_id'] = undefined;
-
-  /**
-   * Foreign key to county
-   * @member {Integer} county_id
-   */
-  exports.prototype['county_id'] = undefined;
 
 
 

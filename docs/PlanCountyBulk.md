@@ -1,4 +1,4 @@
-# vericred-client.PlanCounty
+# vericred-client.PlanCountyBulk
 
 ## Properties
 Name | Type | Description | Notes

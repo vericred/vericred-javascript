@@ -18,7 +18,7 @@
   /**
    * The Provider model module.
    * @module model/Provider
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -27,6 +27,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -86,17 +89,26 @@
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
+      if (data.hasOwnProperty('first_name')) {
+        obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
+      }
       if (data.hasOwnProperty('gender')) {
         obj['gender'] = ApiClient.convertToType(data['gender'], 'String');
       }
-      if (data.hasOwnProperty('first_name')) {
-        obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
+      if (data.hasOwnProperty('hios_ids')) {
+        obj['hios_ids'] = ApiClient.convertToType(data['hios_ids'], ['String']);
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('last_name')) {
         obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
+      }
+      if (data.hasOwnProperty('latitude')) {
+        obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
+      }
+      if (data.hasOwnProperty('longitude')) {
+        obj['longitude'] = ApiClient.convertToType(data['longitude'], 'Number');
       }
       if (data.hasOwnProperty('middle_name')) {
         obj['middle_name'] = ApiClient.convertToType(data['middle_name'], 'String');
@@ -145,32 +157,37 @@
   /**
    * Is this provider accepting patients with a change of insurance?
    * @member {Boolean} accepting_change_of_payor_patients
+   * @default false
    */
-  exports.prototype['accepting_change_of_payor_patients'] = undefined;
+  exports.prototype['accepting_change_of_payor_patients'] = false;
 
   /**
    * Is this provider accepting new Medicaid patients?
    * @member {Boolean} accepting_medicaid_patients
+   * @default false
    */
-  exports.prototype['accepting_medicaid_patients'] = undefined;
+  exports.prototype['accepting_medicaid_patients'] = false;
 
   /**
    * Is this provider accepting new Medicare patients?
    * @member {Boolean} accepting_medicare_patients
+   * @default false
    */
-  exports.prototype['accepting_medicare_patients'] = undefined;
+  exports.prototype['accepting_medicare_patients'] = false;
 
   /**
    * Is this provider accepting new patients with private insurance?
    * @member {Boolean} accepting_private_patients
+   * @default false
    */
-  exports.prototype['accepting_private_patients'] = undefined;
+  exports.prototype['accepting_private_patients'] = false;
 
   /**
    * Is this provider accepting new patients via referrals?
    * @member {Boolean} accepting_referral_patients
+   * @default false
    */
-  exports.prototype['accepting_referral_patients'] = undefined;
+  exports.prototype['accepting_referral_patients'] = false;
 
   /**
    * City name (e.g. Springfield).
@@ -185,16 +202,22 @@
   exports.prototype['email'] = undefined;
 
   /**
+   * Given name for the provider.
+   * @member {String} first_name
+   */
+  exports.prototype['first_name'] = undefined;
+
+  /**
    * Provider's gender (M or F)
    * @member {String} gender
    */
   exports.prototype['gender'] = undefined;
 
   /**
-   * Given name for the provider.
-   * @member {String} first_name
+   * List of HIOS ids for this provider
+   * @member {Array.<String>} hios_ids
    */
-  exports.prototype['first_name'] = undefined;
+  exports.prototype['hios_ids'] = undefined;
 
   /**
    * National Provider Index (NPI) number
@@ -207,6 +230,18 @@
    * @member {String} last_name
    */
   exports.prototype['last_name'] = undefined;
+
+  /**
+   * Latitude of provider
+   * @member {Number} latitude
+   */
+  exports.prototype['latitude'] = undefined;
+
+  /**
+   * Longitude of provider
+   * @member {Number} longitude
+   */
+  exports.prototype['longitude'] = undefined;
 
   /**
    * Middle name for the provider.

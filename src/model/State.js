@@ -18,7 +18,7 @@
   /**
    * The State model module.
    * @module model/State
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -49,17 +49,14 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
       if (data.hasOwnProperty('code')) {
         obj['code'] = ApiClient.convertToType(data['code'], 'String');
       }
       if (data.hasOwnProperty('fips_number')) {
         obj['fips_number'] = ApiClient.convertToType(data['fips_number'], 'String');
+      }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('last_date_for_individual')) {
         obj['last_date_for_individual'] = ApiClient.convertToType(data['last_date_for_individual'], 'Date');
@@ -73,22 +70,13 @@
       if (data.hasOwnProperty('live_for_consumers')) {
         obj['live_for_consumers'] = ApiClient.convertToType(data['live_for_consumers'], 'Boolean');
       }
+      if (data.hasOwnProperty('name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      }
     }
     return obj;
   }
 
-
-  /**
-   * Primary Key of State
-   * @member {Integer} id
-   */
-  exports.prototype['id'] = undefined;
-
-  /**
-   * Name of state
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
 
   /**
    * 2 letter code for state
@@ -101,6 +89,12 @@
    * @member {String} fips_number
    */
   exports.prototype['fips_number'] = undefined;
+
+  /**
+   * Primary Key of State
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
 
   /**
    * Last date this state is live for individuals
@@ -117,14 +111,22 @@
   /**
    * Is this State available for businesses
    * @member {Boolean} live_for_business
+   * @default false
    */
-  exports.prototype['live_for_business'] = undefined;
+  exports.prototype['live_for_business'] = false;
 
   /**
    * Is this State available for individuals
    * @member {Boolean} live_for_consumers
+   * @default false
    */
-  exports.prototype['live_for_consumers'] = undefined;
+  exports.prototype['live_for_consumers'] = false;
+
+  /**
+   * Name of state
+   * @member {String} name
+   */
+  exports.prototype['name'] = undefined;
 
 
 
