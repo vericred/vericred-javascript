@@ -18,7 +18,7 @@
   /**
    * The CarrierSubsidiary model module.
    * @module model/CarrierSubsidiary
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The State model module.
    * @module model/State
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**

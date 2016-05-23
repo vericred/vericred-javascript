@@ -18,7 +18,7 @@
   /**
    * The Applicant model module.
    * @module model/Applicant
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -87,7 +87,7 @@
   exports.prototype['dob'] = undefined;
 
   /**
-   * Foreign key to members
+   * Member token
    * @member {String} member_id
    */
   exports.prototype['member_id'] = undefined;

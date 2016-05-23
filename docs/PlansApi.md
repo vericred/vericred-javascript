@@ -4,14 +4,14 @@ All URIs are relative to *https://api.vericred.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**plansFindPost**](PlansApi.md#plansFindPost) | **POST** /plans/find | Find a set of plans for a Zip Code and County
+[**findPlans**](PlansApi.md#findPlans) | **POST** /plans/search | Find Plans
 
 
-<a name="plansFindPost"></a>
-# **plansFindPost**
-> [Plan] plansFindPost(query)
+<a name="findPlans"></a>
+# **findPlans**
+> PlanSearchResponse findPlans(opts)
 
-Find a set of plans for a Zip Code and County
+Find Plans
 
 ### Location Information
 
@@ -32,7 +32,6 @@ Applicants *must* include an age.  If smoker is omitted, its value is assumed
 to be false.
 
 #### Multiple Applicants
-
 To get pricing for multiple applicants, just append multiple sets
 of data to the URL with the age and smoking status of each applicant
 next to each other.
@@ -76,15 +75,15 @@ and return it for each plan.  If no values are provided, the
 &#x60;GET /plans?zip_code&#x3D;07451&amp;fips_code&#x3D;33025&amp;household_size&#x3D;4&amp;household_income&#x3D;40000&#x60;
 
 
-
 ### Example
 ```javascript
 var vericred-client = require('vericred-client');
 
 var apiInstance = new vericred-client.PlansApi();
 
-var query = new vericred-client.Query(); // Query | Plan query
-
+var opts = { 
+  'body': new vericred-client.RequestPlanFind() // RequestPlanFind | 
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -93,18 +92,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.plansFindPost(query, callback);
+apiInstance.findPlans(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | [**Query**](Query.md)| Plan query | 
+ **body** | [**RequestPlanFind**](RequestPlanFind.md)|  | [optional] 
 
 ### Return type
 
-[**[Plan]**](Plan.md)
+[**PlanSearchResponse**](PlanSearchResponse.md)
 
 ### Authorization
 

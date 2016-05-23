@@ -18,7 +18,7 @@
   /**
    * The Drug model module.
    * @module model/Drug
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -27,6 +27,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -44,14 +45,17 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ndc')) {
-        obj['ndc'] = ApiClient.convertToType(data['ndc'], 'String');
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
       if (data.hasOwnProperty('proprietary_name')) {
         obj['proprietary_name'] = ApiClient.convertToType(data['proprietary_name'], 'String');
       }
       if (data.hasOwnProperty('non_proprietary_name')) {
         obj['non_proprietary_name'] = ApiClient.convertToType(data['non_proprietary_name'], 'String');
+      }
+      if (data.hasOwnProperty('drug_package_ids')) {
+        obj['drug_package_ids'] = ApiClient.convertToType(data['drug_package_ids'], ['String']);
       }
     }
     return obj;
@@ -60,9 +64,9 @@
 
   /**
    * National Drug Code ID
-   * @member {String} ndc
+   * @member {String} id
    */
-  exports.prototype['ndc'] = undefined;
+  exports.prototype['id'] = undefined;
 
   /**
    * Proprietary name of drug
@@ -75,6 +79,12 @@
    * @member {String} non_proprietary_name
    */
   exports.prototype['non_proprietary_name'] = undefined;
+
+  /**
+   * Array of drug package Ids
+   * @member {Array.<String>} drug_package_ids
+   */
+  exports.prototype['drug_package_ids'] = undefined;
 
 
 
