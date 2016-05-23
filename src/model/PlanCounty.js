@@ -18,7 +18,7 @@
   /**
    * The PlanCounty model module.
    * @module model/PlanCounty
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**

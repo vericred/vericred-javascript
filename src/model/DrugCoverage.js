@@ -18,7 +18,7 @@
   /**
    * The DrugCoverage model module.
    * @module model/DrugCoverage
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -50,8 +50,8 @@
       if (data.hasOwnProperty('plan_id')) {
         obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'String');
       }
-      if (data.hasOwnProperty('ndc_package_code')) {
-        obj['ndc_package_code'] = ApiClient.convertToType(data['ndc_package_code'], 'String');
+      if (data.hasOwnProperty('drug_package_id')) {
+        obj['drug_package_id'] = ApiClient.convertToType(data['drug_package_id'], 'String');
       }
       if (data.hasOwnProperty('tier')) {
         obj['tier'] = ApiClient.convertToType(data['tier'], 'String');
@@ -78,9 +78,9 @@
 
   /**
    * NDC package code
-   * @member {String} ndc_package_code
+   * @member {String} drug_package_id
    */
-  exports.prototype['ndc_package_code'] = undefined;
+  exports.prototype['drug_package_id'] = undefined;
 
   /**
    * Tier Name

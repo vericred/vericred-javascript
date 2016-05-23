@@ -8,9 +8,7 @@ Name | Type | Description | Notes
 **name** | **String** | Human-readable name | [optional] 
 **stateCode** | **String** | Two-character state code | [optional] 
 **stateId** | **Integer** | state relationship | [optional] 
-**stateLive** | **Boolean** | Is the state containing this county active for consumers?
-                  *deprecated in favor of last_date_for_individual | [optional] 
-**stateLiveForBusiness** | **Boolean** | Is the state containing this county active for business?
-                  *deprecated in favor of last_date_for_shop | [optional] 
+**stateLive** | **Boolean** | Is the state containing this county active for consumers?(deprecated in favor of last_date_for_individual) | [optional] 
+**stateLiveForBusiness** | **Boolean** | Is the state containing this county active for business?(deprecated in favor of last_date_for_shop) | [optional] 
 
 

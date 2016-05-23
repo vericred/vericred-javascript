@@ -18,7 +18,7 @@
   /**
    * The County model module.
    * @module model/County
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -105,15 +105,13 @@
   exports.prototype['state_id'] = undefined;
 
   /**
-   * Is the state containing this county active for consumers?
-                  *deprecated in favor of last_date_for_individual
+   * Is the state containing this county active for consumers?(deprecated in favor of last_date_for_individual)
    * @member {Boolean} state_live
    */
   exports.prototype['state_live'] = undefined;
 
   /**
-   * Is the state containing this county active for business?
-                  *deprecated in favor of last_date_for_shop
+   * Is the state containing this county active for business?(deprecated in favor of last_date_for_shop)
    * @member {Boolean} state_live_for_business
    */
   exports.prototype['state_live_for_business'] = undefined;

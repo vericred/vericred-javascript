@@ -18,7 +18,7 @@
   /**
    * The PlanSearchResult model module.
    * @module model/PlanSearchResult
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -27,6 +27,24 @@
    * @class
    */
   var exports = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,6 +127,9 @@
       if (data.hasOwnProperty('child_eyewear')) {
         obj['child_eyewear'] = ApiClient.convertToType(data['child_eyewear'], 'String');
       }
+      if (data.hasOwnProperty('child_eye_exam')) {
+        obj['child_eye_exam'] = ApiClient.convertToType(data['child_eye_exam'], 'String');
+      }
       if (data.hasOwnProperty('customer_service_phone_number')) {
         obj['customer_service_phone_number'] = ApiClient.convertToType(data['customer_service_phone_number'], 'String');
       }
@@ -120,6 +141,12 @@
       }
       if (data.hasOwnProperty('drug_formulary_url')) {
         obj['drug_formulary_url'] = ApiClient.convertToType(data['drug_formulary_url'], 'String');
+      }
+      if (data.hasOwnProperty('effective_date')) {
+        obj['effective_date'] = ApiClient.convertToType(data['effective_date'], 'String');
+      }
+      if (data.hasOwnProperty('expiration_date')) {
+        obj['expiration_date'] = ApiClient.convertToType(data['expiration_date'], 'String');
       }
       if (data.hasOwnProperty('emergency_room')) {
         obj['emergency_room'] = ApiClient.convertToType(data['emergency_room'], 'String');
@@ -139,14 +166,26 @@
       if (data.hasOwnProperty('generic_drugs')) {
         obj['generic_drugs'] = ApiClient.convertToType(data['generic_drugs'], 'String');
       }
+      if (data.hasOwnProperty('habilitation_services')) {
+        obj['habilitation_services'] = ApiClient.convertToType(data['habilitation_services'], 'String');
+      }
       if (data.hasOwnProperty('hios_issuer_id')) {
         obj['hios_issuer_id'] = ApiClient.convertToType(data['hios_issuer_id'], 'String');
+      }
+      if (data.hasOwnProperty('home_health_care')) {
+        obj['home_health_care'] = ApiClient.convertToType(data['home_health_care'], 'String');
+      }
+      if (data.hasOwnProperty('hospice_service')) {
+        obj['hospice_service'] = ApiClient.convertToType(data['hospice_service'], 'String');
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
       if (data.hasOwnProperty('imaging')) {
         obj['imaging'] = ApiClient.convertToType(data['imaging'], 'String');
+      }
+      if (data.hasOwnProperty('in_network_ids')) {
+        obj['in_network_ids'] = ApiClient.convertToType(data['in_network_ids'], ['Integer']);
       }
       if (data.hasOwnProperty('individual_drug_deductible')) {
         obj['individual_drug_deductible'] = ApiClient.convertToType(data['individual_drug_deductible'], 'String');
@@ -160,11 +199,20 @@
       if (data.hasOwnProperty('individual_medical_moop')) {
         obj['individual_medical_moop'] = ApiClient.convertToType(data['individual_medical_moop'], 'String');
       }
+      if (data.hasOwnProperty('inpatient_birth')) {
+        obj['inpatient_birth'] = ApiClient.convertToType(data['inpatient_birth'], 'String');
+      }
       if (data.hasOwnProperty('inpatient_facility')) {
         obj['inpatient_facility'] = ApiClient.convertToType(data['inpatient_facility'], 'String');
       }
+      if (data.hasOwnProperty('inpatient_mental_health')) {
+        obj['inpatient_mental_health'] = ApiClient.convertToType(data['inpatient_mental_health'], 'String');
+      }
       if (data.hasOwnProperty('inpatient_physician')) {
         obj['inpatient_physician'] = ApiClient.convertToType(data['inpatient_physician'], 'String');
+      }
+      if (data.hasOwnProperty('inpatient_substance')) {
+        obj['inpatient_substance'] = ApiClient.convertToType(data['inpatient_substance'], 'String');
       }
       if (data.hasOwnProperty('level')) {
         obj['level'] = ApiClient.convertToType(data['level'], 'String');
@@ -187,6 +235,9 @@
       if (data.hasOwnProperty('out_of_network_coverage')) {
         obj['out_of_network_coverage'] = ApiClient.convertToType(data['out_of_network_coverage'], 'Boolean');
       }
+      if (data.hasOwnProperty('out_of_network_ids')) {
+        obj['out_of_network_ids'] = ApiClient.convertToType(data['out_of_network_ids'], ['Integer']);
+      }
       if (data.hasOwnProperty('outpatient_facility')) {
         obj['outpatient_facility'] = ApiClient.convertToType(data['outpatient_facility'], 'String');
       }
@@ -195,6 +246,9 @@
       }
       if (data.hasOwnProperty('outpatient_physician')) {
         obj['outpatient_physician'] = ApiClient.convertToType(data['outpatient_physician'], 'String');
+      }
+      if (data.hasOwnProperty('outpatient_substance')) {
+        obj['outpatient_substance'] = ApiClient.convertToType(data['outpatient_substance'], 'String');
       }
       if (data.hasOwnProperty('plan_market')) {
         obj['plan_market'] = ApiClient.convertToType(data['plan_market'], 'String');
@@ -205,14 +259,26 @@
       if (data.hasOwnProperty('preferred_brand_drugs')) {
         obj['preferred_brand_drugs'] = ApiClient.convertToType(data['preferred_brand_drugs'], 'String');
       }
+      if (data.hasOwnProperty('prenatal_postnatal_care')) {
+        obj['prenatal_postnatal_care'] = ApiClient.convertToType(data['prenatal_postnatal_care'], 'String');
+      }
       if (data.hasOwnProperty('preventative_care')) {
         obj['preventative_care'] = ApiClient.convertToType(data['preventative_care'], 'String');
+      }
+      if (data.hasOwnProperty('premium_subsidized')) {
+        obj['premium_subsidized'] = ApiClient.convertToType(data['premium_subsidized'], 'Number');
+      }
+      if (data.hasOwnProperty('premium')) {
+        obj['premium'] = ApiClient.convertToType(data['premium'], 'Number');
       }
       if (data.hasOwnProperty('primary_care_physician')) {
         obj['primary_care_physician'] = ApiClient.convertToType(data['primary_care_physician'], 'String');
       }
       if (data.hasOwnProperty('rehabilitation_services')) {
         obj['rehabilitation_services'] = ApiClient.convertToType(data['rehabilitation_services'], 'String');
+      }
+      if (data.hasOwnProperty('skilled_nursing')) {
+        obj['skilled_nursing'] = ApiClient.convertToType(data['skilled_nursing'], 'String');
       }
       if (data.hasOwnProperty('specialist')) {
         obj['specialist'] = ApiClient.convertToType(data['specialist'], 'String');
@@ -228,6 +294,12 @@
       }
       if (data.hasOwnProperty('perfect_match_percentage')) {
         obj['perfect_match_percentage'] = ApiClient.convertToType(data['perfect_match_percentage'], 'Integer');
+      }
+      if (data.hasOwnProperty('employee_premium')) {
+        obj['employee_premium'] = ApiClient.convertToType(data['employee_premium'], 'Number');
+      }
+      if (data.hasOwnProperty('dependent_premium')) {
+        obj['dependent_premium'] = ApiClient.convertToType(data['dependent_premium'], 'Number');
       }
     }
     return obj;
@@ -277,6 +349,12 @@
   exports.prototype['child_eyewear'] = undefined;
 
   /**
+   * Child eye exam benefits summary
+   * @member {String} child_eye_exam
+   */
+  exports.prototype['child_eye_exam'] = undefined;
+
+  /**
    * Phone number to contact the insurance carrier
    * @member {String} customer_service_phone_number
    */
@@ -299,6 +377,18 @@
    * @member {String} drug_formulary_url
    */
   exports.prototype['drug_formulary_url'] = undefined;
+
+  /**
+   * Effective date of coverage.
+   * @member {String} effective_date
+   */
+  exports.prototype['effective_date'] = undefined;
+
+  /**
+   * Expiration date of coverage.
+   * @member {String} expiration_date
+   */
+  exports.prototype['expiration_date'] = undefined;
 
   /**
    * Description of costs when visiting the ER
@@ -337,10 +427,28 @@
   exports.prototype['generic_drugs'] = undefined;
 
   /**
+   * Habilitation services benefits summary
+   * @member {String} habilitation_services
+   */
+  exports.prototype['habilitation_services'] = undefined;
+
+  /**
    * 
    * @member {String} hios_issuer_id
    */
   exports.prototype['hios_issuer_id'] = undefined;
+
+  /**
+   * Home health care benefits summary
+   * @member {String} home_health_care
+   */
+  exports.prototype['home_health_care'] = undefined;
+
+  /**
+   * Hospice service benefits summary
+   * @member {String} hospice_service
+   */
+  exports.prototype['hospice_service'] = undefined;
 
   /**
    * Government-issued HIOS plan ID
@@ -353,6 +461,12 @@
    * @member {String} imaging
    */
   exports.prototype['imaging'] = undefined;
+
+  /**
+   * List of NPI numbers for Providers passed in who accept this Plan
+   * @member {Array.<Integer>} in_network_ids
+   */
+  exports.prototype['in_network_ids'] = undefined;
 
   /**
    * Deductible for drugs when an individual is on the plan
@@ -379,16 +493,34 @@
   exports.prototype['individual_medical_moop'] = undefined;
 
   /**
+   * Inpatient birth benefits summary
+   * @member {String} inpatient_birth
+   */
+  exports.prototype['inpatient_birth'] = undefined;
+
+  /**
    * Cost under the plan for an inpatient facility
    * @member {String} inpatient_facility
    */
   exports.prototype['inpatient_facility'] = undefined;
 
   /**
+   * Inpatient mental helath benefits summary
+   * @member {String} inpatient_mental_health
+   */
+  exports.prototype['inpatient_mental_health'] = undefined;
+
+  /**
    * Cost under the plan for an inpatient physician
    * @member {String} inpatient_physician
    */
   exports.prototype['inpatient_physician'] = undefined;
+
+  /**
+   * Inpatient substance abuse benefits summary
+   * @member {String} inpatient_substance
+   */
+  exports.prototype['inpatient_substance'] = undefined;
 
   /**
    * Plan metal grouping (e.g. platinum, gold, silver, etc)
@@ -433,6 +565,12 @@
   exports.prototype['out_of_network_coverage'] = undefined;
 
   /**
+   * List of NPI numbers for Providers passed in who do not accept this Plan
+   * @member {Array.<Integer>} out_of_network_ids
+   */
+  exports.prototype['out_of_network_ids'] = undefined;
+
+  /**
    * Benefits summary for outpatient facility coverage
    * @member {String} outpatient_facility
    */
@@ -449,6 +587,12 @@
    * @member {String} outpatient_physician
    */
   exports.prototype['outpatient_physician'] = undefined;
+
+  /**
+   * Outpatient substance abuse benefits summary
+   * @member {String} outpatient_substance
+   */
+  exports.prototype['outpatient_substance'] = undefined;
 
   /**
    * Market in which the plan is offered (on_marketplace, shop, etc)
@@ -469,10 +613,28 @@
   exports.prototype['preferred_brand_drugs'] = undefined;
 
   /**
+   * Inpatient substance abuse benefits summary
+   * @member {String} prenatal_postnatal_care
+   */
+  exports.prototype['prenatal_postnatal_care'] = undefined;
+
+  /**
    * Benefits summary for preventative care
    * @member {String} preventative_care
    */
   exports.prototype['preventative_care'] = undefined;
+
+  /**
+   * Cumulative premium amount after subsidy
+   * @member {Number} premium_subsidized
+   */
+  exports.prototype['premium_subsidized'] = undefined;
+
+  /**
+   * Cumulative premium amount
+   * @member {Number} premium
+   */
+  exports.prototype['premium'] = undefined;
 
   /**
    * Cost under the plan to visit a Primary Care Physician
@@ -485,6 +647,12 @@
    * @member {String} rehabilitation_services
    */
   exports.prototype['rehabilitation_services'] = undefined;
+
+  /**
+   * Benefits summary for skilled nursing services
+   * @member {String} skilled_nursing
+   */
+  exports.prototype['skilled_nursing'] = undefined;
 
   /**
    * Cost under the plan to visit a specialist
@@ -515,6 +683,18 @@
    * @member {Integer} perfect_match_percentage
    */
   exports.prototype['perfect_match_percentage'] = undefined;
+
+  /**
+   * Cumulative premium amount for employees
+   * @member {Number} employee_premium
+   */
+  exports.prototype['employee_premium'] = undefined;
+
+  /**
+   * Cumulative premium amount for dependents
+   * @member {Number} dependent_premium
+   */
+  exports.prototype['dependent_premium'] = undefined;
 
 
 

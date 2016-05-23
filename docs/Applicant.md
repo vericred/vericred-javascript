@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** | Primary key | [optional] 
 **dob** | **Date** | Date of Birth | [optional] 
-**memberId** | **String** | Foreign key to members | [optional] 
+**memberId** | **String** | Member token | [optional] 
 **name** | **String** | Full name of the Applicant | [optional] 
 **relationship** | **String** | Relationship of the Applicant to the Member | [optional] 
 **smoker** | **Boolean** | Does the Applicant smoke? | [optional] 

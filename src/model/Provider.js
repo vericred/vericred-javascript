@@ -18,7 +18,7 @@
   /**
    * The Provider model module.
    * @module model/Provider
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -27,6 +27,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -92,11 +95,20 @@
       if (data.hasOwnProperty('first_name')) {
         obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
       }
+      if (data.hasOwnProperty('hios_ids')) {
+        obj['hios_ids'] = ApiClient.convertToType(data['hios_ids'], ['String']);
+      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('last_name')) {
         obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
+      }
+      if (data.hasOwnProperty('latitude')) {
+        obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
+      }
+      if (data.hasOwnProperty('longitude')) {
+        obj['longitude'] = ApiClient.convertToType(data['longitude'], 'Number');
       }
       if (data.hasOwnProperty('middle_name')) {
         obj['middle_name'] = ApiClient.convertToType(data['middle_name'], 'String');
@@ -197,6 +209,12 @@
   exports.prototype['first_name'] = undefined;
 
   /**
+   * List of HIOS ids for this provider
+   * @member {Array.<String>} hios_ids
+   */
+  exports.prototype['hios_ids'] = undefined;
+
+  /**
    * National Provider Index (NPI) number
    * @member {Integer} id
    */
@@ -207,6 +225,18 @@
    * @member {String} last_name
    */
   exports.prototype['last_name'] = undefined;
+
+  /**
+   * Latitude of provider
+   * @member {Number} latitude
+   */
+  exports.prototype['latitude'] = undefined;
+
+  /**
+   * Longitude of provider
+   * @member {Number} longitude
+   */
+  exports.prototype['longitude'] = undefined;
 
   /**
    * Middle name for the provider.

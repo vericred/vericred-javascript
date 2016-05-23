@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Query', '../model/Plan'], factory);
+    define(['../ApiClient', '../model/PlanSearchResponse', '../model/RequestPlanFind'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Query'), require('../model/Plan'));
+    module.exports = factory(require('../ApiClient'), require('../model/PlanSearchResponse'), require('../model/RequestPlanFind'));
   } else {
     // Browser globals (root is window)
     if (!root.vericred-client) {
       root.vericred-client = {};
     }
-    root.vericred-client.PlansApi = factory(root.vericred-client.ApiClient, root.vericred-client.Query, root.vericred-client.Plan);
+    root.vericred-client.PlansApi = factory(root.vericred-client.ApiClient, root.vericred-client.PlanSearchResponse, root.vericred-client.RequestPlanFind);
   }
-}(this, function(ApiClient, Query, Plan) {
+}(this, function(ApiClient, PlanSearchResponse, RequestPlanFind) {
   'use strict';
 
   /**
    * Plans service.
    * @module api/PlansApi
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
@@ -33,15 +33,15 @@
 
 
     /**
-     * Callback function to receive the result of the plansFindPost operation.
-     * @callback module:api/PlansApi~plansFindPostCallback
+     * Callback function to receive the result of the findPlans operation.
+     * @callback module:api/PlansApi~findPlansCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Plan>} data The data returned by the service call.
+     * @param {module:model/PlanSearchResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Find a set of plans for a Zip Code and County
+     * Find Plans
      * ### Location Information
 
 Searching for a set of plans requires a &#x60;zip_code&#x60; and &#x60;fips_code&#x60;
@@ -61,7 +61,6 @@ Applicants *must* include an age.  If smoker is omitted, its value is assumed
 to be false.
 
 #### Multiple Applicants
-
 To get pricing for multiple applicants, just append multiple sets
 of data to the URL with the age and smoking status of each applicant
 next to each other.
@@ -104,18 +103,14 @@ and return it for each plan.  If no values are provided, the
 
 &#x60;GET /plans?zip_code&#x3D;07451&amp;fips_code&#x3D;33025&amp;household_size&#x3D;4&amp;household_income&#x3D;40000&#x60;
 
-
-     * @param {module:model/Query} query Plan query
-     * @param {module:api/PlansApi~plansFindPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {Array.<module:model/Plan>}
+     * @param {Object} opts Optional parameters
+     * @param {module:model/RequestPlanFind} opts.body 
+     * @param {module:api/PlansApi~findPlansCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PlanSearchResponse}
      */
-    this.plansFindPost = function(query, callback) {
-      var postBody = query;
-
-      // verify the required parameter 'query' is set
-      if (query == undefined || query == null) {
-        throw "Missing the required parameter 'query' when calling plansFindPost";
-      }
+    this.findPlans = function(opts, callback) {
+      opts = opts || {};
+      var postBody = opts['body'];
 
 
       var pathParams = {
@@ -130,10 +125,10 @@ and return it for each plan.  If no values are provided, the
       var authNames = [];
       var contentTypes = [];
       var accepts = [];
-      var returnType = [Plan];
+      var returnType = PlanSearchResponse;
 
       return this.apiClient.callApi(
-        '/plans/find', 'POST',
+        '/plans/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

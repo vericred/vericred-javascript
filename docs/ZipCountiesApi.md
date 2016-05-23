@@ -4,23 +4,16 @@ All URIs are relative to *https://api.vericred.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**zipCountiesGet**](ZipCountiesApi.md#zipCountiesGet) | **GET** /zip_counties | Find Zip Counties by Zip Code
+[**getZipCounties**](ZipCountiesApi.md#getZipCounties) | **GET** /zip_counties | Search for Zip Counties
 
 
-<a name="zipCountiesGet"></a>
-# **zipCountiesGet**
-> InlineResponse2002 zipCountiesGet(zipPrefix)
+<a name="getZipCounties"></a>
+# **getZipCounties**
+> ZipCountyResponse getZipCounties(zipPrefix, opts)
 
-Find Zip Counties by Zip Code
+Search for Zip Counties
 
-### Finding Zip Code and Fips Code
-
-Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  This is
-because plan pricing requires both of these elements.  Users are unlikely to
-know their fips code, so we provide this endpoint to look up a &#x60;ZipCounty&#x60; by
-zip code and return both the selected zip and fips codes.
-
-
+Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  This is because plan pricing requires both of these elements.  Users are unlikely to know their fips code, so we provide this endpoint to look up a &#x60;ZipCounty&#x60; by zip code and return both the selected zip and fips codes.
 
 ### Example
 ```javascript
@@ -28,8 +21,11 @@ var vericred-client = require('vericred-client');
 
 var apiInstance = new vericred-client.ZipCountiesApi();
 
-var zipPrefix = "zipPrefix_example"; // String | Partial five-digit Zip
+var zipPrefix = "1002"; // String | Partial five-digit Zip
 
+var opts = { 
+  'vericredApiKey': "api-doc-key" // String | API Key
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -38,7 +34,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.zipCountiesGet(zipPrefix, callback);
+apiInstance.getZipCounties(zipPrefix, opts, callback);
 ```
 
 ### Parameters
@@ -46,10 +42,11 @@ apiInstance.zipCountiesGet(zipPrefix, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zipPrefix** | **String**| Partial five-digit Zip | 
+ **vericredApiKey** | **String**| API Key | [optional] 
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**ZipCountyResponse**](ZipCountyResponse.md)
 
 ### Authorization
 

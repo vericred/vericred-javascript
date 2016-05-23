@@ -18,7 +18,7 @@
   /**
    * The ZipCode model module.
    * @module model/ZipCode
-   * @version 0.0.1
+   * @version 0.0.2
    */
 
   /**
