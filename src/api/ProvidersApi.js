@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ProviderResponse', '../model/RequestProvidersSearch', '../model/ProvidersSearchResponse'], factory);
+    define(['../ApiClient', '../model/Provider', '../model/RequestProvidersSearch', '../model/ProvidersSearchResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ProviderResponse'), require('../model/RequestProvidersSearch'), require('../model/ProvidersSearchResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Provider'), require('../model/RequestProvidersSearch'), require('../model/ProvidersSearchResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.vericred-client) {
       root.vericred-client = {};
     }
-    root.vericred-client.ProvidersApi = factory(root.vericred-client.ApiClient, root.vericred-client.ProviderResponse, root.vericred-client.RequestProvidersSearch, root.vericred-client.ProvidersSearchResponse);
+    root.vericred-client.ProvidersApi = factory(root.vericred-client.ApiClient, root.vericred-client.Provider, root.vericred-client.RequestProvidersSearch, root.vericred-client.ProvidersSearchResponse);
   }
-}(this, function(ApiClient, ProviderResponse, RequestProvidersSearch, ProvidersSearchResponse) {
+}(this, function(ApiClient, Provider, RequestProvidersSearch, ProvidersSearchResponse) {
   'use strict';
 
   /**
    * Providers service.
    * @module api/ProvidersApi
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the getProvider operation.
      * @callback module:api/ProvidersApi~getProviderCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ProviderResponse} data The data returned by the service call.
+     * @param {module:model/Provider} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,7 +47,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.vericredApiKey API Key
      * @param {module:api/ProvidersApi~getProviderCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ProviderResponse}
+     * data is of type: {module:model/Provider}
      */
     this.getProvider = function(npi, opts, callback) {
       opts = opts || {};
@@ -73,7 +73,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = [];
-      var returnType = ProviderResponse;
+      var returnType = Provider;
 
       return this.apiClient.callApi(
         '/providers/{npi}', 'GET',

@@ -10,35 +10,34 @@
     if (!root.vericred-client) {
       root.vericred-client = {};
     }
-    root.vericred-client.Carrier = factory(root.vericred-client.ApiClient);
+    root.vericred-client.Network = factory(root.vericred-client.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The Carrier model module.
-   * @module model/Carrier
+   * The Network model module.
+   * @module model/Network
    * @version 0.0.3
    */
 
   /**
-   * Constructs a new <code>Carrier</code>.
-   * @alias module:model/Carrier
+   * Constructs a new <code>Network</code>.
+   * @alias module:model/Network
    * @class
    */
   var exports = function() {
 
 
 
-
   };
 
   /**
-   * Constructs a <code>Carrier</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Network</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Carrier} obj Optional instance to populate.
-   * @return {module:model/Carrier} The populated <code>Carrier</code> instance.
+   * @param {module:model/Network} obj Optional instance to populate.
+   * @return {module:model/Network} The populated <code>Network</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -49,9 +48,6 @@
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('logo_path')) {
-        obj['logo_path'] = ApiClient.convertToType(data['logo_path'], 'String');
       }
     }
     return obj;
@@ -65,16 +61,10 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * Name of the Carrier
+   * Carrier name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
-
-  /**
-   * URL for the Carrier's logo
-   * @member {String} logo_path
-   */
-  exports.prototype['logo_path'] = undefined;
 
 
 

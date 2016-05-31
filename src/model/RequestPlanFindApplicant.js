@@ -18,7 +18,7 @@
   /**
    * The RequestPlanFindApplicant model module.
    * @module model/RequestPlanFindApplicant
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The RequestPlanFind model module.
    * @module model/RequestPlanFind
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**
