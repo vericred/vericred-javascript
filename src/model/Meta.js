@@ -18,7 +18,7 @@
   /**
    * The Meta model module.
    * @module model/Meta
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**

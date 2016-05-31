@@ -18,7 +18,7 @@
   /**
    * Drugs service.
    * @module api/DrugsApi
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**
@@ -42,7 +42,9 @@
 
     /**
      * Search for DrugCoverages
-     * Drug Coverages are the specific tier level, quantity limit, prior authorization and step therapy for a given Drug/Plan combination. This endpoint returns all DrugCoverages for a given Drug
+     * Drug Coverages are the specific tier level, quantity limit, prior
+authorization and step therapy for a given Drug/Plan combination. This endpoint
+returns all DrugCoverages for a given Drug
      * @param {String} ndcPackageCode NDC package code
      * @param {String} audience Two-character state code
      * @param {String} stateCode Two-character state code

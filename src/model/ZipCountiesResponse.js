@@ -18,7 +18,7 @@
   /**
    * The ZipCountiesResponse model module.
    * @module model/ZipCountiesResponse
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**

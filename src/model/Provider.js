@@ -18,7 +18,7 @@
   /**
    * The Provider model module.
    * @module model/Provider
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**
@@ -27,6 +27,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -112,6 +113,9 @@
       }
       if (data.hasOwnProperty('middle_name')) {
         obj['middle_name'] = ApiClient.convertToType(data['middle_name'], 'String');
+      }
+      if (data.hasOwnProperty('network_ids')) {
+        obj['network_ids'] = ApiClient.convertToType(data['network_ids'], ['Integer']);
       }
       if (data.hasOwnProperty('personal_phone')) {
         obj['personal_phone'] = ApiClient.convertToType(data['personal_phone'], 'String');
@@ -243,6 +247,12 @@
    * @member {String} middle_name
    */
   exports.prototype['middle_name'] = undefined;
+
+  /**
+   * Array of network ids
+   * @member {Array.<Integer>} network_ids
+   */
+  exports.prototype['network_ids'] = undefined;
 
   /**
    * Personal contact phone for the provider.

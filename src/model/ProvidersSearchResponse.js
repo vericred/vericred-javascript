@@ -18,7 +18,7 @@
   /**
    * The ProvidersSearchResponse model module.
    * @module model/ProvidersSearchResponse
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**
@@ -59,7 +59,7 @@
 
 
   /**
-   * Meta-data about the response.
+   * Metadata for query
    * @member {module:model/Meta} meta
    */
   exports.prototype['meta'] = undefined;

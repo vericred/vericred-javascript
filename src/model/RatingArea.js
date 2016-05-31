@@ -18,7 +18,7 @@
   /**
    * The RatingArea model module.
    * @module model/RatingArea
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**

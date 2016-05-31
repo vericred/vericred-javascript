@@ -18,7 +18,7 @@
   /**
    * The Applicant model module.
    * @module model/Applicant
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**

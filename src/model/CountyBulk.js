@@ -18,7 +18,7 @@
   /**
    * The CountyBulk model module.
    * @module model/CountyBulk
-   * @version 0.0.2
+   * @version 0.0.3
    */
 
   /**
