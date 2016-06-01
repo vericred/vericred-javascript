@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getProvider"></a>
 # **getProvider**
-> Provider getProvider(npi, opts)
+> ProviderShowResponse getProvider(npi, opts)
 
 Find a Provider
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Provider**](Provider.md)
+[**ProviderShowResponse**](ProviderShowResponse.md)
 
 ### Authorization
 

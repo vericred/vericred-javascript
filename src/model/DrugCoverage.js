@@ -18,7 +18,7 @@
   /**
    * The DrugCoverage model module.
    * @module model/DrugCoverage
-   * @version 0.0.3
+   * @version 0.0.4
    */
 
   /**
