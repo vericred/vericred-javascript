@@ -18,7 +18,7 @@
   /**
    * Networks service.
    * @module api/NetworksApi
-   * @version 0.0.3
+   * @version 0.0.4
    */
 
   /**

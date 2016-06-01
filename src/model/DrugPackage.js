@@ -18,7 +18,7 @@
   /**
    * The DrugPackage model module.
    * @module model/DrugPackage
-   * @version 0.0.3
+   * @version 0.0.4
    */
 
   /**

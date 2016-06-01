@@ -18,7 +18,7 @@
   /**
    * The PlanSearchResponse model module.
    * @module model/PlanSearchResponse
-   * @version 0.0.3
+   * @version 0.0.4
    */
 
   /**

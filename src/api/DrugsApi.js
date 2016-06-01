@@ -18,7 +18,7 @@
   /**
    * Drugs service.
    * @module api/DrugsApi
-   * @version 0.0.3
+   * @version 0.0.4
    */
 
   /**
