@@ -11,6 +11,9 @@ Name | Type | Description | Notes
 **householdSize** | **Integer** | Number of people living in household. | [optional] 
 **market** | **String** | Type of plan to search for. | [optional] 
 **providers** | [**[RequestPlanFindProvider]**](RequestPlanFindProvider.md) | List of providers to search for. | [optional] 
+**page** | **Integer** | Selected page of paginated response. | [optional] 
+**perPage** | **Integer** | Results per page of response. | [optional] 
+**sort** | **String** | Sort responses by plan field. | [optional] 
 **zipCode** | **String** | 5-digit zip code - this helps determine pricing. | [optional] 
 
 

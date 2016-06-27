@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getZipCounties"></a>
 # **getZipCounties**
-> ZipCountyResponse getZipCounties(zipPrefix, opts)
+> ZipCountyResponse getZipCounties(zipPrefix)
 
 Search for Zip Counties
 
@@ -18,14 +18,18 @@ Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  Thi
 ### Example
 ```javascript
 var vericred-client = require('vericred-client');
+var defaultClient = vericred-client.ApiClient.default;
+
+// Configure API key authorization: Vericred-Api-Key
+var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
+Vericred-Api-Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Vericred-Api-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new vericred-client.ZipCountiesApi();
 
 var zipPrefix = "1002"; // String | Partial five-digit Zip
 
-var opts = { 
-  'vericredApiKey': "api-doc-key" // String | API Key
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -34,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getZipCounties(zipPrefix, opts, callback);
+apiInstance.getZipCounties(zipPrefix, callback);
 ```
 
 ### Parameters
@@ -42,7 +46,6 @@ apiInstance.getZipCounties(zipPrefix, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **zipPrefix** | **String**| Partial five-digit Zip | 
- **vericredApiKey** | **String**| API Key | [optional] 
 
 ### Return type
 
@@ -50,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Vericred-Api-Key](../README.md#Vericred-Api-Key)
 
 ### HTTP request headers
 

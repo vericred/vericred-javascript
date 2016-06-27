@@ -18,7 +18,7 @@
   /**
    * The RequestProvidersSearch model module.
    * @module model/RequestProvidersSearch
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**

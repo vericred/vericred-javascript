@@ -18,7 +18,7 @@
   /**
    * The CarrierSubsidiary model module.
    * @module model/CarrierSubsidiary
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -27,6 +27,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -49,6 +50,9 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
+      if (data.hasOwnProperty('alternate_name')) {
+        obj['alternate_name'] = ApiClient.convertToType(data['alternate_name'], 'String');
+      }
     }
     return obj;
   }
@@ -65,6 +69,12 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+
+  /**
+   * Parent Carrier Name
+   * @member {String} alternate_name
+   */
+  exports.prototype['alternate_name'] = undefined;
 
 
 

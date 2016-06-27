@@ -18,7 +18,7 @@
   /**
    * Drugs service.
    * @module api/DrugsApi
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -48,13 +48,10 @@ returns all DrugCoverages for a given Drug
      * @param {String} ndcPackageCode NDC package code
      * @param {String} audience Two-character state code
      * @param {String} stateCode Two-character state code
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.vericredApiKey API Key
      * @param {module:api/DrugsApi~getDrugCoveragesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DrugCoverageResponse}
      */
-    this.getDrugCoverages = function(ndcPackageCode, audience, stateCode, opts, callback) {
-      opts = opts || {};
+    this.getDrugCoverages = function(ndcPackageCode, audience, stateCode, callback) {
       var postBody = null;
 
       // verify the required parameter 'ndcPackageCode' is set
@@ -81,12 +78,11 @@ returns all DrugCoverages for a given Drug
         'state_code': stateCode
       };
       var headerParams = {
-        'Vericred-Api-Key': opts['vericredApiKey']
       };
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Vericred-Api-Key'];
       var contentTypes = [];
       var accepts = [];
       var returnType = DrugCoverageResponse;
@@ -110,13 +106,10 @@ returns all DrugCoverages for a given Drug
      * Drug Search
      * Search for drugs by proprietary name
      * @param {String} searchTerm Full or partial proprietary name of drug
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.vericredApiKey API Key
      * @param {module:api/DrugsApi~listDrugsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DrugSearchResponse}
      */
-    this.listDrugs = function(searchTerm, opts, callback) {
-      opts = opts || {};
+    this.listDrugs = function(searchTerm, callback) {
       var postBody = null;
 
       // verify the required parameter 'searchTerm' is set
@@ -131,12 +124,11 @@ returns all DrugCoverages for a given Drug
         'search_term': searchTerm
       };
       var headerParams = {
-        'Vericred-Api-Key': opts['vericredApiKey']
       };
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Vericred-Api-Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = DrugSearchResponse;

@@ -18,7 +18,7 @@
   /**
    * The RequestPlanFind model module.
    * @module model/RequestPlanFind
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -27,6 +27,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -73,6 +76,15 @@
       }
       if (data.hasOwnProperty('providers')) {
         obj['providers'] = ApiClient.convertToType(data['providers'], [RequestPlanFindProvider]);
+      }
+      if (data.hasOwnProperty('page')) {
+        obj['page'] = ApiClient.convertToType(data['page'], 'Integer');
+      }
+      if (data.hasOwnProperty('per_page')) {
+        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Integer');
+      }
+      if (data.hasOwnProperty('sort')) {
+        obj['sort'] = ApiClient.convertToType(data['sort'], 'String');
       }
       if (data.hasOwnProperty('zip_code')) {
         obj['zip_code'] = ApiClient.convertToType(data['zip_code'], 'String');
@@ -129,6 +141,24 @@
    * @member {Array.<module:model/RequestPlanFindProvider>} providers
    */
   exports.prototype['providers'] = undefined;
+
+  /**
+   * Selected page of paginated response.
+   * @member {Integer} page
+   */
+  exports.prototype['page'] = undefined;
+
+  /**
+   * Results per page of response.
+   * @member {Integer} per_page
+   */
+  exports.prototype['per_page'] = undefined;
+
+  /**
+   * Sort responses by plan field.
+   * @member {String} sort
+   */
+  exports.prototype['sort'] = undefined;
 
   /**
    * 5-digit zip code - this helps determine pricing.

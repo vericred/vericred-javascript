@@ -18,7 +18,7 @@
   /**
    * Providers service.
    * @module api/ProvidersApi
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -44,13 +44,10 @@
      * Find a Provider
      * To retrieve a specific provider, just perform a GET using his NPI number
      * @param {String} npi NPI number
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.vericredApiKey API Key
      * @param {module:api/ProvidersApi~getProviderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ProviderShowResponse}
      */
-    this.getProvider = function(npi, opts, callback) {
-      opts = opts || {};
+    this.getProvider = function(npi, callback) {
       var postBody = null;
 
       // verify the required parameter 'npi' is set
@@ -65,12 +62,11 @@
       var queryParams = {
       };
       var headerParams = {
-        'Vericred-Api-Key': opts['vericredApiKey']
       };
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Vericred-Api-Key'];
       var contentTypes = [];
       var accepts = [];
       var returnType = ProviderShowResponse;
@@ -125,7 +121,7 @@ Specialty name search.  So, searching &quot;John Smith nose&quot; would return
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Vericred-Api-Key'];
       var contentTypes = [];
       var accepts = [];
       var returnType = ProvidersSearchResponse;
