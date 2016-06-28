@@ -10,34 +10,35 @@
     if (!root.vericred-client) {
       root.vericred-client = {};
     }
-    root.vericred-client.PlanCountyBulk = factory(root.vericred-client.ApiClient);
+    root.vericred-client.PlanZipCounty = factory(root.vericred-client.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The PlanCountyBulk model module.
-   * @module model/PlanCountyBulk
+   * The PlanZipCounty model module.
+   * @module model/PlanZipCounty
    * @version 0.0.5
    */
 
   /**
-   * Constructs a new <code>PlanCountyBulk</code>.
-   * @alias module:model/PlanCountyBulk
+   * Constructs a new <code>PlanZipCounty</code>.
+   * @alias module:model/PlanZipCounty
    * @class
    */
   var exports = function() {
 
 
 
+
   };
 
   /**
-   * Constructs a <code>PlanCountyBulk</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PlanZipCounty</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PlanCountyBulk} obj Optional instance to populate.
-   * @return {module:model/PlanCountyBulk} The populated <code>PlanCountyBulk</code> instance.
+   * @param {module:model/PlanZipCounty} obj Optional instance to populate.
+   * @return {module:model/PlanZipCounty} The populated <code>PlanZipCounty</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -48,6 +49,9 @@
       }
       if (data.hasOwnProperty('county_id')) {
         obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Integer');
+      }
+      if (data.hasOwnProperty('zip_code_id')) {
+        obj['zip_code_id'] = ApiClient.convertToType(data['zip_code_id'], 'Integer');
       }
     }
     return obj;
@@ -65,6 +69,12 @@
    * @member {Integer} county_id
    */
   exports.prototype['county_id'] = undefined;
+
+  /**
+   * Foreign key to zip code
+   * @member {Integer} zip_code_id
+   */
+  exports.prototype['zip_code_id'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * ZipCounties service.
    * @module api/ZipCountiesApi
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -44,13 +44,10 @@
      * Search for Zip Counties
      * Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  This is because plan pricing requires both of these elements.  Users are unlikely to know their fips code, so we provide this endpoint to look up a &#x60;ZipCounty&#x60; by zip code and return both the selected zip and fips codes.
      * @param {String} zipPrefix Partial five-digit Zip
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.vericredApiKey API Key
      * @param {module:api/ZipCountiesApi~getZipCountiesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ZipCountyResponse}
      */
-    this.getZipCounties = function(zipPrefix, opts, callback) {
-      opts = opts || {};
+    this.getZipCounties = function(zipPrefix, callback) {
       var postBody = null;
 
       // verify the required parameter 'zipPrefix' is set
@@ -65,12 +62,11 @@
         'zip_prefix': zipPrefix
       };
       var headerParams = {
-        'Vericred-Api-Key': opts['vericredApiKey']
       };
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Vericred-Api-Key'];
       var contentTypes = [];
       var accepts = [];
       var returnType = ZipCountyResponse;

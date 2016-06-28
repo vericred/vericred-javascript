@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/Applicant', './model/Base', './model/Carrier', './model/CarrierSubsidiary', './model/County', './model/CountyBulk', './model/Drug', './model/DrugCoverage', './model/DrugCoverageResponse', './model/DrugPackage', './model/DrugSearchResponse', './model/Meta', './model/Network', './model/NetworkSearchResponse', './model/Plan', './model/PlanCounty', './model/PlanCountyBulk', './model/PlanSearchResponse', './model/PlanSearchResult', './model/Pricing', './model/Provider', './model/ProviderShowResponse', './model/ProvidersSearchResponse', './model/RatingArea', './model/RequestPlanFind', './model/RequestPlanFindApplicant', './model/RequestPlanFindProvider', './model/RequestProvidersSearch', './model/State', './model/ZipCode', './model/ZipCountiesResponse', './model/ZipCounty', './model/ZipCountyBulk', './model/ZipCountyResponse', './api/DrugsApi', './api/NetworksApi', './api/PlansApi', './api/ProvidersApi', './api/ZipCountiesApi'], factory);
+    define(['./ApiClient', './model/Applicant', './model/Base', './model/Carrier', './model/CarrierSubsidiary', './model/County', './model/CountyBulk', './model/Drug', './model/DrugCoverage', './model/DrugCoverageResponse', './model/DrugPackage', './model/DrugSearchResponse', './model/Meta', './model/Network', './model/NetworkSearchResponse', './model/Plan', './model/PlanCounty', './model/PlanCountyBulk', './model/PlanSearchResponse', './model/PlanSearchResult', './model/PlanZipCounty', './model/Pricing', './model/Provider', './model/ProviderShowResponse', './model/ProvidersSearchResponse', './model/RatingArea', './model/RequestPlanFind', './model/RequestPlanFindApplicant', './model/RequestPlanFindProvider', './model/RequestProvidersSearch', './model/State', './model/ZipCode', './model/ZipCountiesResponse', './model/ZipCounty', './model/ZipCountyBulk', './model/ZipCountyResponse', './api/DrugsApi', './api/NetworksApi', './api/PlansApi', './api/ProvidersApi', './api/ZipCountiesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Applicant'), require('./model/Base'), require('./model/Carrier'), require('./model/CarrierSubsidiary'), require('./model/County'), require('./model/CountyBulk'), require('./model/Drug'), require('./model/DrugCoverage'), require('./model/DrugCoverageResponse'), require('./model/DrugPackage'), require('./model/DrugSearchResponse'), require('./model/Meta'), require('./model/Network'), require('./model/NetworkSearchResponse'), require('./model/Plan'), require('./model/PlanCounty'), require('./model/PlanCountyBulk'), require('./model/PlanSearchResponse'), require('./model/PlanSearchResult'), require('./model/Pricing'), require('./model/Provider'), require('./model/ProviderShowResponse'), require('./model/ProvidersSearchResponse'), require('./model/RatingArea'), require('./model/RequestPlanFind'), require('./model/RequestPlanFindApplicant'), require('./model/RequestPlanFindProvider'), require('./model/RequestProvidersSearch'), require('./model/State'), require('./model/ZipCode'), require('./model/ZipCountiesResponse'), require('./model/ZipCounty'), require('./model/ZipCountyBulk'), require('./model/ZipCountyResponse'), require('./api/DrugsApi'), require('./api/NetworksApi'), require('./api/PlansApi'), require('./api/ProvidersApi'), require('./api/ZipCountiesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Applicant'), require('./model/Base'), require('./model/Carrier'), require('./model/CarrierSubsidiary'), require('./model/County'), require('./model/CountyBulk'), require('./model/Drug'), require('./model/DrugCoverage'), require('./model/DrugCoverageResponse'), require('./model/DrugPackage'), require('./model/DrugSearchResponse'), require('./model/Meta'), require('./model/Network'), require('./model/NetworkSearchResponse'), require('./model/Plan'), require('./model/PlanCounty'), require('./model/PlanCountyBulk'), require('./model/PlanSearchResponse'), require('./model/PlanSearchResult'), require('./model/PlanZipCounty'), require('./model/Pricing'), require('./model/Provider'), require('./model/ProviderShowResponse'), require('./model/ProvidersSearchResponse'), require('./model/RatingArea'), require('./model/RequestPlanFind'), require('./model/RequestPlanFindApplicant'), require('./model/RequestPlanFindProvider'), require('./model/RequestProvidersSearch'), require('./model/State'), require('./model/ZipCode'), require('./model/ZipCountiesResponse'), require('./model/ZipCounty'), require('./model/ZipCountyBulk'), require('./model/ZipCountyResponse'), require('./api/DrugsApi'), require('./api/NetworksApi'), require('./api/PlansApi'), require('./api/ProvidersApi'), require('./api/ZipCountiesApi'));
   }
-}(function(ApiClient, Applicant, Base, Carrier, CarrierSubsidiary, County, CountyBulk, Drug, DrugCoverage, DrugCoverageResponse, DrugPackage, DrugSearchResponse, Meta, Network, NetworkSearchResponse, Plan, PlanCounty, PlanCountyBulk, PlanSearchResponse, PlanSearchResult, Pricing, Provider, ProviderShowResponse, ProvidersSearchResponse, RatingArea, RequestPlanFind, RequestPlanFindApplicant, RequestPlanFindProvider, RequestProvidersSearch, State, ZipCode, ZipCountiesResponse, ZipCounty, ZipCountyBulk, ZipCountyResponse, DrugsApi, NetworksApi, PlansApi, ProvidersApi, ZipCountiesApi) {
+}(function(ApiClient, Applicant, Base, Carrier, CarrierSubsidiary, County, CountyBulk, Drug, DrugCoverage, DrugCoverageResponse, DrugPackage, DrugSearchResponse, Meta, Network, NetworkSearchResponse, Plan, PlanCounty, PlanCountyBulk, PlanSearchResponse, PlanSearchResult, PlanZipCounty, Pricing, Provider, ProviderShowResponse, ProvidersSearchResponse, RatingArea, RequestPlanFind, RequestPlanFindApplicant, RequestPlanFindProvider, RequestProvidersSearch, State, ZipCode, ZipCountiesResponse, ZipCounty, ZipCountyBulk, ZipCountyResponse, DrugsApi, NetworksApi, PlansApi, ProvidersApi, ZipCountiesApi) {
   'use strict';
 
   /**
@@ -38,7 +38,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 0.0.4
+   * @version 0.0.5
    */
   var exports = {
     /**
@@ -141,6 +141,11 @@
      * @property {module:model/PlanSearchResult}
      */
     PlanSearchResult: PlanSearchResult,
+    /**
+     * The PlanZipCounty model constructor.
+     * @property {module:model/PlanZipCounty}
+     */
+    PlanZipCounty: PlanZipCounty,
     /**
      * The Pricing model constructor.
      * @property {module:model/Pricing}

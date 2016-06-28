@@ -17,7 +17,7 @@
 
   /**
    * @module ApiClient
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -40,6 +40,7 @@
      * @type {Array.<String>}
      */
     this.authentications = {
+      'Vericred-Api-Key': {type: 'apiKey', 'in': 'header', name: 'Vericred-Api-Key'}
     };
     /**
      * The default HTTP headers to be included for all API calls.

@@ -18,7 +18,7 @@
   /**
    * The Plan model module.
    * @module model/Plan
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -27,6 +27,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -106,6 +109,9 @@
       if (data.hasOwnProperty('adult_dental')) {
         obj['adult_dental'] = ApiClient.convertToType(data['adult_dental'], 'Boolean');
       }
+      if (data.hasOwnProperty('age29_rider')) {
+        obj['age29_rider'] = ApiClient.convertToType(data['age29_rider'], 'Boolean');
+      }
       if (data.hasOwnProperty('ambulance')) {
         obj['ambulance'] = ApiClient.convertToType(data['ambulance'], 'String');
       }
@@ -136,6 +142,9 @@
       if (data.hasOwnProperty('diagnostic_test')) {
         obj['diagnostic_test'] = ApiClient.convertToType(data['diagnostic_test'], 'String');
       }
+      if (data.hasOwnProperty('dp_rider')) {
+        obj['dp_rider'] = ApiClient.convertToType(data['dp_rider'], 'Boolean');
+      }
       if (data.hasOwnProperty('drug_formulary_url')) {
         obj['drug_formulary_url'] = ApiClient.convertToType(data['drug_formulary_url'], 'String');
       }
@@ -159,6 +168,9 @@
       }
       if (data.hasOwnProperty('family_medical_moop')) {
         obj['family_medical_moop'] = ApiClient.convertToType(data['family_medical_moop'], 'String');
+      }
+      if (data.hasOwnProperty('fp_rider')) {
+        obj['fp_rider'] = ApiClient.convertToType(data['fp_rider'], 'Boolean');
       }
       if (data.hasOwnProperty('generic_drugs')) {
         obj['generic_drugs'] = ApiClient.convertToType(data['generic_drugs'], 'String');
@@ -301,6 +313,12 @@
   exports.prototype['adult_dental'] = undefined;
 
   /**
+   * 
+   * @member {Boolean} age29_rider
+   */
+  exports.prototype['age29_rider'] = undefined;
+
+  /**
    * Benefits string for ambulance coverage
    * @member {String} ambulance
    */
@@ -361,6 +379,12 @@
   exports.prototype['diagnostic_test'] = undefined;
 
   /**
+   * Is this a domestic plan?
+   * @member {Boolean} dp_rider
+   */
+  exports.prototype['dp_rider'] = undefined;
+
+  /**
    * Link to the summary of drug benefits for the plan
    * @member {String} drug_formulary_url
    */
@@ -407,6 +431,12 @@
    * @member {String} family_medical_moop
    */
   exports.prototype['family_medical_moop'] = undefined;
+
+  /**
+   * Is this a family plan?
+   * @member {Boolean} fp_rider
+   */
+  exports.prototype['fp_rider'] = undefined;
 
   /**
    * Cost for generic drugs

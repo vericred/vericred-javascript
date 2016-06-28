@@ -18,7 +18,7 @@
   /**
    * The Provider model module.
    * @module model/Provider
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**

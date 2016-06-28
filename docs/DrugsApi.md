@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getDrugCoverages"></a>
 # **getDrugCoverages**
-> DrugCoverageResponse getDrugCoverages(ndcPackageCode, audience, stateCode, opts)
+> DrugCoverageResponse getDrugCoverages(ndcPackageCode, audience, stateCode)
 
 Search for DrugCoverages
 
@@ -21,6 +21,13 @@ returns all DrugCoverages for a given Drug
 ### Example
 ```javascript
 var vericred-client = require('vericred-client');
+var defaultClient = vericred-client.ApiClient.default;
+
+// Configure API key authorization: Vericred-Api-Key
+var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
+Vericred-Api-Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Vericred-Api-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new vericred-client.DrugsApi();
 
@@ -30,9 +37,6 @@ var audience = "individual"; // String | Two-character state code
 
 var stateCode = "NY"; // String | Two-character state code
 
-var opts = { 
-  'vericredApiKey': "api-doc-key" // String | API Key
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -41,7 +45,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getDrugCoverages(ndcPackageCode, audience, stateCode, opts, callback);
+apiInstance.getDrugCoverages(ndcPackageCode, audience, stateCode, callback);
 ```
 
 ### Parameters
@@ -51,7 +55,6 @@ Name | Type | Description  | Notes
  **ndcPackageCode** | **String**| NDC package code | 
  **audience** | **String**| Two-character state code | 
  **stateCode** | **String**| Two-character state code | 
- **vericredApiKey** | **String**| API Key | [optional] 
 
 ### Return type
 
@@ -59,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Vericred-Api-Key](../README.md#Vericred-Api-Key)
 
 ### HTTP request headers
 
@@ -68,7 +71,7 @@ No authorization required
 
 <a name="listDrugs"></a>
 # **listDrugs**
-> DrugSearchResponse listDrugs(searchTerm, opts)
+> DrugSearchResponse listDrugs(searchTerm)
 
 Drug Search
 
@@ -77,14 +80,18 @@ Search for drugs by proprietary name
 ### Example
 ```javascript
 var vericred-client = require('vericred-client');
+var defaultClient = vericred-client.ApiClient.default;
+
+// Configure API key authorization: Vericred-Api-Key
+var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
+Vericred-Api-Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Vericred-Api-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new vericred-client.DrugsApi();
 
 var searchTerm = "Zyrtec"; // String | Full or partial proprietary name of drug
 
-var opts = { 
-  'vericredApiKey': "api-doc-key" // String | API Key
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -93,7 +100,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.listDrugs(searchTerm, opts, callback);
+apiInstance.listDrugs(searchTerm, callback);
 ```
 
 ### Parameters
@@ -101,7 +108,6 @@ apiInstance.listDrugs(searchTerm, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **searchTerm** | **String**| Full or partial proprietary name of drug | 
- **vericredApiKey** | **String**| API Key | [optional] 
 
 ### Return type
 
@@ -109,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Vericred-Api-Key](../README.md#Vericred-Api-Key)
 
 ### HTTP request headers
 

@@ -18,7 +18,7 @@
   /**
    * Networks service.
    * @module api/NetworksApi
-   * @version 0.0.4
+   * @version 0.0.5
    */
 
   /**
@@ -44,12 +44,16 @@
      * Networks
      * A network is a list of the doctors, other health care providers,
 and hospitals that a plan has contracted with to provide medical care to
-its members.
+its members. This endpoint is paginated.
      * @param {String} carrierId Carrier HIOS Issuer ID
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page Page of paginated response
+     * @param {Integer} opts.perPage Responses per page
      * @param {module:api/NetworksApi~listNetworksCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/NetworkSearchResponse}
      */
-    this.listNetworks = function(carrierId, callback) {
+    this.listNetworks = function(carrierId, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'carrierId' is set
@@ -61,14 +65,16 @@ its members.
       var pathParams = {
       };
       var queryParams = {
-        'carrier_id': carrierId
+        'carrier_id': carrierId,
+        'page': opts['page'],
+        'per_page': opts['perPage']
       };
       var headerParams = {
       };
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Vericred-Api-Key'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = NetworkSearchResponse;

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getProvider"></a>
 # **getProvider**
-> ProviderShowResponse getProvider(npi, opts)
+> ProviderShowResponse getProvider(npi)
 
 Find a Provider
 
@@ -19,14 +19,18 @@ To retrieve a specific provider, just perform a GET using his NPI number
 ### Example
 ```javascript
 var vericred-client = require('vericred-client');
+var defaultClient = vericred-client.ApiClient.default;
+
+// Configure API key authorization: Vericred-Api-Key
+var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
+Vericred-Api-Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Vericred-Api-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new vericred-client.ProvidersApi();
 
 var npi = "1234567890"; // String | NPI number
 
-var opts = { 
-  'vericredApiKey': "api-doc-key" // String | API Key
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -35,7 +39,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getProvider(npi, opts, callback);
+apiInstance.getProvider(npi, callback);
 ```
 
 ### Parameters
@@ -43,7 +47,6 @@ apiInstance.getProvider(npi, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **npi** | **String**| NPI number | 
- **vericredApiKey** | **String**| API Key | [optional] 
 
 ### Return type
 
@@ -51,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Vericred-Api-Key](../README.md#Vericred-Api-Key)
 
 ### HTTP request headers
 
@@ -82,6 +85,13 @@ Specialty name search.  So, searching &quot;John Smith nose&quot; would return
 ### Example
 ```javascript
 var vericred-client = require('vericred-client');
+var defaultClient = vericred-client.ApiClient.default;
+
+// Configure API key authorization: Vericred-Api-Key
+var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
+Vericred-Api-Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Vericred-Api-Key.apiKeyPrefix = 'Token';
 
 var apiInstance = new vericred-client.ProvidersApi();
 
@@ -111,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Vericred-Api-Key](../README.md#Vericred-Api-Key)
 
 ### HTTP request headers
 
