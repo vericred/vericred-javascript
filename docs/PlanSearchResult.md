@@ -1,4 +1,4 @@
-# vericred-client.PlanSearchResult
+# vericredClient.PlanSearchResult
 
 ## Properties
 Name | Type | Description | Notes

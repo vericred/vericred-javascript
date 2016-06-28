@@ -1,4 +1,4 @@
-# vericred-client.NetworkSearchResponse
+# vericredClient.NetworkSearchResponse
 
 ## Properties
 Name | Type | Description | Notes

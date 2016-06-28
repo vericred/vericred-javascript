@@ -1,4 +1,4 @@
-# vericred-client.ZipCountiesResponse
+# vericredClient.ZipCountiesResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# vericred-client.Base
+# vericredClient.Base
 
 ## Properties
 Name | Type | Description | Notes

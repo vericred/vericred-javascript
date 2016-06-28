@@ -1,4 +1,4 @@
-# vericred-client.DrugSearchResponse
+# vericredClient.DrugSearchResponse
 
 ## Properties
 Name | Type | Description | Notes

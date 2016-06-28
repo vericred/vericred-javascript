@@ -1,4 +1,4 @@
-# vericred-client.DrugsApi
+# vericredClient.DrugsApi
 
 All URIs are relative to *https://api.vericred.com/*
 
@@ -14,14 +14,12 @@ Method | HTTP request | Description
 
 Search for DrugCoverages
 
-Drug Coverages are the specific tier level, quantity limit, prior
-authorization and step therapy for a given Drug/Plan combination. This endpoint
-returns all DrugCoverages for a given Drug
+Drug Coverages are the specific tier level, quantity limit, prior authorization and step therapy for a given Drug/Plan combination. This endpoint returns all DrugCoverages for a given Drug
 
 ### Example
 ```javascript
-var vericred-client = require('vericred-client');
-var defaultClient = vericred-client.ApiClient.default;
+var vericredClient = require('vericredClient');
+var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
 var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
@@ -29,7 +27,7 @@ Vericred-Api-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Vericred-Api-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new vericred-client.DrugsApi();
+var apiInstance = new vericredClient.DrugsApi();
 
 var ndcPackageCode = "12345-4321-11"; // String | NDC package code
 
@@ -79,8 +77,8 @@ Search for drugs by proprietary name
 
 ### Example
 ```javascript
-var vericred-client = require('vericred-client');
-var defaultClient = vericred-client.ApiClient.default;
+var vericredClient = require('vericredClient');
+var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
 var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
@@ -88,7 +86,7 @@ Vericred-Api-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Vericred-Api-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new vericred-client.DrugsApi();
+var apiInstance = new vericredClient.DrugsApi();
 
 var searchTerm = "Zyrtec"; // String | Full or partial proprietary name of drug
 

@@ -1,4 +1,4 @@
-# vericred-client.RequestPlanFind
+# vericredClient.RequestPlanFind
 
 ## Properties
 Name | Type | Description | Notes

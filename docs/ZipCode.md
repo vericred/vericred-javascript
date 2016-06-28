@@ -1,4 +1,4 @@
-# vericred-client.ZipCode
+# vericredClient.ZipCode
 
 ## Properties
 Name | Type | Description | Notes

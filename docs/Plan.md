@@ -1,4 +1,4 @@
-# vericred-client.Plan
+# vericredClient.Plan
 
 ## Properties
 Name | Type | Description | Notes

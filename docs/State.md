@@ -1,4 +1,4 @@
-# vericred-client.State
+# vericredClient.State
 
 ## Properties
 Name | Type | Description | Notes

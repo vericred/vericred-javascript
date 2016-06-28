@@ -1,4 +1,4 @@
-# vericred-client.ZipCounty
+# vericredClient.ZipCounty
 
 ## Properties
 Name | Type | Description | Notes
