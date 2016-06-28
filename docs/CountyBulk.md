@@ -1,4 +1,4 @@
-# vericred-client.CountyBulk
+# vericredClient.CountyBulk
 
 ## Properties
 Name | Type | Description | Notes

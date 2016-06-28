@@ -1,4 +1,4 @@
-# vericred-client.RatingArea
+# vericredClient.RatingArea
 
 ## Properties
 Name | Type | Description | Notes

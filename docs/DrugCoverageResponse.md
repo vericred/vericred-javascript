@@ -1,4 +1,4 @@
-# vericred-client.DrugCoverageResponse
+# vericredClient.DrugCoverageResponse
 
 ## Properties
 Name | Type | Description | Notes

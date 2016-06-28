@@ -1,4 +1,4 @@
-# vericred-client.Provider
+# vericredClient.Provider
 
 ## Properties
 Name | Type | Description | Notes

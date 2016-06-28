@@ -1,4 +1,4 @@
-# vericred-client.NetworksApi
+# vericredClient.NetworksApi
 
 All URIs are relative to *https://api.vericred.com/*
 
@@ -13,14 +13,12 @@ Method | HTTP request | Description
 
 Networks
 
-A network is a list of the doctors, other health care providers,
-and hospitals that a plan has contracted with to provide medical care to
-its members. This endpoint is paginated.
+A network is a list of the doctors, other health care providers, and hospitals that a plan has contracted with to provide medical care to its members. This endpoint is paginated.
 
 ### Example
 ```javascript
-var vericred-client = require('vericred-client');
-var defaultClient = vericred-client.ApiClient.default;
+var vericredClient = require('vericredClient');
+var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
 var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
@@ -28,7 +26,7 @@ Vericred-Api-Key.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Vericred-Api-Key.apiKeyPrefix = 'Token';
 
-var apiInstance = new vericred-client.NetworksApi();
+var apiInstance = new vericredClient.NetworksApi();
 
 var carrierId = "33333"; // String | Carrier HIOS Issuer ID
 

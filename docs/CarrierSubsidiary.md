@@ -1,4 +1,4 @@
-# vericred-client.CarrierSubsidiary
+# vericredClient.CarrierSubsidiary
 
 ## Properties
 Name | Type | Description | Notes

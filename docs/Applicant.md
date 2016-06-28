@@ -1,4 +1,4 @@
-# vericred-client.Applicant
+# vericredClient.Applicant
 
 ## Properties
 Name | Type | Description | Notes

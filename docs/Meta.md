@@ -1,4 +1,4 @@
-# vericred-client.Meta
+# vericredClient.Meta
 
 ## Properties
 Name | Type | Description | Notes

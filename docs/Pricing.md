@@ -1,4 +1,4 @@
-# vericred-client.Pricing
+# vericredClient.Pricing
 
 ## Properties
 Name | Type | Description | Notes

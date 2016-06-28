@@ -1,4 +1,4 @@
-# vericred-client.Network
+# vericredClient.Network
 
 ## Properties
 Name | Type | Description | Notes

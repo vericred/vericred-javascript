@@ -1,4 +1,4 @@
-# vericred-client.ProvidersSearchResponse
+# vericredClient.ProvidersSearchResponse
 
 ## Properties
 Name | Type | Description | Notes

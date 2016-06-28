@@ -1,4 +1,4 @@
-# vericred-client.Drug
+# vericredClient.Drug
 
 ## Properties
 Name | Type | Description | Notes
