@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **Integer** | Number of entities returned | [optional] 
+**total** | **Number** | Number of entities returned | [optional] 
 
 

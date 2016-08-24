@@ -152,7 +152,7 @@ The response would be
   /**
    * The ZipCounty model module.
    * @module model/ZipCounty
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -180,13 +180,13 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('county_id')) {
-        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Integer');
+        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Number');
       }
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
       if (data.hasOwnProperty('zip_code_id')) {
-        obj['zip_code_id'] = ApiClient.convertToType(data['zip_code_id'], 'Integer');
+        obj['zip_code_id'] = ApiClient.convertToType(data['zip_code_id'], 'Number');
       }
     }
     return obj;
@@ -194,20 +194,19 @@ The response would be
 
   /**
    * ID of the parent County in Vericred's API
-   * @member {Integer} county_id
+   * @member {Number} county_id
    */
   exports.prototype['county_id'] = undefined;
   /**
    * Primary key
-   * @member {Integer} id
+   * @member {Number} id
    */
   exports.prototype['id'] = undefined;
   /**
    * ID of the parent Zip Code in Vericred's API
-   * @member {Integer} zip_code_id
+   * @member {Number} zip_code_id
    */
   exports.prototype['zip_code_id'] = undefined;
-
 
 
 

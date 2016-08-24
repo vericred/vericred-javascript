@@ -31,8 +31,8 @@ var apiInstance = new vericredClient.NetworksApi();
 var carrierId = "33333"; // String | Carrier HIOS Issuer ID
 
 var opts = { 
-  'page': 1, // Integer | Page of paginated response
-  'perPage': 1 // Integer | Responses per page
+  'page': 1, // Number | Page of paginated response
+  'perPage': 1 // Number | Responses per page
 };
 
 var callback = function(error, data, response) {
@@ -50,8 +50,8 @@ apiInstance.listNetworks(carrierId, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **carrierId** | **String**| Carrier HIOS Issuer ID | 
- **page** | **Integer**| Page of paginated response | [optional] 
- **perPage** | **Integer**| Responses per page | [optional] 
+ **page** | **Number**| Page of paginated response | [optional] 
+ **perPage** | **Number**| Responses per page | [optional] 
 
 ### Return type
 

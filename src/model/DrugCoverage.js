@@ -152,7 +152,7 @@ The response would be
   /**
    * The DrugCoverage model module.
    * @module model/DrugCoverage
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -234,7 +234,6 @@ The response would be
    * @member {Boolean} step_therapy
    */
   exports.prototype['step_therapy'] = undefined;
-
 
 
 

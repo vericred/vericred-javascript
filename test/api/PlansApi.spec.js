@@ -176,6 +176,16 @@ The response would be
         done();
       });
     });
+    describe('showPlan', function() {
+      it('should call showPlan successfully', function(done) {
+        //uncomment below and update the code to test showPlan
+        //instance.showPlan(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

@@ -149,7 +149,7 @@ The response would be
   /**
    * Providers service.
    * @module api/ProvidersApi
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -175,10 +175,14 @@ The response would be
      * Find a Provider
      * To retrieve a specific provider, just perform a GET using his NPI number
      * @param {String} npi NPI number
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.year Only show plan ids for the given year
+     * @param {String} opts.state Only show plan ids for the given state
      * @param {module:api/ProvidersApi~getProviderCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ProviderShowResponse}
+     * data is of type: {@link module:model/ProviderShowResponse}
      */
-    this.getProvider = function(npi, callback) {
+    this.getProvider = function(npi, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'npi' is set
@@ -191,6 +195,8 @@ The response would be
         'npi': npi
       };
       var queryParams = {
+        'year': opts['year'],
+        'state': opts['state']
       };
       var headerParams = {
       };
@@ -223,7 +229,7 @@ The response would be
      * @param {Object} opts Optional parameters
      * @param {module:model/RequestProvidersSearch} opts.body 
      * @param {module:api/ProvidersApi~getProvidersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ProvidersSearchResponse}
+     * data is of type: {@link module:model/ProvidersSearchResponse}
      */
     this.getProviders = function(opts, callback) {
       opts = opts || {};

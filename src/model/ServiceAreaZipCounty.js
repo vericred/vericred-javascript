@@ -141,7 +141,7 @@ The response would be
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.Applicant = factory(root.vericredClient.ApiClient);
+    root.vericredClient.ServiceAreaZipCounty = factory(root.vericredClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -150,14 +150,14 @@ The response would be
 
 
   /**
-   * The Applicant model module.
-   * @module model/Applicant
+   * The ServiceAreaZipCounty model module.
+   * @module model/ServiceAreaZipCounty
    * @version 0.0.7
    */
 
   /**
-   * Constructs a new <code>Applicant</code>.
-   * @alias module:model/Applicant
+   * Constructs a new <code>ServiceAreaZipCounty</code>.
+   * @alias module:model/ServiceAreaZipCounty
    * @class
    */
   var exports = function() {
@@ -166,83 +166,47 @@ The response would be
 
 
 
-
-
-
-
   };
 
   /**
-   * Constructs a <code>Applicant</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ServiceAreaZipCounty</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Applicant} obj Optional instance to populate.
-   * @return {module:model/Applicant} The populated <code>Applicant</code> instance.
+   * @param {module:model/ServiceAreaZipCounty} obj Optional instance to populate.
+   * @return {module:model/ServiceAreaZipCounty} The populated <code>ServiceAreaZipCounty</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('county_id')) {
+        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'String');
       }
-      if (data.hasOwnProperty('dob')) {
-        obj['dob'] = ApiClient.convertToType(data['dob'], 'Date');
+      if (data.hasOwnProperty('service_area_id')) {
+        obj['service_area_id'] = ApiClient.convertToType(data['service_area_id'], 'String');
       }
-      if (data.hasOwnProperty('member_id')) {
-        obj['member_id'] = ApiClient.convertToType(data['member_id'], 'String');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('relationship')) {
-        obj['relationship'] = ApiClient.convertToType(data['relationship'], 'String');
-      }
-      if (data.hasOwnProperty('smoker')) {
-        obj['smoker'] = ApiClient.convertToType(data['smoker'], 'Boolean');
-      }
-      if (data.hasOwnProperty('ssn')) {
-        obj['ssn'] = ApiClient.convertToType(data['ssn'], 'String');
+      if (data.hasOwnProperty('zip_code_id')) {
+        obj['zip_code_id'] = ApiClient.convertToType(data['zip_code_id'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Primary key
-   * @member {Number} id
+   * Foreign key to county
+   * @member {String} county_id
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['county_id'] = undefined;
   /**
-   * Date of Birth
-   * @member {Date} dob
+   * Foreign key to service area
+   * @member {String} service_area_id
    */
-  exports.prototype['dob'] = undefined;
+  exports.prototype['service_area_id'] = undefined;
   /**
-   * Member token
-   * @member {String} member_id
+   * Foreign key to zip code
+   * @member {String} zip_code_id
    */
-  exports.prototype['member_id'] = undefined;
-  /**
-   * Full name of the Applicant
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-  /**
-   * Relationship of the Applicant to the Member
-   * @member {String} relationship
-   */
-  exports.prototype['relationship'] = undefined;
-  /**
-   * Does the Applicant smoke?
-   * @member {Boolean} smoker
-   */
-  exports.prototype['smoker'] = undefined;
-  /**
-   * Applicant's Social Security Number
-   * @member {String} ssn
-   */
-  exports.prototype['ssn'] = undefined;
+  exports.prototype['zip_code_id'] = undefined;
 
 
 

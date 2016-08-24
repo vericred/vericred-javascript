@@ -152,7 +152,7 @@ The response would be
   /**
    * The Network model module.
    * @module model/Network
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -179,7 +179,7 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -190,7 +190,7 @@ The response would be
 
   /**
    * Primary key
-   * @member {Integer} id
+   * @member {Number} id
    */
   exports.prototype['id'] = undefined;
   /**
@@ -198,7 +198,6 @@ The response would be
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
-
 
 
 

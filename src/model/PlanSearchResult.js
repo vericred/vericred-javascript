@@ -152,7 +152,7 @@ The response would be
   /**
    * The PlanSearchResult model module.
    * @module model/PlanSearchResult
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -162,6 +162,9 @@ The response would be
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -280,6 +283,9 @@ The response would be
       if (data.hasOwnProperty('diagnostic_test')) {
         obj['diagnostic_test'] = ApiClient.convertToType(data['diagnostic_test'], 'String');
       }
+      if (data.hasOwnProperty('display_name')) {
+        obj['display_name'] = ApiClient.convertToType(data['display_name'], 'String');
+      }
       if (data.hasOwnProperty('dp_rider')) {
         obj['dp_rider'] = ApiClient.convertToType(data['dp_rider'], 'Boolean');
       }
@@ -325,6 +331,9 @@ The response would be
       if (data.hasOwnProperty('hospice_service')) {
         obj['hospice_service'] = ApiClient.convertToType(data['hospice_service'], 'String');
       }
+      if (data.hasOwnProperty('hsa_eligible')) {
+        obj['hsa_eligible'] = ApiClient.convertToType(data['hsa_eligible'], 'Boolean');
+      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
@@ -332,7 +341,7 @@ The response would be
         obj['imaging'] = ApiClient.convertToType(data['imaging'], 'String');
       }
       if (data.hasOwnProperty('in_network_ids')) {
-        obj['in_network_ids'] = ApiClient.convertToType(data['in_network_ids'], ['Integer']);
+        obj['in_network_ids'] = ApiClient.convertToType(data['in_network_ids'], ['Number']);
       }
       if (data.hasOwnProperty('individual_drug_deductible')) {
         obj['individual_drug_deductible'] = ApiClient.convertToType(data['individual_drug_deductible'], 'String');
@@ -383,7 +392,7 @@ The response would be
         obj['out_of_network_coverage'] = ApiClient.convertToType(data['out_of_network_coverage'], 'Boolean');
       }
       if (data.hasOwnProperty('out_of_network_ids')) {
-        obj['out_of_network_ids'] = ApiClient.convertToType(data['out_of_network_ids'], ['Integer']);
+        obj['out_of_network_ids'] = ApiClient.convertToType(data['out_of_network_ids'], ['Number']);
       }
       if (data.hasOwnProperty('outpatient_facility')) {
         obj['outpatient_facility'] = ApiClient.convertToType(data['outpatient_facility'], 'String');
@@ -424,6 +433,9 @@ The response would be
       if (data.hasOwnProperty('rehabilitation_services')) {
         obj['rehabilitation_services'] = ApiClient.convertToType(data['rehabilitation_services'], 'String');
       }
+      if (data.hasOwnProperty('service_area_id')) {
+        obj['service_area_id'] = ApiClient.convertToType(data['service_area_id'], 'String');
+      }
       if (data.hasOwnProperty('skilled_nursing')) {
         obj['skilled_nursing'] = ApiClient.convertToType(data['skilled_nursing'], 'String');
       }
@@ -437,10 +449,10 @@ The response would be
         obj['urgent_care'] = ApiClient.convertToType(data['urgent_care'], 'String');
       }
       if (data.hasOwnProperty('match_percentage')) {
-        obj['match_percentage'] = ApiClient.convertToType(data['match_percentage'], 'Integer');
+        obj['match_percentage'] = ApiClient.convertToType(data['match_percentage'], 'Number');
       }
       if (data.hasOwnProperty('perfect_match_percentage')) {
-        obj['perfect_match_percentage'] = ApiClient.convertToType(data['perfect_match_percentage'], 'Integer');
+        obj['perfect_match_percentage'] = ApiClient.convertToType(data['perfect_match_percentage'], 'Number');
       }
       if (data.hasOwnProperty('employee_premium')) {
         obj['employee_premium'] = ApiClient.convertToType(data['employee_premium'], 'Number');
@@ -512,6 +524,11 @@ The response would be
    * @member {String} diagnostic_test
    */
   exports.prototype['diagnostic_test'] = undefined;
+  /**
+   * Alternate name for the Plan
+   * @member {String} display_name
+   */
+  exports.prototype['display_name'] = undefined;
   /**
    * Is this a domestic plan?
    * @member {Boolean} dp_rider
@@ -588,6 +605,11 @@ The response would be
    */
   exports.prototype['hospice_service'] = undefined;
   /**
+   * Is the plan HSA eligible?
+   * @member {Boolean} hsa_eligible
+   */
+  exports.prototype['hsa_eligible'] = undefined;
+  /**
    * Government-issued HIOS plan ID
    * @member {String} id
    */
@@ -599,7 +621,7 @@ The response would be
   exports.prototype['imaging'] = undefined;
   /**
    * List of NPI numbers for Providers passed in who accept this Plan
-   * @member {Array.<Integer>} in_network_ids
+   * @member {Array.<Number>} in_network_ids
    */
   exports.prototype['in_network_ids'] = undefined;
   /**
@@ -684,7 +706,7 @@ The response would be
   exports.prototype['out_of_network_coverage'] = undefined;
   /**
    * List of NPI numbers for Providers passed in who do not accept this Plan
-   * @member {Array.<Integer>} out_of_network_ids
+   * @member {Array.<Number>} out_of_network_ids
    */
   exports.prototype['out_of_network_ids'] = undefined;
   /**
@@ -753,6 +775,11 @@ The response would be
    */
   exports.prototype['rehabilitation_services'] = undefined;
   /**
+   * Foreign key for service area
+   * @member {String} service_area_id
+   */
+  exports.prototype['service_area_id'] = undefined;
+  /**
    * Benefits summary for skilled nursing services
    * @member {String} skilled_nursing
    */
@@ -774,12 +801,12 @@ The response would be
   exports.prototype['urgent_care'] = undefined;
   /**
    * Percentage of doctors who matched this Plan
-   * @member {Integer} match_percentage
+   * @member {Number} match_percentage
    */
   exports.prototype['match_percentage'] = undefined;
   /**
    * Percentage of employees with 100% match
-   * @member {Integer} perfect_match_percentage
+   * @member {Number} perfect_match_percentage
    */
   exports.prototype['perfect_match_percentage'] = undefined;
   /**
@@ -792,7 +819,6 @@ The response would be
    * @member {Number} dependent_premium
    */
   exports.prototype['dependent_premium'] = undefined;
-
 
 
 

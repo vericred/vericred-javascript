@@ -152,7 +152,7 @@ The response would be
   /**
    * The PlanSearchResponse model module.
    * @module model/PlanSearchResponse
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -207,7 +207,6 @@ The response would be
    * @member {Array.<module:model/Drug>} coverages
    */
   exports.prototype['coverages'] = undefined;
-
 
 
 

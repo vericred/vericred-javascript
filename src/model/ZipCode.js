@@ -152,7 +152,7 @@ The response would be
   /**
    * The ZipCode model module.
    * @module model/ZipCode
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -182,7 +182,7 @@ The response would be
         obj['code'] = ApiClient.convertToType(data['code'], 'String');
       }
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
     }
     return obj;
@@ -195,10 +195,9 @@ The response would be
   exports.prototype['code'] = undefined;
   /**
    * Primary key
-   * @member {Integer} id
+   * @member {Number} id
    */
   exports.prototype['id'] = undefined;
-
 
 
 

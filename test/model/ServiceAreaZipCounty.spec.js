@@ -131,87 +131,65 @@ The response would be
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    // AMD.
+    define(['expect.js', '../../src/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    if (!root.vericredClient) {
-      root.vericredClient = {};
-    }
-    root.vericredClient.PlanZipCounty = factory(root.vericredClient.ApiClient);
+    factory(root.expect, root.vericredClient);
   }
-}(this, function(ApiClient) {
+}(this, function(expect, vericredClient) {
   'use strict';
 
+  var instance;
 
+  beforeEach(function() {
+    instance = new vericredClient.ServiceAreaZipCounty();
+  });
 
-
-  /**
-   * The PlanZipCounty model module.
-   * @module model/PlanZipCounty
-   * @version 0.0.6
-   */
-
-  /**
-   * Constructs a new <code>PlanZipCounty</code>.
-   * @alias module:model/PlanZipCounty
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
-
-
-  };
-
-  /**
-   * Constructs a <code>PlanZipCounty</code> from a plain JavaScript object, optionally creating a new instance.
-   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-   * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PlanZipCounty} obj Optional instance to populate.
-   * @return {module:model/PlanZipCounty} The populated <code>PlanZipCounty</code> instance.
-   */
-  exports.constructFromObject = function(data, obj) {
-    if (data) {
-      obj = obj || new exports();
-
-      if (data.hasOwnProperty('plan_id')) {
-        obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'Integer');
-      }
-      if (data.hasOwnProperty('county_id')) {
-        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Integer');
-      }
-      if (data.hasOwnProperty('zip_code_id')) {
-        obj['zip_code_id'] = ApiClient.convertToType(data['zip_code_id'], 'Integer');
-      }
-    }
-    return obj;
+  var getProperty = function(object, getter, property) {
+    // Use getter method if present; otherwise, get the property directly.
+    if (typeof object[getter] === 'function')
+      return object[getter]();
+    else
+      return object[property];
   }
 
-  /**
-   * Foreign key to plan
-   * @member {Integer} plan_id
-   */
-  exports.prototype['plan_id'] = undefined;
-  /**
-   * Foreign key to county
-   * @member {Integer} county_id
-   */
-  exports.prototype['county_id'] = undefined;
-  /**
-   * Foreign key to zip code
-   * @member {Integer} zip_code_id
-   */
-  exports.prototype['zip_code_id'] = undefined;
+  var setProperty = function(object, setter, property, value) {
+    // Use setter method if present; otherwise, set the property directly.
+    if (typeof object[setter] === 'function')
+      object[setter](value);
+    else
+      object[property] = value;
+  }
 
+  describe('ServiceAreaZipCounty', function() {
+    it('should create an instance of ServiceAreaZipCounty', function() {
+      // uncomment below and update the code to test ServiceAreaZipCounty
+      //var instane = new vericredClient.ServiceAreaZipCounty();
+      //expect(instance).to.be.a(vericredClient.ServiceAreaZipCounty);
+    });
 
+    it('should have the property countyId (base name: "county_id")', function() {
+      // uncomment below and update the code to test the property countyId
+      //var instane = new vericredClient.ServiceAreaZipCounty();
+      //expect(instance).to.be();
+    });
 
+    it('should have the property serviceAreaId (base name: "service_area_id")', function() {
+      // uncomment below and update the code to test the property serviceAreaId
+      //var instane = new vericredClient.ServiceAreaZipCounty();
+      //expect(instance).to.be();
+    });
 
-  return exports;
+    it('should have the property zipCodeId (base name: "zip_code_id")', function() {
+      // uncomment below and update the code to test the property zipCodeId
+      //var instane = new vericredClient.ServiceAreaZipCounty();
+      //expect(instance).to.be();
+    });
+
+  });
+
 }));
-
-

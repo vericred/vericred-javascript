@@ -152,7 +152,7 @@ The response would be
   /**
    * The RequestProvidersSearch model module.
    * @module model/RequestProvidersSearch
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -162,6 +162,7 @@ The response would be
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -190,14 +191,17 @@ The response would be
       if (data.hasOwnProperty('hios_ids')) {
         obj['hios_ids'] = ApiClient.convertToType(data['hios_ids'], ['String']);
       }
+      if (data.hasOwnProperty('min_score')) {
+        obj['min_score'] = ApiClient.convertToType(data['min_score'], 'Number');
+      }
       if (data.hasOwnProperty('page')) {
-        obj['page'] = ApiClient.convertToType(data['page'], 'Integer');
+        obj['page'] = ApiClient.convertToType(data['page'], 'Number');
       }
       if (data.hasOwnProperty('per_page')) {
-        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Integer');
+        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Number');
       }
       if (data.hasOwnProperty('radius')) {
-        obj['radius'] = ApiClient.convertToType(data['radius'], 'Integer');
+        obj['radius'] = ApiClient.convertToType(data['radius'], 'Number');
       }
       if (data.hasOwnProperty('search_term')) {
         obj['search_term'] = ApiClient.convertToType(data['search_term'], 'String');
@@ -223,18 +227,23 @@ The response would be
    */
   exports.prototype['hios_ids'] = undefined;
   /**
+   * Minimum search threshold to be included in the results
+   * @member {Number} min_score
+   */
+  exports.prototype['min_score'] = undefined;
+  /**
    * Page number
-   * @member {Integer} page
+   * @member {Number} page
    */
   exports.prototype['page'] = undefined;
   /**
    * Number of records to return per page
-   * @member {Integer} per_page
+   * @member {Number} per_page
    */
   exports.prototype['per_page'] = undefined;
   /**
    * Radius (in miles) to use to limit results
-   * @member {Integer} radius
+   * @member {Number} radius
    */
   exports.prototype['radius'] = undefined;
   /**
@@ -252,7 +261,6 @@ The response would be
    * @member {String} type
    */
   exports.prototype['type'] = undefined;
-
 
 
 

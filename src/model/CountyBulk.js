@@ -152,7 +152,7 @@ The response would be
   /**
    * The CountyBulk model module.
    * @module model/CountyBulk
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -162,6 +162,8 @@ The response would be
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -188,6 +190,12 @@ The response would be
       if (data.hasOwnProperty('state_id')) {
         obj['state_id'] = ApiClient.convertToType(data['state_id'], 'String');
       }
+      if (data.hasOwnProperty('rating_area_count')) {
+        obj['rating_area_count'] = ApiClient.convertToType(data['rating_area_count'], 'String');
+      }
+      if (data.hasOwnProperty('service_area_count')) {
+        obj['service_area_count'] = ApiClient.convertToType(data['service_area_count'], 'String');
+      }
     }
     return obj;
   }
@@ -207,7 +215,16 @@ The response would be
    * @member {String} state_id
    */
   exports.prototype['state_id'] = undefined;
-
+  /**
+   * Count of unique rating areas in the county
+   * @member {String} rating_area_count
+   */
+  exports.prototype['rating_area_count'] = undefined;
+  /**
+   * Count of unique service areas in the county
+   * @member {String} service_area_count
+   */
+  exports.prototype['service_area_count'] = undefined;
 
 
 

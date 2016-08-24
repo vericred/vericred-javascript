@@ -149,7 +149,7 @@ The response would be
   /**
    * Networks service.
    * @module api/NetworksApi
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -176,10 +176,10 @@ The response would be
      * A network is a list of the doctors, other health care providers, and hospitals that a plan has contracted with to provide medical care to its members. This endpoint is paginated.
      * @param {String} carrierId Carrier HIOS Issuer ID
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page Page of paginated response
-     * @param {Integer} opts.perPage Responses per page
+     * @param {Number} opts.page Page of paginated response
+     * @param {Number} opts.perPage Responses per page
      * @param {module:api/NetworksApi~listNetworksCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/NetworkSearchResponse}
+     * data is of type: {@link module:model/NetworkSearchResponse}
      */
     this.listNetworks = function(carrierId, opts, callback) {
       opts = opts || {};

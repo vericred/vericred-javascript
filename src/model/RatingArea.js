@@ -152,7 +152,7 @@ The response would be
   /**
    * The RatingArea model module.
    * @module model/RatingArea
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -198,7 +198,6 @@ The response would be
    * @member {String} state_id
    */
   exports.prototype['state_id'] = undefined;
-
 
 
 

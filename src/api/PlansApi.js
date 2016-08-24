@@ -132,24 +132,24 @@ The response would be
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PlanSearchResponse', 'model/RequestPlanFind'], factory);
+    define(['ApiClient', 'model/PlanSearchResponse', 'model/RequestPlanFind', 'model/PlanShowResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PlanSearchResponse'), require('../model/RequestPlanFind'));
+    module.exports = factory(require('../ApiClient'), require('../model/PlanSearchResponse'), require('../model/RequestPlanFind'), require('../model/PlanShowResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.PlansApi = factory(root.vericredClient.ApiClient, root.vericredClient.PlanSearchResponse, root.vericredClient.RequestPlanFind);
+    root.vericredClient.PlansApi = factory(root.vericredClient.ApiClient, root.vericredClient.PlanSearchResponse, root.vericredClient.RequestPlanFind, root.vericredClient.PlanShowResponse);
   }
-}(this, function(ApiClient, PlanSearchResponse, RequestPlanFind) {
+}(this, function(ApiClient, PlanSearchResponse, RequestPlanFind, PlanShowResponse) {
   'use strict';
 
   /**
    * Plans service.
    * @module api/PlansApi
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -177,7 +177,7 @@ The response would be
      * @param {Object} opts Optional parameters
      * @param {module:model/RequestPlanFind} opts.body 
      * @param {module:api/PlansApi~findPlansCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PlanSearchResponse}
+     * data is of type: {@link module:model/PlanSearchResponse}
      */
     this.findPlans = function(opts, callback) {
       opts = opts || {};
@@ -200,6 +200,49 @@ The response would be
 
       return this.apiClient.callApi(
         '/plans/search', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the showPlan operation.
+     * @callback module:api/PlansApi~showPlanCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PlanShowResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Show Plan
+     * Show the details of an individual Plan.  This includes deductibles, maximums out of pocket, and co-pay/coinsurance for benefits
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.year Plan year (defaults to current year)
+     * @param {module:api/PlansApi~showPlanCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PlanShowResponse}
+     */
+    this.showPlan = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'year': opts['year']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Vericred-Api-Key'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PlanShowResponse;
+
+      return this.apiClient.callApi(
+        '/plans/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
