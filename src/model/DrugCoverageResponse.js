@@ -152,7 +152,7 @@ The response would be
   /**
    * The DrugCoverageResponse model module.
    * @module model/DrugCoverageResponse
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -216,7 +216,6 @@ The response would be
    * @member {Array.<module:model/DrugPackage>} drug_packages
    */
   exports.prototype['drug_packages'] = undefined;
-
 
 
 

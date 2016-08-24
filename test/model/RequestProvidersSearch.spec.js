@@ -184,6 +184,12 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property minScore (base name: "min_score")', function() {
+      // uncomment below and update the code to test the property minScore
+      //var instane = new vericredClient.RequestProvidersSearch();
+      //expect(instance).to.be();
+    });
+
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
       //var instane = new vericredClient.RequestProvidersSearch();

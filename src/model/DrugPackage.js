@@ -152,7 +152,7 @@ The response would be
   /**
    * The DrugPackage model module.
    * @module model/DrugPackage
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -198,7 +198,6 @@ The response would be
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
-
 
 
 

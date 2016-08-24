@@ -152,7 +152,7 @@ The response would be
   /**
    * The ProvidersSearchResponse model module.
    * @module model/ProvidersSearchResponse
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -207,7 +207,6 @@ The response would be
    * @member {Array.<module:model/State>} states
    */
   exports.prototype['states'] = undefined;
-
 
 
 

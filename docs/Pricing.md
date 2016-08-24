@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**age** | **Integer** | Age of applicant | [optional] 
+**age** | **Number** | Age of applicant | [optional] 
 **effectiveDate** | **Date** | Effective date of plan | [optional] 
 **expirationDate** | **Date** | Plan expiration date | [optional] 
-**planId** | **Integer** | Foreign key to plans | [optional] 
+**planId** | **Number** | Foreign key to plans | [optional] 
 **premiumChildOnly** | **Number** | Child-only premium | [optional] 
 **premiumFamily** | **Number** | Family premium | [optional] 
 **premiumSingle** | **Number** | Single-person premium | [optional] 

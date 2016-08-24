@@ -1,8 +1,8 @@
-# vericredClient.RequestPlanFindProvider
+# vericredClient.RequestPlanFindDrugPackage
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**npi** | **Number** | NPI of provider to search for | [optional] 
+**id** | **String** | National Drug Code ID (Package) | [optional] 
 
 

@@ -190,6 +190,18 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property ratingAreaCount (base name: "rating_area_count")', function() {
+      // uncomment below and update the code to test the property ratingAreaCount
+      //var instane = new vericredClient.CountyBulk();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property serviceAreaCount (base name: "service_area_count")', function() {
+      // uncomment below and update the code to test the property serviceAreaCount
+      //var instane = new vericredClient.CountyBulk();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

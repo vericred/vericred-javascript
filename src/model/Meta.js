@@ -152,7 +152,7 @@ The response would be
   /**
    * The Meta model module.
    * @module model/Meta
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -178,7 +178,7 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('total')) {
-        obj['total'] = ApiClient.convertToType(data['total'], 'Integer');
+        obj['total'] = ApiClient.convertToType(data['total'], 'Number');
       }
     }
     return obj;
@@ -186,10 +186,9 @@ The response would be
 
   /**
    * Number of entities returned
-   * @member {Integer} total
+   * @member {Number} total
    */
   exports.prototype['total'] = undefined;
-
 
 
 

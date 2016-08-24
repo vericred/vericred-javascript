@@ -149,7 +149,7 @@ The response would be
   /**
    * Drugs service.
    * @module api/DrugsApi
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -178,7 +178,7 @@ The response would be
      * @param {String} audience Two-character state code
      * @param {String} stateCode Two-character state code
      * @param {module:api/DrugsApi~getDrugCoveragesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/DrugCoverageResponse}
+     * data is of type: {@link module:model/DrugCoverageResponse}
      */
     this.getDrugCoverages = function(ndcPackageCode, audience, stateCode, callback) {
       var postBody = null;
@@ -236,7 +236,7 @@ The response would be
      * Search for drugs by proprietary name
      * @param {String} searchTerm Full or partial proprietary name of drug
      * @param {module:api/DrugsApi~listDrugsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/DrugSearchResponse}
+     * data is of type: {@link module:model/DrugSearchResponse}
      */
     this.listDrugs = function(searchTerm, callback) {
       var postBody = null;

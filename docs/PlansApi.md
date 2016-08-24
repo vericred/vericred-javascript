@@ -5,6 +5,7 @@ All URIs are relative to *https://api.vericred.com/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**findPlans**](PlansApi.md#findPlans) | **POST** /plans/search | Find Plans
+[**showPlan**](PlansApi.md#showPlan) | **GET** /plans/{id} | Show Plan
 
 
 <a name="findPlans"></a>
@@ -60,4 +61,58 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+<a name="showPlan"></a>
+# **showPlan**
+> PlanShowResponse showPlan(opts)
+
+Show Plan
+
+Show the details of an individual Plan.  This includes deductibles, maximums out of pocket, and co-pay/coinsurance for benefits
+
+### Example
+```javascript
+var vericredClient = require('vericredClient');
+var defaultClient = vericredClient.ApiClient.default;
+
+// Configure API key authorization: Vericred-Api-Key
+var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
+Vericred-Api-Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Vericred-Api-Key.apiKeyPrefix = 'Token';
+
+var apiInstance = new vericredClient.PlansApi();
+
+var opts = { 
+  'year': 2016 // Number | Plan year (defaults to current year)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.showPlan(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **Number**| Plan year (defaults to current year) | [optional] 
+
+### Return type
+
+[**PlanShowResponse**](PlanShowResponse.md)
+
+### Authorization
+
+[Vericred-Api-Key](../README.md#Vericred-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

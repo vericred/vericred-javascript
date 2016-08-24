@@ -152,7 +152,7 @@ The response would be
   /**
    * The Base model module.
    * @module model/Base
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -189,7 +189,6 @@ The response would be
    * @member {module:model/Meta} meta
    */
   exports.prototype['meta'] = undefined;
-
 
 
 
