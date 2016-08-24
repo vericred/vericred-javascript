@@ -149,7 +149,7 @@ The response would be
   /**
    * ZipCounties service.
    * @module api/ZipCountiesApi
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -176,7 +176,7 @@ The response would be
      * Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  This is because plan pricing requires both of these elements.  Users are unlikely to know their fips code, so we provide this endpoint to look up a &#x60;ZipCounty&#x60; by zip code and return both the selected zip and fips codes.
      * @param {String} zipPrefix Partial five-digit Zip
      * @param {module:api/ZipCountiesApi~getZipCountiesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ZipCountyResponse}
+     * data is of type: {@link module:model/ZipCountyResponse}
      */
     this.getZipCounties = function(zipPrefix, callback) {
       var postBody = null;

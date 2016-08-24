@@ -152,7 +152,7 @@ The response would be
   /**
    * The ProviderShowResponse model module.
    * @module model/ProviderShowResponse
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -189,7 +189,6 @@ The response would be
    * @member {module:model/Provider} provider
    */
   exports.prototype['provider'] = undefined;
-
 
 
 

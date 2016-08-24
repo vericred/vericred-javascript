@@ -152,7 +152,7 @@ The response would be
   /**
    * The Provider model module.
    * @module model/Provider
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -235,7 +235,7 @@ The response would be
         obj['hios_ids'] = ApiClient.convertToType(data['hios_ids'], ['String']);
       }
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
       if (data.hasOwnProperty('last_name')) {
         obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
@@ -250,7 +250,7 @@ The response would be
         obj['middle_name'] = ApiClient.convertToType(data['middle_name'], 'String');
       }
       if (data.hasOwnProperty('network_ids')) {
-        obj['network_ids'] = ApiClient.convertToType(data['network_ids'], ['Integer']);
+        obj['network_ids'] = ApiClient.convertToType(data['network_ids'], ['Number']);
       }
       if (data.hasOwnProperty('personal_phone')) {
         obj['personal_phone'] = ApiClient.convertToType(data['personal_phone'], 'String');
@@ -268,7 +268,7 @@ The response would be
         obj['state'] = ApiClient.convertToType(data['state'], 'String');
       }
       if (data.hasOwnProperty('state_id')) {
-        obj['state_id'] = ApiClient.convertToType(data['state_id'], 'Integer');
+        obj['state_id'] = ApiClient.convertToType(data['state_id'], 'Number');
       }
       if (data.hasOwnProperty('street_line_1')) {
         obj['street_line_1'] = ApiClient.convertToType(data['street_line_1'], 'String');
@@ -344,7 +344,7 @@ The response would be
   exports.prototype['hios_ids'] = undefined;
   /**
    * National Provider Index (NPI) number
-   * @member {Integer} id
+   * @member {Number} id
    */
   exports.prototype['id'] = undefined;
   /**
@@ -369,7 +369,7 @@ The response would be
   exports.prototype['middle_name'] = undefined;
   /**
    * Array of network ids
-   * @member {Array.<Integer>} network_ids
+   * @member {Array.<Number>} network_ids
    */
   exports.prototype['network_ids'] = undefined;
   /**
@@ -399,7 +399,7 @@ The response would be
   exports.prototype['state'] = undefined;
   /**
    * Foreign key to States
-   * @member {Integer} state_id
+   * @member {Number} state_id
    */
   exports.prototype['state_id'] = undefined;
   /**
@@ -432,7 +432,6 @@ The response would be
    * @member {String} zip_code
    */
   exports.prototype['zip_code'] = undefined;
-
 
 
 

@@ -146,7 +146,7 @@ The response would be
   var instance;
 
   beforeEach(function() {
-    instance = new vericredClient.PlanZipCounty();
+    instance = new vericredClient.PlanShowResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -165,28 +165,16 @@ The response would be
       object[property] = value;
   }
 
-  describe('PlanZipCounty', function() {
-    it('should create an instance of PlanZipCounty', function() {
-      // uncomment below and update the code to test PlanZipCounty
-      //var instane = new vericredClient.PlanZipCounty();
-      //expect(instance).to.be.a(vericredClient.PlanZipCounty);
+  describe('PlanShowResponse', function() {
+    it('should create an instance of PlanShowResponse', function() {
+      // uncomment below and update the code to test PlanShowResponse
+      //var instane = new vericredClient.PlanShowResponse();
+      //expect(instance).to.be.a(vericredClient.PlanShowResponse);
     });
 
-    it('should have the property planId (base name: "plan_id")', function() {
-      // uncomment below and update the code to test the property planId
-      //var instane = new vericredClient.PlanZipCounty();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property countyId (base name: "county_id")', function() {
-      // uncomment below and update the code to test the property countyId
-      //var instane = new vericredClient.PlanZipCounty();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property zipCodeId (base name: "zip_code_id")', function() {
-      // uncomment below and update the code to test the property zipCodeId
-      //var instane = new vericredClient.PlanZipCounty();
+    it('should have the property plan (base name: "plan")', function() {
+      // uncomment below and update the code to test the property plan
+      //var instane = new vericredClient.PlanShowResponse();
       //expect(instance).to.be();
     });
 

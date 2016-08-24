@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Primary Key of State | [optional] 
+**id** | **Number** | Primary Key of State | [optional] 
 **name** | **String** | Name of state | [optional] 
 **code** | **String** | 2 letter code for state | [optional] 
 **fipsNumber** | **String** | National FIPs number | [optional] 

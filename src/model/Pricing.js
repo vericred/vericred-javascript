@@ -152,7 +152,7 @@ The response would be
   /**
    * The Pricing model module.
    * @module model/Pricing
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -188,7 +188,7 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('age')) {
-        obj['age'] = ApiClient.convertToType(data['age'], 'Integer');
+        obj['age'] = ApiClient.convertToType(data['age'], 'Number');
       }
       if (data.hasOwnProperty('effective_date')) {
         obj['effective_date'] = ApiClient.convertToType(data['effective_date'], 'Date');
@@ -197,7 +197,7 @@ The response would be
         obj['expiration_date'] = ApiClient.convertToType(data['expiration_date'], 'Date');
       }
       if (data.hasOwnProperty('plan_id')) {
-        obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'Integer');
+        obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'Number');
       }
       if (data.hasOwnProperty('premium_child_only')) {
         obj['premium_child_only'] = ApiClient.convertToType(data['premium_child_only'], 'Number');
@@ -226,7 +226,7 @@ The response would be
 
   /**
    * Age of applicant
-   * @member {Integer} age
+   * @member {Number} age
    */
   exports.prototype['age'] = undefined;
   /**
@@ -241,7 +241,7 @@ The response would be
   exports.prototype['expiration_date'] = undefined;
   /**
    * Foreign key to plans
-   * @member {Integer} plan_id
+   * @member {Number} plan_id
    */
   exports.prototype['plan_id'] = undefined;
   /**
@@ -279,7 +279,6 @@ The response would be
    * @member {String} rating_area_id
    */
   exports.prototype['rating_area_id'] = undefined;
-
 
 
 

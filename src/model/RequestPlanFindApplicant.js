@@ -152,7 +152,7 @@ The response would be
   /**
    * The RequestPlanFindApplicant model module.
    * @module model/RequestPlanFindApplicant
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -178,7 +178,7 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('age')) {
-        obj['age'] = ApiClient.convertToType(data['age'], 'Integer');
+        obj['age'] = ApiClient.convertToType(data['age'], 'Number');
       }
     }
     return obj;
@@ -186,10 +186,9 @@ The response would be
 
   /**
    * Age of applicant to search for
-   * @member {Integer} age
+   * @member {Number} age
    */
   exports.prototype['age'] = undefined;
-
 
 
 

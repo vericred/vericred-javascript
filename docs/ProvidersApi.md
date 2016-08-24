@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getProvider"></a>
 # **getProvider**
-> ProviderShowResponse getProvider(npi)
+> ProviderShowResponse getProvider(npi, opts)
 
 Find a Provider
 
@@ -31,6 +31,10 @@ var apiInstance = new vericredClient.ProvidersApi();
 
 var npi = "1234567890"; // String | NPI number
 
+var opts = { 
+  'year': "2016", // String | Only show plan ids for the given year
+  'state': "NY" // String | Only show plan ids for the given state
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -39,7 +43,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getProvider(npi, callback);
+apiInstance.getProvider(npi, opts, callback);
 ```
 
 ### Parameters
@@ -47,6 +51,8 @@ apiInstance.getProvider(npi, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **npi** | **String**| NPI number | 
+ **year** | **String**| Only show plan ids for the given year | [optional] 
+ **state** | **String**| Only show plan ids for the given state | [optional] 
 
 ### Return type
 

@@ -141,7 +141,7 @@ The response would be
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.Applicant = factory(root.vericredClient.ApiClient);
+    root.vericredClient.ServiceArea = factory(root.vericredClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -150,14 +150,14 @@ The response would be
 
 
   /**
-   * The Applicant model module.
-   * @module model/Applicant
+   * The ServiceArea model module.
+   * @module model/ServiceArea
    * @version 0.0.7
    */
 
   /**
-   * Constructs a new <code>Applicant</code>.
-   * @alias module:model/Applicant
+   * Constructs a new <code>ServiceArea</code>.
+   * @alias module:model/ServiceArea
    * @class
    */
   var exports = function() {
@@ -166,43 +166,27 @@ The response would be
 
 
 
-
-
-
-
   };
 
   /**
-   * Constructs a <code>Applicant</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ServiceArea</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Applicant} obj Optional instance to populate.
-   * @return {module:model/Applicant} The populated <code>Applicant</code> instance.
+   * @param {module:model/ServiceArea} obj Optional instance to populate.
+   * @return {module:model/ServiceArea} The populated <code>ServiceArea</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
-      if (data.hasOwnProperty('dob')) {
-        obj['dob'] = ApiClient.convertToType(data['dob'], 'Date');
-      }
-      if (data.hasOwnProperty('member_id')) {
-        obj['member_id'] = ApiClient.convertToType(data['member_id'], 'String');
+      if (data.hasOwnProperty('issuer_id')) {
+        obj['issuer_id'] = ApiClient.convertToType(data['issuer_id'], 'String');
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('relationship')) {
-        obj['relationship'] = ApiClient.convertToType(data['relationship'], 'String');
-      }
-      if (data.hasOwnProperty('smoker')) {
-        obj['smoker'] = ApiClient.convertToType(data['smoker'], 'Boolean');
-      }
-      if (data.hasOwnProperty('ssn')) {
-        obj['ssn'] = ApiClient.convertToType(data['ssn'], 'String');
       }
     }
     return obj;
@@ -210,39 +194,19 @@ The response would be
 
   /**
    * Primary key
-   * @member {Number} id
+   * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
-   * Date of Birth
-   * @member {Date} dob
+   * Issuer foreign key
+   * @member {String} issuer_id
    */
-  exports.prototype['dob'] = undefined;
+  exports.prototype['issuer_id'] = undefined;
   /**
-   * Member token
-   * @member {String} member_id
-   */
-  exports.prototype['member_id'] = undefined;
-  /**
-   * Full name of the Applicant
+   * Name of the Service Area
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
-  /**
-   * Relationship of the Applicant to the Member
-   * @member {String} relationship
-   */
-  exports.prototype['relationship'] = undefined;
-  /**
-   * Does the Applicant smoke?
-   * @member {Boolean} smoker
-   */
-  exports.prototype['smoker'] = undefined;
-  /**
-   * Applicant's Social Security Number
-   * @member {String} ssn
-   */
-  exports.prototype['ssn'] = undefined;
 
 
 

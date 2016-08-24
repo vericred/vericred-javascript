@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**age** | **Integer** | Age of applicant to search for | [optional] 
+**age** | **Number** | Age of applicant to search for | [optional] 
 
 

@@ -152,7 +152,7 @@ The response would be
   /**
    * The RequestPlanFindProvider model module.
    * @module model/RequestPlanFindProvider
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -178,7 +178,7 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('npi')) {
-        obj['npi'] = ApiClient.convertToType(data['npi'], 'Integer');
+        obj['npi'] = ApiClient.convertToType(data['npi'], 'Number');
       }
     }
     return obj;
@@ -186,10 +186,9 @@ The response would be
 
   /**
    * NPI of provider to search for
-   * @member {Integer} npi
+   * @member {Number} npi
    */
   exports.prototype['npi'] = undefined;
-
 
 
 

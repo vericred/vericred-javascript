@@ -152,7 +152,7 @@ The response would be
   /**
    * The County model module.
    * @module model/County
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -184,7 +184,7 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
       if (data.hasOwnProperty('fips_code')) {
         obj['fips_code'] = ApiClient.convertToType(data['fips_code'], 'String');
@@ -196,7 +196,7 @@ The response would be
         obj['state_code'] = ApiClient.convertToType(data['state_code'], 'String');
       }
       if (data.hasOwnProperty('state_id')) {
-        obj['state_id'] = ApiClient.convertToType(data['state_id'], 'Integer');
+        obj['state_id'] = ApiClient.convertToType(data['state_id'], 'Number');
       }
       if (data.hasOwnProperty('state_live')) {
         obj['state_live'] = ApiClient.convertToType(data['state_live'], 'Boolean');
@@ -210,7 +210,7 @@ The response would be
 
   /**
    * Primary key
-   * @member {Integer} id
+   * @member {Number} id
    */
   exports.prototype['id'] = undefined;
   /**
@@ -230,7 +230,7 @@ The response would be
   exports.prototype['state_code'] = undefined;
   /**
    * state relationship
-   * @member {Integer} state_id
+   * @member {Number} state_id
    */
   exports.prototype['state_id'] = undefined;
   /**
@@ -243,7 +243,6 @@ The response would be
    * @member {Boolean} state_live_for_business
    */
   exports.prototype['state_live_for_business'] = undefined;
-
 
 
 

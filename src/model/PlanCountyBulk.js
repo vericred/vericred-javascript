@@ -152,7 +152,7 @@ The response would be
   /**
    * The PlanCountyBulk model module.
    * @module model/PlanCountyBulk
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -179,10 +179,10 @@ The response would be
       obj = obj || new exports();
 
       if (data.hasOwnProperty('plan_id')) {
-        obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'Integer');
+        obj['plan_id'] = ApiClient.convertToType(data['plan_id'], 'Number');
       }
       if (data.hasOwnProperty('county_id')) {
-        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Integer');
+        obj['county_id'] = ApiClient.convertToType(data['county_id'], 'Number');
       }
     }
     return obj;
@@ -190,15 +190,14 @@ The response would be
 
   /**
    * Foreign key to plan
-   * @member {Integer} plan_id
+   * @member {Number} plan_id
    */
   exports.prototype['plan_id'] = undefined;
   /**
    * Foreign key to county
-   * @member {Integer} county_id
+   * @member {Number} county_id
    */
   exports.prototype['county_id'] = undefined;
-
 
 
 

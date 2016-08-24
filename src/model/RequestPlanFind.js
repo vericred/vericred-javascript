@@ -132,18 +132,18 @@ The response would be
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DrugPackage', 'model/RequestPlanFindApplicant', 'model/RequestPlanFindProvider'], factory);
+    define(['ApiClient', 'model/RequestPlanFindApplicant', 'model/RequestPlanFindDrugPackage', 'model/RequestPlanFindProvider'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DrugPackage'), require('./RequestPlanFindApplicant'), require('./RequestPlanFindProvider'));
+    module.exports = factory(require('../ApiClient'), require('./RequestPlanFindApplicant'), require('./RequestPlanFindDrugPackage'), require('./RequestPlanFindProvider'));
   } else {
     // Browser globals (root is window)
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.RequestPlanFind = factory(root.vericredClient.ApiClient, root.vericredClient.DrugPackage, root.vericredClient.RequestPlanFindApplicant, root.vericredClient.RequestPlanFindProvider);
+    root.vericredClient.RequestPlanFind = factory(root.vericredClient.ApiClient, root.vericredClient.RequestPlanFindApplicant, root.vericredClient.RequestPlanFindDrugPackage, root.vericredClient.RequestPlanFindProvider);
   }
-}(this, function(ApiClient, DrugPackage, RequestPlanFindApplicant, RequestPlanFindProvider) {
+}(this, function(ApiClient, RequestPlanFindApplicant, RequestPlanFindDrugPackage, RequestPlanFindProvider) {
   'use strict';
 
 
@@ -152,7 +152,7 @@ The response would be
   /**
    * The RequestPlanFind model module.
    * @module model/RequestPlanFind
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -162,6 +162,7 @@ The response would be
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -195,16 +196,19 @@ The response would be
         obj['enrollment_date'] = ApiClient.convertToType(data['enrollment_date'], 'String');
       }
       if (data.hasOwnProperty('drug_packages')) {
-        obj['drug_packages'] = ApiClient.convertToType(data['drug_packages'], [DrugPackage]);
+        obj['drug_packages'] = ApiClient.convertToType(data['drug_packages'], [RequestPlanFindDrugPackage]);
       }
       if (data.hasOwnProperty('fips_code')) {
         obj['fips_code'] = ApiClient.convertToType(data['fips_code'], 'String');
       }
       if (data.hasOwnProperty('household_income')) {
-        obj['household_income'] = ApiClient.convertToType(data['household_income'], 'Integer');
+        obj['household_income'] = ApiClient.convertToType(data['household_income'], 'Number');
       }
       if (data.hasOwnProperty('household_size')) {
-        obj['household_size'] = ApiClient.convertToType(data['household_size'], 'Integer');
+        obj['household_size'] = ApiClient.convertToType(data['household_size'], 'Number');
+      }
+      if (data.hasOwnProperty('ids')) {
+        obj['ids'] = ApiClient.convertToType(data['ids'], ['Number']);
       }
       if (data.hasOwnProperty('market')) {
         obj['market'] = ApiClient.convertToType(data['market'], 'String');
@@ -213,10 +217,10 @@ The response would be
         obj['providers'] = ApiClient.convertToType(data['providers'], [RequestPlanFindProvider]);
       }
       if (data.hasOwnProperty('page')) {
-        obj['page'] = ApiClient.convertToType(data['page'], 'Integer');
+        obj['page'] = ApiClient.convertToType(data['page'], 'Number');
       }
       if (data.hasOwnProperty('per_page')) {
-        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Integer');
+        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Number');
       }
       if (data.hasOwnProperty('sort')) {
         obj['sort'] = ApiClient.convertToType(data['sort'], 'String');
@@ -240,7 +244,7 @@ The response would be
   exports.prototype['enrollment_date'] = undefined;
   /**
    * National Drug Code Package Id
-   * @member {Array.<module:model/DrugPackage>} drug_packages
+   * @member {Array.<module:model/RequestPlanFindDrugPackage>} drug_packages
    */
   exports.prototype['drug_packages'] = undefined;
   /**
@@ -250,14 +254,19 @@ The response would be
   exports.prototype['fips_code'] = undefined;
   /**
    * Total household income.
-   * @member {Integer} household_income
+   * @member {Number} household_income
    */
   exports.prototype['household_income'] = undefined;
   /**
    * Number of people living in household.
-   * @member {Integer} household_size
+   * @member {Number} household_size
    */
   exports.prototype['household_size'] = undefined;
+  /**
+   * List of plan IDs to filter by
+   * @member {Array.<Number>} ids
+   */
+  exports.prototype['ids'] = undefined;
   /**
    * Type of plan to search for.
    * @member {String} market
@@ -270,12 +279,12 @@ The response would be
   exports.prototype['providers'] = undefined;
   /**
    * Selected page of paginated response.
-   * @member {Integer} page
+   * @member {Number} page
    */
   exports.prototype['page'] = undefined;
   /**
    * Results per page of response.
-   * @member {Integer} per_page
+   * @member {Number} per_page
    */
   exports.prototype['per_page'] = undefined;
   /**
@@ -288,7 +297,6 @@ The response would be
    * @member {String} zip_code
    */
   exports.prototype['zip_code'] = undefined;
-
 
 
 

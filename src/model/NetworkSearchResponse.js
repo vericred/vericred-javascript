@@ -152,7 +152,7 @@ The response would be
   /**
    * The NetworkSearchResponse model module.
    * @module model/NetworkSearchResponse
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -198,7 +198,6 @@ The response would be
    * @member {Array.<module:model/Network>} networks
    */
   exports.prototype['networks'] = undefined;
-
 
 
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Primary key | [optional] 
+**id** | **Number** | Primary key | [optional] 
 **dob** | **Date** | Date of Birth | [optional] 
 **memberId** | **String** | Member token | [optional] 
 **name** | **String** | Full name of the Applicant | [optional] 

@@ -152,7 +152,7 @@ The response would be
   /**
    * The ZipCountiesResponse model module.
    * @module model/ZipCountiesResponse
-   * @version 0.0.6
+   * @version 0.0.7
    */
 
   /**
@@ -216,7 +216,6 @@ The response would be
    * @member {Array.<module:model/ZipCode>} zip_codes
    */
   exports.prototype['zip_codes'] = undefined;
-
 
 
 

@@ -244,6 +244,12 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property displayName (base name: "display_name")', function() {
+      // uncomment below and update the code to test the property displayName
+      //var instane = new vericredClient.Plan();
+      //expect(instance).to.be();
+    });
+
     it('should have the property dpRider (base name: "dp_rider")', function() {
       // uncomment below and update the code to test the property dpRider
       //var instane = new vericredClient.Plan();
@@ -330,6 +336,12 @@ The response would be
 
     it('should have the property hospiceService (base name: "hospice_service")', function() {
       // uncomment below and update the code to test the property hospiceService
+      //var instane = new vericredClient.Plan();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property hsaEligible (base name: "hsa_eligible")', function() {
+      // uncomment below and update the code to test the property hsaEligible
       //var instane = new vericredClient.Plan();
       //expect(instance).to.be();
     });
@@ -534,6 +546,12 @@ The response would be
 
     it('should have the property rehabilitationServices (base name: "rehabilitation_services")', function() {
       // uncomment below and update the code to test the property rehabilitationServices
+      //var instane = new vericredClient.Plan();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property serviceAreaId (base name: "service_area_id")', function() {
+      // uncomment below and update the code to test the property serviceAreaId
       //var instane = new vericredClient.Plan();
       //expect(instance).to.be();
     });

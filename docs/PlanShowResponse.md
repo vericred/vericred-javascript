@@ -1,8 +1,8 @@
-# vericredClient.RequestPlanFindProvider
+# vericredClient.PlanShowResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**npi** | **Number** | NPI of provider to search for | [optional] 
+**plan** | [**Plan**](Plan.md) | Plan response | [optional] 
 
 
