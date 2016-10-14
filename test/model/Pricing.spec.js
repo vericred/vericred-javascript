@@ -238,6 +238,18 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property premiumSource (base name: "premium_source")', function() {
+      // uncomment below and update the code to test the property premiumSource
+      //var instane = new vericredClient.Pricing();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instane = new vericredClient.Pricing();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -14,5 +14,7 @@ Name | Type | Description | Notes
 **premiumSingleAndSpouse** | **Number** | Person with spouse premium | [optional] 
 **premiumSingleSmoker** | **Number** | Premium for single smoker | [optional] 
 **ratingAreaId** | **String** | Foreign key to rating areas | [optional] 
+**premiumSource** | **String** | Where was this pricing data extracted from? | [optional] 
+**updatedAt** | **String** | Time when pricing was last updated | [optional] 
 
 

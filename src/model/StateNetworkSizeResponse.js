@@ -132,32 +132,32 @@ The response would be
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/Meta', 'model/NetworkSize'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Meta'), require('./NetworkSize'));
   } else {
     // Browser globals (root is window)
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.RequestProvidersSearch = factory(root.vericredClient.ApiClient);
+    root.vericredClient.StateNetworkSizeResponse = factory(root.vericredClient.ApiClient, root.vericredClient.Meta, root.vericredClient.NetworkSize);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Meta, NetworkSize) {
   'use strict';
 
 
 
 
   /**
-   * The RequestProvidersSearch model module.
-   * @module model/RequestProvidersSearch
+   * The StateNetworkSizeResponse model module.
+   * @module model/StateNetworkSizeResponse
    * @version 0.0.7
    */
 
   /**
-   * Constructs a new <code>RequestProvidersSearch</code>.
-   * @alias module:model/RequestProvidersSearch
+   * Constructs a new <code>StateNetworkSizeResponse</code>.
+   * @alias module:model/StateNetworkSizeResponse
    * @class
    */
   var exports = function() {
@@ -165,111 +165,39 @@ The response would be
 
 
 
-
-
-
-
-
-
-
-
   };
 
   /**
-   * Constructs a <code>RequestProvidersSearch</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>StateNetworkSizeResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RequestProvidersSearch} obj Optional instance to populate.
-   * @return {module:model/RequestProvidersSearch} The populated <code>RequestProvidersSearch</code> instance.
+   * @param {module:model/StateNetworkSizeResponse} obj Optional instance to populate.
+   * @return {module:model/StateNetworkSizeResponse} The populated <code>StateNetworkSizeResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('accepts_insurance')) {
-        obj['accepts_insurance'] = ApiClient.convertToType(data['accepts_insurance'], 'Boolean');
+      if (data.hasOwnProperty('meta')) {
+        obj['meta'] = Meta.constructFromObject(data['meta']);
       }
-      if (data.hasOwnProperty('hios_ids')) {
-        obj['hios_ids'] = ApiClient.convertToType(data['hios_ids'], ['String']);
-      }
-      if (data.hasOwnProperty('min_score')) {
-        obj['min_score'] = ApiClient.convertToType(data['min_score'], 'Number');
-      }
-      if (data.hasOwnProperty('network_ids')) {
-        obj['network_ids'] = ApiClient.convertToType(data['network_ids'], ['Number']);
-      }
-      if (data.hasOwnProperty('page')) {
-        obj['page'] = ApiClient.convertToType(data['page'], 'Number');
-      }
-      if (data.hasOwnProperty('per_page')) {
-        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Number');
-      }
-      if (data.hasOwnProperty('radius')) {
-        obj['radius'] = ApiClient.convertToType(data['radius'], 'Number');
-      }
-      if (data.hasOwnProperty('search_term')) {
-        obj['search_term'] = ApiClient.convertToType(data['search_term'], 'String');
-      }
-      if (data.hasOwnProperty('zip_code')) {
-        obj['zip_code'] = ApiClient.convertToType(data['zip_code'], 'String');
-      }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('network_sizes')) {
+        obj['network_sizes'] = ApiClient.convertToType(data['network_sizes'], [NetworkSize]);
       }
     }
     return obj;
   }
 
   /**
-   * Limit results to Providers who accept at least one insurance         plan.  Note that the inverse of this filter is not supported and         any value will evaluate to true
-   * @member {Boolean} accepts_insurance
+   * Meta-data
+   * @member {module:model/Meta} meta
    */
-  exports.prototype['accepts_insurance'] = undefined;
+  exports.prototype['meta'] = undefined;
   /**
-   * List of HIOS ids
-   * @member {Array.<String>} hios_ids
+   * Network Sizes
+   * @member {Array.<module:model/NetworkSize>} network_sizes
    */
-  exports.prototype['hios_ids'] = undefined;
-  /**
-   * Minimum search threshold to be included in the results
-   * @member {Number} min_score
-   */
-  exports.prototype['min_score'] = undefined;
-  /**
-   * List of Vericred network ids
-   * @member {Array.<Number>} network_ids
-   */
-  exports.prototype['network_ids'] = undefined;
-  /**
-   * Page number
-   * @member {Number} page
-   */
-  exports.prototype['page'] = undefined;
-  /**
-   * Number of records to return per page
-   * @member {Number} per_page
-   */
-  exports.prototype['per_page'] = undefined;
-  /**
-   * Radius (in miles) to use to limit results
-   * @member {Number} radius
-   */
-  exports.prototype['radius'] = undefined;
-  /**
-   * String to search by
-   * @member {String} search_term
-   */
-  exports.prototype['search_term'] = undefined;
-  /**
-   * Zip Code to search near
-   * @member {String} zip_code
-   */
-  exports.prototype['zip_code'] = undefined;
-  /**
-   * Either organization or individual
-   * @member {String} type
-   */
-  exports.prototype['type'] = undefined;
+  exports.prototype['network_sizes'] = undefined;
 
 
 

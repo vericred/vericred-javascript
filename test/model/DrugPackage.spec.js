@@ -184,6 +184,12 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property medId (base name: "med_id")', function() {
+      // uncomment below and update the code to test the property medId
+      //var instane = new vericredClient.DrugPackage();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

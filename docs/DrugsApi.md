@@ -29,11 +29,11 @@ Vericred-Api-Key.apiKey = 'YOUR API KEY';
 
 var apiInstance = new vericredClient.DrugsApi();
 
-var ndcPackageCode = "12345-4321-11"; // String | NDC package code
+var ndcPackageCode = "07777-3105-01"; // String | NDC package code
 
-var audience = "individual"; // String | Two-character state code
+var audience = "individual"; // String | Plan Audience (individual or small_group)
 
-var stateCode = "NY"; // String | Two-character state code
+var stateCode = "CA"; // String | Two-character state code
 
 
 var callback = function(error, data, response) {
@@ -51,7 +51,7 @@ apiInstance.getDrugCoverages(ndcPackageCode, audience, stateCode, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ndcPackageCode** | **String**| NDC package code | 
- **audience** | **String**| Two-character state code | 
+ **audience** | **String**| Plan Audience (individual or small_group) | 
  **stateCode** | **String**| Two-character state code | 
 
 ### Return type

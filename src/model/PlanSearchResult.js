@@ -234,6 +234,7 @@ The response would be
 
 
 
+
   };
 
   /**
@@ -427,6 +428,9 @@ The response would be
       if (data.hasOwnProperty('premium')) {
         obj['premium'] = ApiClient.convertToType(data['premium'], 'Number');
       }
+      if (data.hasOwnProperty('premium_source')) {
+        obj['premium_source'] = ApiClient.convertToType(data['premium_source'], 'String');
+      }
       if (data.hasOwnProperty('primary_care_physician')) {
         obj['primary_care_physician'] = ApiClient.convertToType(data['primary_care_physician'], 'String');
       }
@@ -470,7 +474,7 @@ The response would be
    */
   exports.prototype['adult_dental'] = undefined;
   /**
-   * 
+   * True if the plan allows dependents up to age 29
    * @member {Boolean} age29_rider
    */
   exports.prototype['age29_rider'] = undefined;
@@ -530,7 +534,7 @@ The response would be
    */
   exports.prototype['display_name'] = undefined;
   /**
-   * Is this a domestic plan?
+   * True if plan does not cover domestic partners
    * @member {Boolean} dp_rider
    */
   exports.prototype['dp_rider'] = undefined;
@@ -575,7 +579,7 @@ The response would be
    */
   exports.prototype['family_medical_moop'] = undefined;
   /**
-   * Is this a family plan?
+   * True if plan does not cover family planning
    * @member {Boolean} fp_rider
    */
   exports.prototype['fp_rider'] = undefined;
@@ -764,6 +768,11 @@ The response would be
    * @member {Number} premium
    */
   exports.prototype['premium'] = undefined;
+  /**
+   * Source of the base pricing data
+   * @member {String} premium_source
+   */
+  exports.prototype['premium_source'] = undefined;
   /**
    * Cost under the plan to visit a Primary Care Physician
    * @member {String} primary_care_physician

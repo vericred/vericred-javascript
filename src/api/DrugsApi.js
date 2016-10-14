@@ -175,7 +175,7 @@ The response would be
      * Search for DrugCoverages
      * Drug Coverages are the specific tier level, quantity limit, prior authorization and step therapy for a given Drug/Plan combination. This endpoint returns all DrugCoverages for a given Drug
      * @param {String} ndcPackageCode NDC package code
-     * @param {String} audience Two-character state code
+     * @param {String} audience Plan Audience (individual or small_group)
      * @param {String} stateCode Two-character state code
      * @param {module:api/DrugsApi~getDrugCoveragesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DrugCoverageResponse}

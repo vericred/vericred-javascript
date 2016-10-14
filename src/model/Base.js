@@ -185,7 +185,7 @@ The response would be
   }
 
   /**
-   * Metadata for query
+   * Meta-data
    * @member {module:model/Meta} meta
    */
   exports.prototype['meta'] = undefined;

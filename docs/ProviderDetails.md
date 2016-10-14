@@ -1,4 +1,4 @@
-# vericredClient.Provider
+# vericredClient.ProviderDetails
 
 ## Properties
 Name | Type | Description | Notes
@@ -31,5 +31,6 @@ Name | Type | Description | Notes
 **title** | **String** | Professional title for the provider (e.g. Dr). | [optional] 
 **type** | **String** | Type of NPI number (individual provider vs organization). | [optional] 
 **zipCode** | **String** | Postal code for the provider&#39;s address (e.g. 11215) | [optional] 
+**hiosIds** | **[String]** | List of HIOS ids for this provider | [optional] 
 
 

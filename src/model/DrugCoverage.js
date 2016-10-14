@@ -169,6 +169,7 @@ The response would be
 
 
 
+
   };
 
   /**
@@ -188,8 +189,8 @@ The response would be
       if (data.hasOwnProperty('drug_package_id')) {
         obj['drug_package_id'] = ApiClient.convertToType(data['drug_package_id'], 'String');
       }
-      if (data.hasOwnProperty('tier')) {
-        obj['tier'] = ApiClient.convertToType(data['tier'], 'String');
+      if (data.hasOwnProperty('med_id')) {
+        obj['med_id'] = ApiClient.convertToType(data['med_id'], 'Number');
       }
       if (data.hasOwnProperty('quantity_limit')) {
         obj['quantity_limit'] = ApiClient.convertToType(data['quantity_limit'], 'Boolean');
@@ -199,6 +200,9 @@ The response would be
       }
       if (data.hasOwnProperty('step_therapy')) {
         obj['step_therapy'] = ApiClient.convertToType(data['step_therapy'], 'Boolean');
+      }
+      if (data.hasOwnProperty('tier')) {
+        obj['tier'] = ApiClient.convertToType(data['tier'], 'String');
       }
     }
     return obj;
@@ -215,10 +219,10 @@ The response would be
    */
   exports.prototype['drug_package_id'] = undefined;
   /**
-   * Tier Name
-   * @member {String} tier
+   * Med ID
+   * @member {Number} med_id
    */
-  exports.prototype['tier'] = undefined;
+  exports.prototype['med_id'] = undefined;
   /**
    * Quantity limit exists
    * @member {Boolean} quantity_limit
@@ -234,6 +238,11 @@ The response would be
    * @member {Boolean} step_therapy
    */
   exports.prototype['step_therapy'] = undefined;
+  /**
+   * Tier Name
+   * @member {String} tier
+   */
+  exports.prototype['tier'] = undefined;
 
 
 

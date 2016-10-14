@@ -178,6 +178,12 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property activeIngredientStrength (base name: "active_ingredient_strength")', function() {
+      // uncomment below and update the code to test the property activeIngredientStrength
+      //var instane = new vericredClient.Drug();
+      //expect(instance).to.be();
+    });
+
     it('should have the property proprietaryName (base name: "proprietary_name")', function() {
       // uncomment below and update the code to test the property proprietaryName
       //var instane = new vericredClient.Drug();

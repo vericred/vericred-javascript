@@ -190,6 +190,12 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property networkIds (base name: "network_ids")', function() {
+      // uncomment below and update the code to test the property networkIds
+      //var instane = new vericredClient.RequestProvidersSearch();
+      //expect(instance).to.be();
+    });
+
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
       //var instane = new vericredClient.RequestProvidersSearch();
