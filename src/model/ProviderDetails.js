@@ -141,7 +141,7 @@ The response would be
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.Provider = factory(root.vericredClient.ApiClient);
+    root.vericredClient.ProviderDetails = factory(root.vericredClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -150,14 +150,14 @@ The response would be
 
 
   /**
-   * The Provider model module.
-   * @module model/Provider
+   * The ProviderDetails model module.
+   * @module model/ProviderDetails
    * @version 0.0.7
    */
 
   /**
-   * Constructs a new <code>Provider</code>.
-   * @alias module:model/Provider
+   * Constructs a new <code>ProviderDetails</code>.
+   * @alias module:model/ProviderDetails
    * @class
    */
   var exports = function() {
@@ -191,14 +191,15 @@ The response would be
 
 
 
+
   };
 
   /**
-   * Constructs a <code>Provider</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ProviderDetails</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Provider} obj Optional instance to populate.
-   * @return {module:model/Provider} The populated <code>Provider</code> instance.
+   * @param {module:model/ProviderDetails} obj Optional instance to populate.
+   * @return {module:model/ProviderDetails} The populated <code>ProviderDetails</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -287,6 +288,9 @@ The response would be
       }
       if (data.hasOwnProperty('zip_code')) {
         obj['zip_code'] = ApiClient.convertToType(data['zip_code'], 'String');
+      }
+      if (data.hasOwnProperty('hios_ids')) {
+        obj['hios_ids'] = ApiClient.convertToType(data['hios_ids'], ['String']);
       }
     }
     return obj;
@@ -432,6 +436,11 @@ The response would be
    * @member {String} zip_code
    */
   exports.prototype['zip_code'] = undefined;
+  /**
+   * List of HIOS ids for this provider
+   * @member {Array.<String>} hios_ids
+   */
+  exports.prototype['hios_ids'] = undefined;
 
 
 

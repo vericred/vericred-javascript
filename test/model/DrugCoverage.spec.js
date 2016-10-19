@@ -184,8 +184,8 @@ The response would be
       //expect(instance).to.be();
     });
 
-    it('should have the property tier (base name: "tier")', function() {
-      // uncomment below and update the code to test the property tier
+    it('should have the property medId (base name: "med_id")', function() {
+      // uncomment below and update the code to test the property medId
       //var instane = new vericredClient.DrugCoverage();
       //expect(instance).to.be();
     });
@@ -204,6 +204,12 @@ The response would be
 
     it('should have the property stepTherapy (base name: "step_therapy")', function() {
       // uncomment below and update the code to test the property stepTherapy
+      //var instane = new vericredClient.DrugCoverage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tier (base name: "tier")', function() {
+      // uncomment below and update the code to test the property tier
       //var instane = new vericredClient.DrugCoverage();
       //expect(instance).to.be();
     });

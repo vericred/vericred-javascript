@@ -165,6 +165,7 @@ The response would be
 
 
 
+
   };
 
   /**
@@ -184,6 +185,9 @@ The response would be
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
       }
+      if (data.hasOwnProperty('med_id')) {
+        obj['med_id'] = ApiClient.convertToType(data['med_id'], 'Number');
+      }
     }
     return obj;
   }
@@ -198,6 +202,11 @@ The response would be
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
+  /**
+   * Med ID
+   * @member {Number} med_id
+   */
+  exports.prototype['med_id'] = undefined;
 
 
 

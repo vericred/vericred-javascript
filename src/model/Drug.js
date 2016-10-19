@@ -167,6 +167,7 @@ The response would be
 
 
 
+
   };
 
   /**
@@ -182,6 +183,9 @@ The response would be
 
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
+      if (data.hasOwnProperty('active_ingredient_strength')) {
+        obj['active_ingredient_strength'] = ApiClient.convertToType(data['active_ingredient_strength'], 'String');
       }
       if (data.hasOwnProperty('proprietary_name')) {
         obj['proprietary_name'] = ApiClient.convertToType(data['proprietary_name'], 'String');
@@ -201,6 +205,11 @@ The response would be
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
+  /**
+   * Active Ingredient Strength information
+   * @member {String} active_ingredient_strength
+   */
+  exports.prototype['active_ingredient_strength'] = undefined;
   /**
    * Proprietary name of drug
    * @member {String} proprietary_name

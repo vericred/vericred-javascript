@@ -174,6 +174,8 @@ The response would be
 
 
 
+
+
   };
 
   /**
@@ -219,6 +221,12 @@ The response would be
       }
       if (data.hasOwnProperty('rating_area_id')) {
         obj['rating_area_id'] = ApiClient.convertToType(data['rating_area_id'], 'String');
+      }
+      if (data.hasOwnProperty('premium_source')) {
+        obj['premium_source'] = ApiClient.convertToType(data['premium_source'], 'String');
+      }
+      if (data.hasOwnProperty('updated_at')) {
+        obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'String');
       }
     }
     return obj;
@@ -279,6 +287,16 @@ The response would be
    * @member {String} rating_area_id
    */
   exports.prototype['rating_area_id'] = undefined;
+  /**
+   * Where was this pricing data extracted from?
+   * @member {String} premium_source
+   */
+  exports.prototype['premium_source'] = undefined;
+  /**
+   * Time when pricing was last updated
+   * @member {String} updated_at
+   */
+  exports.prototype['updated_at'] = undefined;
 
 
 

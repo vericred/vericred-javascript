@@ -164,6 +164,7 @@ The response would be
     var _this = this;
 
 
+
   };
 
   /**
@@ -180,6 +181,9 @@ The response would be
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
+      if (data.hasOwnProperty('med_id')) {
+        obj['med_id'] = ApiClient.convertToType(data['med_id'], 'Number');
+      }
     }
     return obj;
   }
@@ -189,6 +193,11 @@ The response would be
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
+  /**
+   * Med ID, mutually exclusive with id
+   * @member {Number} med_id
+   */
+  exports.prototype['med_id'] = undefined;
 
 
 

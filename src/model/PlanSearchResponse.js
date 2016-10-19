@@ -132,18 +132,18 @@ The response would be
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Drug', 'model/Meta', 'model/Plan'], factory);
+    define(['ApiClient', 'model/DrugCoverage', 'model/Meta', 'model/Plan'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Drug'), require('./Meta'), require('./Plan'));
+    module.exports = factory(require('../ApiClient'), require('./DrugCoverage'), require('./Meta'), require('./Plan'));
   } else {
     // Browser globals (root is window)
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.PlanSearchResponse = factory(root.vericredClient.ApiClient, root.vericredClient.Drug, root.vericredClient.Meta, root.vericredClient.Plan);
+    root.vericredClient.PlanSearchResponse = factory(root.vericredClient.ApiClient, root.vericredClient.DrugCoverage, root.vericredClient.Meta, root.vericredClient.Plan);
   }
-}(this, function(ApiClient, Drug, Meta, Plan) {
+}(this, function(ApiClient, DrugCoverage, Meta, Plan) {
   'use strict';
 
 
@@ -186,14 +186,14 @@ The response would be
         obj['plans'] = ApiClient.convertToType(data['plans'], [Plan]);
       }
       if (data.hasOwnProperty('coverages')) {
-        obj['coverages'] = ApiClient.convertToType(data['coverages'], [Drug]);
+        obj['coverages'] = ApiClient.convertToType(data['coverages'], [DrugCoverage]);
       }
     }
     return obj;
   }
 
   /**
-   * Metadata for query
+   * Meta-data
    * @member {module:model/Meta} meta
    */
   exports.prototype['meta'] = undefined;
@@ -203,8 +203,8 @@ The response would be
    */
   exports.prototype['plans'] = undefined;
   /**
-   * null
-   * @member {Array.<module:model/Drug>} coverages
+   * Coverages associated with the plan.
+   * @member {Array.<module:model/DrugCoverage>} coverages
    */
   exports.prototype['coverages'] = undefined;
 

@@ -146,7 +146,7 @@ The response would be
   var instance;
 
   beforeEach(function() {
-    instance = new vericredClient.Provider();
+    instance = new vericredClient.ProviderDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -165,178 +165,184 @@ The response would be
       object[property] = value;
   }
 
-  describe('Provider', function() {
-    it('should create an instance of Provider', function() {
-      // uncomment below and update the code to test Provider
-      //var instane = new vericredClient.Provider();
-      //expect(instance).to.be.a(vericredClient.Provider);
+  describe('ProviderDetails', function() {
+    it('should create an instance of ProviderDetails', function() {
+      // uncomment below and update the code to test ProviderDetails
+      //var instane = new vericredClient.ProviderDetails();
+      //expect(instance).to.be.a(vericredClient.ProviderDetails);
     });
 
     it('should have the property acceptingChangeOfPayorPatients (base name: "accepting_change_of_payor_patients")', function() {
       // uncomment below and update the code to test the property acceptingChangeOfPayorPatients
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property acceptingMedicaidPatients (base name: "accepting_medicaid_patients")', function() {
       // uncomment below and update the code to test the property acceptingMedicaidPatients
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property acceptingMedicarePatients (base name: "accepting_medicare_patients")', function() {
       // uncomment below and update the code to test the property acceptingMedicarePatients
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property acceptingPrivatePatients (base name: "accepting_private_patients")', function() {
       // uncomment below and update the code to test the property acceptingPrivatePatients
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property acceptingReferralPatients (base name: "accepting_referral_patients")', function() {
       // uncomment below and update the code to test the property acceptingReferralPatients
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property gender (base name: "gender")', function() {
       // uncomment below and update the code to test the property gender
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property latitude (base name: "latitude")', function() {
       // uncomment below and update the code to test the property latitude
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property longitude (base name: "longitude")', function() {
       // uncomment below and update the code to test the property longitude
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property middleName (base name: "middle_name")', function() {
       // uncomment below and update the code to test the property middleName
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property networkIds (base name: "network_ids")', function() {
       // uncomment below and update the code to test the property networkIds
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property organizationName (base name: "organization_name")', function() {
       // uncomment below and update the code to test the property organizationName
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property personalPhone (base name: "personal_phone")', function() {
       // uncomment below and update the code to test the property personalPhone
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property phone (base name: "phone")', function() {
       // uncomment below and update the code to test the property phone
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property presentationName (base name: "presentation_name")', function() {
       // uncomment below and update the code to test the property presentationName
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property specialty (base name: "specialty")', function() {
       // uncomment below and update the code to test the property specialty
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property stateId (base name: "state_id")', function() {
       // uncomment below and update the code to test the property stateId
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property streetLine1 (base name: "street_line_1")', function() {
       // uncomment below and update the code to test the property streetLine1
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property streetLine2 (base name: "street_line_2")', function() {
       // uncomment below and update the code to test the property streetLine2
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property suffix (base name: "suffix")', function() {
       // uncomment below and update the code to test the property suffix
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property zipCode (base name: "zip_code")', function() {
       // uncomment below and update the code to test the property zipCode
-      //var instane = new vericredClient.Provider();
+      //var instane = new vericredClient.ProviderDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property hiosIds (base name: "hios_ids")', function() {
+      // uncomment below and update the code to test the property hiosIds
+      //var instane = new vericredClient.ProviderDetails();
       //expect(instance).to.be();
     });
 

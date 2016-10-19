@@ -141,7 +141,7 @@ The response would be
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.RequestProvidersSearch = factory(root.vericredClient.ApiClient);
+    root.vericredClient.NetworkSize = factory(root.vericredClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -150,14 +150,14 @@ The response would be
 
 
   /**
-   * The RequestProvidersSearch model module.
-   * @module model/RequestProvidersSearch
+   * The NetworkSize model module.
+   * @module model/NetworkSize
    * @version 0.0.7
    */
 
   /**
-   * Constructs a new <code>RequestProvidersSearch</code>.
-   * @alias module:model/RequestProvidersSearch
+   * Constructs a new <code>NetworkSize</code>.
+   * @alias module:model/NetworkSize
    * @class
    */
   var exports = function() {
@@ -166,110 +166,47 @@ The response would be
 
 
 
-
-
-
-
-
-
-
   };
 
   /**
-   * Constructs a <code>RequestProvidersSearch</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>NetworkSize</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RequestProvidersSearch} obj Optional instance to populate.
-   * @return {module:model/RequestProvidersSearch} The populated <code>RequestProvidersSearch</code> instance.
+   * @param {module:model/NetworkSize} obj Optional instance to populate.
+   * @return {module:model/NetworkSize} The populated <code>NetworkSize</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('accepts_insurance')) {
-        obj['accepts_insurance'] = ApiClient.convertToType(data['accepts_insurance'], 'Boolean');
+      if (data.hasOwnProperty('network_id')) {
+        obj['network_id'] = ApiClient.convertToType(data['network_id'], 'Number');
       }
-      if (data.hasOwnProperty('hios_ids')) {
-        obj['hios_ids'] = ApiClient.convertToType(data['hios_ids'], ['String']);
+      if (data.hasOwnProperty('count')) {
+        obj['count'] = ApiClient.convertToType(data['count'], 'Number');
       }
-      if (data.hasOwnProperty('min_score')) {
-        obj['min_score'] = ApiClient.convertToType(data['min_score'], 'Number');
-      }
-      if (data.hasOwnProperty('network_ids')) {
-        obj['network_ids'] = ApiClient.convertToType(data['network_ids'], ['Number']);
-      }
-      if (data.hasOwnProperty('page')) {
-        obj['page'] = ApiClient.convertToType(data['page'], 'Number');
-      }
-      if (data.hasOwnProperty('per_page')) {
-        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Number');
-      }
-      if (data.hasOwnProperty('radius')) {
-        obj['radius'] = ApiClient.convertToType(data['radius'], 'Number');
-      }
-      if (data.hasOwnProperty('search_term')) {
-        obj['search_term'] = ApiClient.convertToType(data['search_term'], 'String');
-      }
-      if (data.hasOwnProperty('zip_code')) {
-        obj['zip_code'] = ApiClient.convertToType(data['zip_code'], 'String');
-      }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('state_id')) {
+        obj['state_id'] = ApiClient.convertToType(data['state_id'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Limit results to Providers who accept at least one insurance         plan.  Note that the inverse of this filter is not supported and         any value will evaluate to true
-   * @member {Boolean} accepts_insurance
+   * Foreign key to Network
+   * @member {Number} network_id
    */
-  exports.prototype['accepts_insurance'] = undefined;
+  exports.prototype['network_id'] = undefined;
   /**
-   * List of HIOS ids
-   * @member {Array.<String>} hios_ids
+   * Number of Providers in-network in this State
+   * @member {Number} count
    */
-  exports.prototype['hios_ids'] = undefined;
+  exports.prototype['count'] = undefined;
   /**
-   * Minimum search threshold to be included in the results
-   * @member {Number} min_score
+   * Foreign key to State
+   * @member {String} state_id
    */
-  exports.prototype['min_score'] = undefined;
-  /**
-   * List of Vericred network ids
-   * @member {Array.<Number>} network_ids
-   */
-  exports.prototype['network_ids'] = undefined;
-  /**
-   * Page number
-   * @member {Number} page
-   */
-  exports.prototype['page'] = undefined;
-  /**
-   * Number of records to return per page
-   * @member {Number} per_page
-   */
-  exports.prototype['per_page'] = undefined;
-  /**
-   * Radius (in miles) to use to limit results
-   * @member {Number} radius
-   */
-  exports.prototype['radius'] = undefined;
-  /**
-   * String to search by
-   * @member {String} search_term
-   */
-  exports.prototype['search_term'] = undefined;
-  /**
-   * Zip Code to search near
-   * @member {String} zip_code
-   */
-  exports.prototype['zip_code'] = undefined;
-  /**
-   * Either organization or individual
-   * @member {String} type
-   */
-  exports.prototype['type'] = undefined;
+  exports.prototype['state_id'] = undefined;
 
 
 

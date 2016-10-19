@@ -532,6 +532,12 @@ The response would be
       //expect(instance).to.be();
     });
 
+    it('should have the property premiumSource (base name: "premium_source")', function() {
+      // uncomment below and update the code to test the property premiumSource
+      //var instane = new vericredClient.PlanSearchResult();
+      //expect(instance).to.be();
+    });
+
     it('should have the property primaryCarePhysician (base name: "primary_care_physician")', function() {
       // uncomment below and update the code to test the property primaryCarePhysician
       //var instane = new vericredClient.PlanSearchResult();
