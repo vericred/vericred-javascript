@@ -5,6 +5,7 @@ All URIs are relative to *https://api.vericred.com/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**listNetworks**](NetworksApi.md#listNetworks) | **GET** /networks | Networks
+[**showNetwork**](NetworksApi.md#showNetwork) | **GET** /networks/{id} | Network Details
 
 
 <a name="listNetworks"></a>
@@ -56,6 +57,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**NetworkSearchResponse**](NetworkSearchResponse.md)
+
+### Authorization
+
+[Vericred-Api-Key](../README.md#Vericred-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="showNetwork"></a>
+# **showNetwork**
+> NetworkDetailsResponse showNetwork(id)
+
+Network Details
+
+A network is a list of the doctors, other health care providers, and hospitals that a plan has contracted with to provide medical care to its members.
+
+### Example
+```javascript
+var vericredClient = require('vericredClient');
+var defaultClient = vericredClient.ApiClient.default;
+
+// Configure API key authorization: Vericred-Api-Key
+var Vericred-Api-Key = defaultClient.authentications['Vericred-Api-Key'];
+Vericred-Api-Key.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Vericred-Api-Key.apiKeyPrefix = 'Token';
+
+var apiInstance = new vericredClient.NetworksApi();
+
+var id = 100001; // Number | Primary key of the network
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.showNetwork(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Primary key of the network | 
+
+### Return type
+
+[**NetworkDetailsResponse**](NetworkDetailsResponse.md)
 
 ### Authorization
 

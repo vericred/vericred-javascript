@@ -3,11 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**acceptingChangeOfPayorPatients** | **Boolean** | Is this provider accepting patients with a change of insurance? | [optional] 
-**acceptingMedicaidPatients** | **Boolean** | Is this provider accepting new Medicaid patients? | [optional] 
-**acceptingMedicarePatients** | **Boolean** | Is this provider accepting new Medicare patients? | [optional] 
-**acceptingPrivatePatients** | **Boolean** | Is this provider accepting new patients with private insurance? | [optional] 
-**acceptingReferralPatients** | **Boolean** | Is this provider accepting new patients via referrals? | [optional] 
 **city** | **String** | City name (e.g. Springfield). | [optional] 
 **email** | **String** | Primary email address to contact the provider. | [optional] 
 **gender** | **String** | Provider&#39;s gender (M or F) | [optional] 
