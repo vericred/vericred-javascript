@@ -18,7 +18,7 @@ Find Plans
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
@@ -71,7 +71,7 @@ Show the details of an individual Plan.  This includes deductibles, maximums out
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key

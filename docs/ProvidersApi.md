@@ -19,7 +19,7 @@ To retrieve a specific provider, just perform a GET using his NPI number
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
@@ -78,7 +78,7 @@ Find Providers
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
@@ -131,7 +131,7 @@ Find Providers
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
