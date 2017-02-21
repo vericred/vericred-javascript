@@ -17,7 +17,7 @@ Search for coverage by Formulary and DrugPackage ID
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key

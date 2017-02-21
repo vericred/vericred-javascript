@@ -147,19 +147,32 @@ In [this other Summary of Benefits &amp; Coverage](https://s3.amazonaws.com/veri
 Here's a description of the benefits summary string, represented as a context-free grammar:
 
 ```
-<cost-share>     ::= <tier> <opt-num-prefix> <value> <opt-per-unit> <deductible> <tier-limit> "/" <tier> <opt-num-prefix> <value> <opt-per-unit> <deductible> "|" <benefit-limit>
-<tier>           ::= "In-Network:" | "In-Network-Tier-2:" | "Out-of-Network:"
-<opt-num-prefix> ::= "first" <num> <unit> | ""
-<unit>           ::= "day(s)" | "visit(s)" | "exam(s)" | "item(s)"
-<value>          ::= <ddct_moop> | <copay> | <coinsurance> | <compound> | "unknown" | "Not Applicable"
-<compound>       ::= <copay> <deductible> "then" <coinsurance> <deductible> | <copay> <deductible> "then" <copay> <deductible> | <coinsurance> <deductible> "then" <coinsurance> <deductible>
-<copay>          ::= "$" <num>
-<coinsurace>     ::= <num> "%"
-<ddct_moop>      ::= <copay> | "Included in Medical" | "Unlimited"
-<opt-per-unit>   ::= "per day" | "per visit" | "per stay" | ""
-<deductible>     ::= "before deductible" | "after deductible" | ""
-<tier-limit>     ::= ", " <limit> | ""
-<benefit-limit>  ::= <limit> | ""
+<coverage>                 ::= <tiered-coverage> <coverage-limitation>
+<tiered-coverage>          ::= <tier> "/" <tier>
+<tier>                     ::= <tier-name> ( <tier-coverage> | <not-applicable> | <unknown> )
+<tier-coverage>            ::= <simple-coverage> ("then" <simple-coverage>)? <tier-limitation>
+<simple-coverage>          ::= <pre-coverage-limitation> <coverage-amount> <post-coverage-limitation> <coverage-condition> <coverage-limitation>
+<tier-name>                ::= "In-Network:" | "In-Network-Tier-2:" | "Out-of-Network:"
+<coverage-amount>          ::= <currency> | <percentage> | <not-applicable> | <unknown> | <unlimited> | <included>
+<currency>                 ::= "$"<number>
+<percentage>               ::= <number>"%"
+<coverage-limitation>      ::= "|" <limit> | ""
+<pre-coverage-limitation>  ::= "first" <integer> ( <time-unit> | <treatment-unit> ) | ""
+<post-coverage-limitation> ::= "per day" | "per visit" | "per stay" | ""
+<coverage-condition>       ::= "before deductible" | "after deductible" | "penalty" | "after" ( <currency> | <percentage> ) "penalty" | "after allowance" | "after" ( <currency> | <percentage> ) "allowance" | ""
+<time-unit>                ::= "day(s)" | "visit(s)" | "month(s)" | "week(s)"
+<treatment-unit>           ::= "item(s)" | "exam(s)" | "condition(s)" | "script(s)" | "visit(s)" | ""
+<tier-limitation>          ::= "," <limit> | ""
+<not-applicable>           ::= "Not Applicable"
+<unknown>                  ::= "unknown"
+<unlimited>                ::= "Unlimited"
+<included>                 ::= "Included in Medical"
+<limit>                    ::= <text>
+<number>                   ::= integer | float
+<integer>                  ::= [0-9]+(","[0-9]{3})?
+<float>                    ::= digits "."" digits
+<digit>                    ::= [0-9]+
+<text>                     ::= [A-Za-z0-9,.;()]+
 ```
 
 
@@ -207,7 +220,7 @@ Here's a description of the benefits summary string, represented as a context-fr
   /**
    * The RatingArea model module.
    * @module model/RatingArea
-   * @version 0.0.8
+   * @version 0.0.9
    */
 
   /**

@@ -18,7 +18,7 @@ Drug Coverages are the specific tier level, quantity limit, prior authorization 
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
@@ -77,7 +77,7 @@ Search for drugs by proprietary name
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key

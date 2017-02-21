@@ -18,7 +18,7 @@ A network is a list of the doctors, other health care providers, and hospitals t
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
@@ -77,7 +77,7 @@ A network is a list of the doctors, other health care providers, and hospitals t
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key

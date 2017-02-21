@@ -17,7 +17,7 @@ Our &#x60;Plan&#x60; endpoints require a zip code and a fips (county) code.  Thi
 
 ### Example
 ```javascript
-var vericredClient = require('vericredClient');
+var vericredClient = require('vericred-client');
 var defaultClient = vericredClient.ApiClient.default;
 
 // Configure API key authorization: Vericred-Api-Key
