@@ -92,7 +92,7 @@ document.
 In this case, we want to select `name` and `phone` from the `provider` key,
 so we would add the parameters `select=provider.name,provider.phone`.
 We also want the `name` and `code` from the `states` key, so we would
-add the parameters `select=states.name,staes.code`.  The id field of
+add the parameters `select=states.name,states.code`.  The id field of
 each document is always returned whether or not it is requested.
 
 Our final request would be `GET /providers/12345?select=provider.name,provider.phone,states.name,states.code`
@@ -147,32 +147,53 @@ In [this other Summary of Benefits &amp; Coverage](https://s3.amazonaws.com/veri
 Here's a description of the benefits summary string, represented as a context-free grammar:
 
 ```
-<coverage>                 ::= <tiered-coverage> <coverage-limitation>
-<tiered-coverage>          ::= <tier> "/" <tier>
-<tier>                     ::= <tier-name> ( <tier-coverage> | <not-applicable> | <unknown> )
-<tier-coverage>            ::= <simple-coverage> ("then" <simple-coverage>)? <tier-limitation>
-<simple-coverage>          ::= <pre-coverage-limitation> <coverage-amount> <post-coverage-limitation> <coverage-condition> <coverage-limitation>
-<tier-name>                ::= "In-Network:" | "In-Network-Tier-2:" | "Out-of-Network:"
-<coverage-amount>          ::= <currency> | <percentage> | <not-applicable> | <unknown> | <unlimited> | <included>
-<currency>                 ::= "$"<number>
-<percentage>               ::= <number>"%"
-<coverage-limitation>      ::= "|" <limit> | ""
-<pre-coverage-limitation>  ::= "first" <integer> ( <time-unit> | <treatment-unit> ) | ""
-<post-coverage-limitation> ::= "per day" | "per visit" | "per stay" | ""
-<coverage-condition>       ::= "before deductible" | "after deductible" | "penalty" | "after" ( <currency> | <percentage> ) "penalty" | "after allowance" | "after" ( <currency> | <percentage> ) "allowance" | ""
-<time-unit>                ::= "day(s)" | "visit(s)" | "month(s)" | "week(s)"
-<treatment-unit>           ::= "item(s)" | "exam(s)" | "condition(s)" | "script(s)" | "visit(s)" | ""
-<tier-limitation>          ::= "," <limit> | ""
-<not-applicable>           ::= "Not Applicable"
-<unknown>                  ::= "unknown"
-<unlimited>                ::= "Unlimited"
-<included>                 ::= "Included in Medical"
-<limit>                    ::= <text>
-<number>                   ::= integer | float
-<integer>                  ::= [0-9]+(","[0-9]{3})?
-<float>                    ::= digits "."" digits
-<digit>                    ::= [0-9]+
-<text>                     ::= [A-Za-z0-9,.;()]+
+root                      ::= coverage
+
+coverage                  ::= (simple_coverage | tiered_coverage) (space pipe space coverage_modifier)?
+tiered_coverage           ::= tier (space slash space tier)*
+tier                      ::= tier_name colon space (tier_coverage | not_applicable)
+tier_coverage             ::= simple_coverage (space (then | or | and) space simple_coverage)* tier_limitation?
+simple_coverage           ::= (pre_coverage_limitation space)? coverage_amount (space post_coverage_limitation)? (comma? space coverage_condition)?
+coverage_modifier         ::= limit_condition colon space (((simple_coverage | simple_limitation) (semicolon space see_carrier_documentation)?) | see_carrier_documentation | waived_if_admitted | shared_across_tiers)
+waived_if_admitted        ::= ("copay" space)? "waived if admitted"
+simple_limitation         ::= pre_coverage_limitation space "copay applies"
+tier_name                 ::= "In-Network-Tier-2" | "Out-of-Network" | "In-Network"
+limit_condition           ::= "limit" | "condition"
+tier_limitation           ::= comma space "up to" space (currency | (integer space time_unit plural?)) (space post_coverage_limitation)?
+coverage_amount           ::= currency | unlimited | included | unknown | percentage | (digits space (treatment_unit | time_unit) plural?)
+pre_coverage_limitation   ::= first space digits space time_unit plural?
+post_coverage_limitation  ::= (((then space currency) | "per condition") space)? "per" space (treatment_unit | (integer space time_unit) | time_unit) plural?
+coverage_condition        ::= ("before deductible" | "after deductible" | "penalty" | allowance | "in-state" | "out-of-state") (space allowance)?
+allowance                 ::= upto_allowance | after_allowance
+upto_allowance            ::= "up to" space (currency space)? "allowance"
+after_allowance           ::= "after" space (currency space)? "allowance"
+see_carrier_documentation ::= "see carrier documentation for more information"
+shared_across_tiers       ::= "shared across all tiers"
+unknown                   ::= "unknown"
+unlimited                 ::= /[uU]nlimited/
+included                  ::= /[iI]ncluded in [mM]edical/
+time_unit                 ::= /[hH]our/ | (((/[cC]alendar/ | /[cC]ontract/) space)? /[yY]ear/) | /[mM]onth/ | /[dD]ay/ | /[wW]eek/ | /[vV]isit/ | /[lL]ifetime/ | ((((/[bB]enefit/ plural?) | /[eE]ligibility/) space)? /[pP]eriod/)
+treatment_unit            ::= /[pP]erson/ | /[gG]roup/ | /[cC]ondition/ | /[sS]cript/ | /[vV]isit/ | /[eE]xam/ | /[iI]tem/ | /[sS]tay/ | /[tT]reatment/ | /[aA]dmission/ | /[eE]pisode/
+comma                     ::= ","
+colon                     ::= ":"
+semicolon                 ::= ";"
+pipe                      ::= "|"
+slash                     ::= "/"
+plural                    ::= "(s)" | "s"
+then                      ::= "then" | ("," space) | space
+or                        ::= "or"
+and                       ::= "and"
+not_applicable            ::= "Not Applicable" | "N/A" | "NA"
+first                     ::= "first"
+currency                  ::= "$" number
+percentage                ::= number "%"
+number                    ::= float | integer
+float                     ::= digits "." digits
+integer                   ::= /[0-9]/+ (comma_int | under_int)*
+comma_int                 ::= ("," /[0-9]/*3) !"_"
+under_int                 ::= ("_" /[0-9]/*3) !","
+digits                    ::= /[0-9]/+ ("_" /[0-9]/+)*
+space                     ::= /[ \t]/+
 ```
 
 
@@ -217,7 +238,7 @@ Here's a description of the benefits summary string, represented as a context-fr
   /**
    * NetworkSizes service.
    * @module api/NetworkSizesApi
-   * @version 0.0.9
+   * @version 0.0.10
    */
 
   /**
