@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * Plans service.
    * @module api/PlansApi
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

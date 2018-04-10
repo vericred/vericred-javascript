@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ACAPlanPre2018ShowResponse model module.
    * @module model/ACAPlanPre2018ShowResponse
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

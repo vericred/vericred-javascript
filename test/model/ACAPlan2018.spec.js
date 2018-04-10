@@ -795,6 +795,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property essentialHealthBenefitsPercentage (base name: "essential_health_benefits_percentage")', function() {
+      // uncomment below and update the code to test the property essentialHealthBenefitsPercentage
+      //var instane = new vericredClient.ACAPlan2018();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

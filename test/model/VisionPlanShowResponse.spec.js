@@ -235,7 +235,7 @@ space                     ::= /[ \t]/+
   var instance;
 
   beforeEach(function() {
-    instance = new vericredClient.Applicant();
+    instance = new vericredClient.VisionPlanShowResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -254,52 +254,16 @@ space                     ::= /[ \t]/+
       object[property] = value;
   }
 
-  describe('Applicant', function() {
-    it('should create an instance of Applicant', function() {
-      // uncomment below and update the code to test Applicant
-      //var instane = new vericredClient.Applicant();
-      //expect(instance).to.be.a(vericredClient.Applicant);
+  describe('VisionPlanShowResponse', function() {
+    it('should create an instance of VisionPlanShowResponse', function() {
+      // uncomment below and update the code to test VisionPlanShowResponse
+      //var instane = new vericredClient.VisionPlanShowResponse();
+      //expect(instance).to.be.a(vericredClient.VisionPlanShowResponse);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new vericredClient.Applicant();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dob (base name: "dob")', function() {
-      // uncomment below and update the code to test the property dob
-      //var instane = new vericredClient.Applicant();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property memberId (base name: "member_id")', function() {
-      // uncomment below and update the code to test the property memberId
-      //var instane = new vericredClient.Applicant();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new vericredClient.Applicant();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property relationship (base name: "relationship")', function() {
-      // uncomment below and update the code to test the property relationship
-      //var instane = new vericredClient.Applicant();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property smoker (base name: "smoker")', function() {
-      // uncomment below and update the code to test the property smoker
-      //var instane = new vericredClient.Applicant();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ssn (base name: "ssn")', function() {
-      // uncomment below and update the code to test the property ssn
-      //var instane = new vericredClient.Applicant();
+    it('should have the property visionPlan (base name: "vision_plan")', function() {
+      // uncomment below and update the code to test the property visionPlan
+      //var instane = new vericredClient.VisionPlanShowResponse();
       //expect(instance).to.be();
     });
 

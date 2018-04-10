@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The PlanShowResponse model module.
    * @module model/PlanShowResponse
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

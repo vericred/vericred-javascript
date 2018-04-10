@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The State model module.
    * @module model/State
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

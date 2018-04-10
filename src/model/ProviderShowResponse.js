@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ProviderShowResponse model module.
    * @module model/ProviderShowResponse
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

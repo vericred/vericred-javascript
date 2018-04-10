@@ -279,6 +279,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property drugIds (base name: "drug_ids")', function() {
+      // uncomment below and update the code to test the property drugIds
+      //var instane = new vericredClient.DrugCoverage();
+      //expect(instance).to.be();
+    });
+
     it('should have the property quantityLimit (base name: "quantity_limit")', function() {
       // uncomment below and update the code to test the property quantityLimit
       //var instane = new vericredClient.DrugCoverage();

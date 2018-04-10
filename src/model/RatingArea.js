@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RatingArea model module.
    * @module model/RatingArea
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

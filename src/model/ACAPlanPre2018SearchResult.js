@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ACAPlanPre2018SearchResult model module.
    * @module model/ACAPlanPre2018SearchResult
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
@@ -1058,7 +1058,7 @@ space                     ::= /[ \t]/+
    */
   exports.prototype['outpatient_ambulatory_care_center'] = undefined;
   /**
-   * Are deductibles and MOOPs reset on Dec-31 (\"calendar year\") or 365 days after enrollment date (\"plan year\")?
+   * Are deductibles and MOOPs reset on Dec-31 (\"calendar year\"), 365 days after enrollment date (\"plan year\"), or are both options available (\"both\")?
    * @member {String} plan_calendar
    */
   exports.prototype['plan_calendar'] = undefined;
