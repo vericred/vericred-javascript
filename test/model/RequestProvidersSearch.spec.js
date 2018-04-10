@@ -267,6 +267,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property ids (base name: "ids")', function() {
+      // uncomment below and update the code to test the property ids
+      //var instane = new vericredClient.RequestProvidersSearch();
+      //expect(instance).to.be();
+    });
+
     it('should have the property minScore (base name: "min_score")', function() {
       // uncomment below and update the code to test the property minScore
       //var instane = new vericredClient.RequestProvidersSearch();

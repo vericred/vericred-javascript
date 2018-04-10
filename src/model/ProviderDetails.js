@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ProviderDetails model module.
    * @module model/ProviderDetails
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
@@ -251,7 +251,6 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
-
 
 
 
@@ -322,9 +321,6 @@ space                     ::= /[ \t]/+
       }
       if (data.hasOwnProperty('organization_name')) {
         obj['organization_name'] = ApiClient.convertToType(data['organization_name'], 'String');
-      }
-      if (data.hasOwnProperty('personal_phone')) {
-        obj['personal_phone'] = ApiClient.convertToType(data['personal_phone'], 'String');
       }
       if (data.hasOwnProperty('phone')) {
         obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
@@ -424,11 +420,6 @@ space                     ::= /[ \t]/+
    * @member {String} organization_name
    */
   exports.prototype['organization_name'] = undefined;
-  /**
-   * Personal contact phone for the provider.
-   * @member {String} personal_phone
-   */
-  exports.prototype['personal_phone'] = undefined;
   /**
    * Office phone for the provider
    * @member {String} phone

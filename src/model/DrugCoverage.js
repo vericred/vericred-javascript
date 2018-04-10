@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DrugCoverage model module.
    * @module model/DrugCoverage
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
@@ -251,6 +251,7 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -280,6 +281,9 @@ space                     ::= /[ \t]/+
       }
       if (data.hasOwnProperty('med_id')) {
         obj['med_id'] = ApiClient.convertToType(data['med_id'], 'Number');
+      }
+      if (data.hasOwnProperty('drug_ids')) {
+        obj['drug_ids'] = ApiClient.convertToType(data['drug_ids'], ['String']);
       }
       if (data.hasOwnProperty('quantity_limit')) {
         obj['quantity_limit'] = ApiClient.convertToType(data['quantity_limit'], 'Boolean');
@@ -312,6 +316,11 @@ space                     ::= /[ \t]/+
    * @member {Number} med_id
    */
   exports.prototype['med_id'] = undefined;
+  /**
+   * Vericred-generated IDs for drugs
+   * @member {Array.<String>} drug_ids
+   */
+  exports.prototype['drug_ids'] = undefined;
   /**
    * Quantity limit exists
    * @member {Boolean} quantity_limit

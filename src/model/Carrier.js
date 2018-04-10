@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The Carrier model module.
    * @module model/Carrier
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
@@ -251,7 +251,6 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
-
 
 
 
@@ -274,9 +273,6 @@ space                     ::= /[ \t]/+
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
-      if (data.hasOwnProperty('logo_path')) {
-        obj['logo_path'] = ApiClient.convertToType(data['logo_path'], 'String');
-      }
     }
     return obj;
   }
@@ -291,11 +287,6 @@ space                     ::= /[ \t]/+
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
-  /**
-   * URL for the Carrier's logo
-   * @member {String} logo_path
-   */
-  exports.prototype['logo_path'] = undefined;
 
 
 

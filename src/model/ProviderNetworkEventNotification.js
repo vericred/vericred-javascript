@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ProviderNetworkEventNotification model module.
    * @module model/ProviderNetworkEventNotification
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RequestProvidersSearch model module.
    * @module model/RequestProvidersSearch
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
@@ -251,6 +251,7 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -279,6 +280,9 @@ space                     ::= /[ \t]/+
 
       if (data.hasOwnProperty('accepts_insurance')) {
         obj['accepts_insurance'] = ApiClient.convertToType(data['accepts_insurance'], 'Boolean');
+      }
+      if (data.hasOwnProperty('ids')) {
+        obj['ids'] = ApiClient.convertToType(data['ids'], ['Number']);
       }
       if (data.hasOwnProperty('min_score')) {
         obj['min_score'] = ApiClient.convertToType(data['min_score'], 'Number');
@@ -322,6 +326,11 @@ space                     ::= /[ \t]/+
    * @member {Boolean} accepts_insurance
    */
   exports.prototype['accepts_insurance'] = undefined;
+  /**
+   * List of NPIs
+   * @member {Array.<Number>} ids
+   */
+  exports.prototype['ids'] = undefined;
   /**
    * Minimum search threshold to be included in the results
    * @member {Number} min_score

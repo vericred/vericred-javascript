@@ -273,14 +273,8 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
-    it('should have the property drugs (base name: "drugs")', function() {
-      // uncomment below and update the code to test the property drugs
-      //var instane = new vericredClient.DrugCoverageResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property drugPackages (base name: "drug_packages")', function() {
-      // uncomment below and update the code to test the property drugPackages
+    it('should have the property drug (base name: "drug")', function() {
+      // uncomment below and update the code to test the property drug
       //var instane = new vericredClient.DrugCoverageResponse();
       //expect(instance).to.be();
     });

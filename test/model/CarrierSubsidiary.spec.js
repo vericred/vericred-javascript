@@ -279,6 +279,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property logoPath (base name: "logo_path")', function() {
+      // uncomment below and update the code to test the property logoPath
+      //var instane = new vericredClient.CarrierSubsidiary();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

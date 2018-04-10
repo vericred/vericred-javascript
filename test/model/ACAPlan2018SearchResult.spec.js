@@ -789,6 +789,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property essentialHealthBenefitsPercentage (base name: "essential_health_benefits_percentage")', function() {
+      // uncomment below and update the code to test the property essentialHealthBenefitsPercentage
+      //var instane = new vericredClient.ACAPlan2018SearchResult();
+      //expect(instance).to.be();
+    });
+
     it('should have the property matchPercentage (base name: "match_percentage")', function() {
       // uncomment below and update the code to test the property matchPercentage
       //var instane = new vericredClient.ACAPlan2018SearchResult();

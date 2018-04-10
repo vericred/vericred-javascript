@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The Base model module.
    * @module model/Base
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

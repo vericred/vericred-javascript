@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ACAPlan2018 model module.
    * @module model/ACAPlan2018
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
@@ -251,6 +251,7 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -620,6 +621,9 @@ space                     ::= /[ \t]/+
       }
       if (data.hasOwnProperty('skilled_nursing_facility_365')) {
         obj['skilled_nursing_facility_365'] = ApiClient.convertToType(data['skilled_nursing_facility_365'], 'String');
+      }
+      if (data.hasOwnProperty('essential_health_benefits_percentage')) {
+        obj['essential_health_benefits_percentage'] = ApiClient.convertToType(data['essential_health_benefits_percentage'], 'Number');
       }
     }
     return obj;
@@ -1051,7 +1055,7 @@ space                     ::= /[ \t]/+
    */
   exports.prototype['outpatient_ambulatory_care_center'] = undefined;
   /**
-   * Are deductibles and MOOPs reset on Dec-31 (\"calendar year\") or 365 days after enrollment date (\"plan year\")?
+   * Are deductibles and MOOPs reset on Dec-31 (\"calendar year\"), 365 days after enrollment date (\"plan year\"), or are both options available (\"both\")?
    * @member {String} plan_calendar
    */
   exports.prototype['plan_calendar'] = undefined;
@@ -1070,6 +1074,11 @@ space                     ::= /[ \t]/+
    * @member {String} skilled_nursing_facility_365
    */
   exports.prototype['skilled_nursing_facility_365'] = undefined;
+  /**
+   * Percentage of essential plan benefits
+   * @member {Number} essential_health_benefits_percentage
+   */
+  exports.prototype['essential_health_benefits_percentage'] = undefined;
 
 
 

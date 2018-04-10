@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * ProviderNotificationSubscriptions service.
    * @module api/ProviderNotificationSubscriptionsApi
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

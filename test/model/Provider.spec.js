@@ -327,12 +327,6 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
-    it('should have the property personalPhone (base name: "personal_phone")', function() {
-      // uncomment below and update the code to test the property personalPhone
-      //var instane = new vericredClient.Provider();
-      //expect(instance).to.be();
-    });
-
     it('should have the property phone (base name: "phone")', function() {
       // uncomment below and update the code to test the property phone
       //var instane = new vericredClient.Provider();

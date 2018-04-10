@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The Plan model module.
    * @module model/Plan
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

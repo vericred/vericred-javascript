@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * Drugs service.
    * @module api/DrugsApi
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

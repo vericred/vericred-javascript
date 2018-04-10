@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ZipCode model module.
    * @module model/ZipCode
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

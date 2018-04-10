@@ -221,18 +221,18 @@ space                     ::= /[ \t]/+
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Drug', 'model/DrugCoverage', 'model/DrugPackage', 'model/Meta'], factory);
+    define(['ApiClient', 'model/Drug', 'model/DrugCoverage', 'model/Meta'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Drug'), require('./DrugCoverage'), require('./DrugPackage'), require('./Meta'));
+    module.exports = factory(require('../ApiClient'), require('./Drug'), require('./DrugCoverage'), require('./Meta'));
   } else {
     // Browser globals (root is window)
     if (!root.vericredClient) {
       root.vericredClient = {};
     }
-    root.vericredClient.DrugCoverageResponse = factory(root.vericredClient.ApiClient, root.vericredClient.Drug, root.vericredClient.DrugCoverage, root.vericredClient.DrugPackage, root.vericredClient.Meta);
+    root.vericredClient.DrugCoverageResponse = factory(root.vericredClient.ApiClient, root.vericredClient.Drug, root.vericredClient.DrugCoverage, root.vericredClient.Meta);
   }
-}(this, function(ApiClient, Drug, DrugCoverage, DrugPackage, Meta) {
+}(this, function(ApiClient, Drug, DrugCoverage, Meta) {
   'use strict';
 
 
@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DrugCoverageResponse model module.
    * @module model/DrugCoverageResponse
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
@@ -251,7 +251,6 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
-
 
 
 
@@ -275,11 +274,8 @@ space                     ::= /[ \t]/+
       if (data.hasOwnProperty('drug_coverages')) {
         obj['drug_coverages'] = ApiClient.convertToType(data['drug_coverages'], [DrugCoverage]);
       }
-      if (data.hasOwnProperty('drugs')) {
-        obj['drugs'] = ApiClient.convertToType(data['drugs'], [Drug]);
-      }
-      if (data.hasOwnProperty('drug_packages')) {
-        obj['drug_packages'] = ApiClient.convertToType(data['drug_packages'], [DrugPackage]);
+      if (data.hasOwnProperty('drug')) {
+        obj['drug'] = Drug.constructFromObject(data['drug']);
       }
     }
     return obj;
@@ -297,14 +293,9 @@ space                     ::= /[ \t]/+
   exports.prototype['drug_coverages'] = undefined;
   /**
    * Drug
-   * @member {Array.<module:model/Drug>} drugs
+   * @member {module:model/Drug} drug
    */
-  exports.prototype['drugs'] = undefined;
-  /**
-   * Drug Packages
-   * @member {Array.<module:model/DrugPackage>} drug_packages
-   */
-  exports.prototype['drug_packages'] = undefined;
+  exports.prototype['drug'] = undefined;
 
 
 

@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The MetaPlanSearchResponse model module.
    * @module model/MetaPlanSearchResponse
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

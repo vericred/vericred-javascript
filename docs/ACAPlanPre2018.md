@@ -88,7 +88,7 @@ Name | Type | Description | Notes
 **nonpreferredGenericDrugShare** | **String** | Non-preferred generic drugs benefits summary | [optional] 
 **nonpreferredSpecialtyDrugShare** | **String** | Non-preferred specialty drugs benefits summary | [optional] 
 **outpatientAmbulatoryCareCenter** | **String** | Outpatient ambulatory care center benefits summary | [optional] 
-**planCalendar** | **String** | Are deductibles and MOOPs reset on Dec-31 (\&quot;calendar year\&quot;) or 365 days after enrollment date (\&quot;plan year\&quot;)? | [optional] 
+**planCalendar** | **String** | Are deductibles and MOOPs reset on Dec-31 (\&quot;calendar year\&quot;), 365 days after enrollment date (\&quot;plan year\&quot;), or are both options available (\&quot;both\&quot;)? | [optional] 
 **prenatalCare** | **String** | Prenatal care benefits summary | [optional] 
 **postnatalCare** | **String** | Post-natal care benefits summary | [optional] 
 **skilledNursingFacility365** | **String** | Does the plan cover full-time, year-round, nursing facilities? | [optional] 

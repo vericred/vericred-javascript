@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DrugPackage model module.
    * @module model/DrugPackage
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**

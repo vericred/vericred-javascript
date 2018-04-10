@@ -221,12 +221,12 @@ space                     ::= /[ \t]/+
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ACAPlan', 'model/ACAPlan2018', 'model/ACAPlan2018SearchResponse', 'model/ACAPlan2018SearchResult', 'model/ACAPlan2018ShowResponse', 'model/ACAPlanPre2018', 'model/ACAPlanPre2018SearchResponse', 'model/ACAPlanPre2018SearchResult', 'model/ACAPlanPre2018ShowResponse', 'model/Applicant', 'model/Base', 'model/BasePlanSearchResponse', 'model/Carrier', 'model/CarrierSubsidiary', 'model/County', 'model/CountyBulk', 'model/Drug', 'model/DrugCoverage', 'model/DrugCoverageResponse', 'model/DrugPackage', 'model/DrugSearchResponse', 'model/Formulary', 'model/FormularyDrugPackageResponse', 'model/FormularyResponse', 'model/Meta', 'model/MetaPlanSearchResponse', 'model/Network', 'model/NetworkComparison', 'model/NetworkComparisonRequest', 'model/NetworkComparisonResponse', 'model/NetworkDetails', 'model/NetworkDetailsResponse', 'model/NetworkSearchResponse', 'model/NetworkSize', 'model/NotificationSubscription', 'model/NotificationSubscriptionResponse', 'model/Plan', 'model/PlanCounty', 'model/PlanCountyBulk', 'model/PlanDeleted', 'model/PlanIdentifier', 'model/PlanMedicare', 'model/PlanMedicareBulk', 'model/PlanPricingMedicare', 'model/PlanSearchResponse', 'model/PlanShowResponse', 'model/Provider', 'model/ProviderDetails', 'model/ProviderGeocode', 'model/ProviderNetworkEventNotification', 'model/ProviderShowResponse', 'model/ProvidersGeocodeResponse', 'model/ProvidersSearchResponse', 'model/RatingArea', 'model/RequestPlanFind', 'model/RequestPlanFindApplicant', 'model/RequestPlanFindDrugPackage', 'model/RequestPlanFindProvider', 'model/RequestProviderNotificationSubscription', 'model/RequestProvidersSearch', 'model/RxCuiIdentifier', 'model/RxCuiIdentifierSearchResponse', 'model/ServiceArea', 'model/ServiceAreaZipCounty', 'model/State', 'model/StateNetworkSizeRequest', 'model/StateNetworkSizeResponse', 'model/ZipCode', 'model/ZipCountiesResponse', 'model/ZipCounty', 'model/ZipCountyBulk', 'model/ZipCountyResponse', 'api/DrugCoveragesApi', 'api/DrugPackagesApi', 'api/DrugsApi', 'api/FormulariesApi', 'api/NetworkSizesApi', 'api/NetworksApi', 'api/PlansApi', 'api/ProviderNotificationSubscriptionsApi', 'api/ProvidersApi', 'api/ZipCountiesApi'], factory);
+    define(['ApiClient', 'model/ACAPlan', 'model/ACAPlan2018', 'model/ACAPlan2018SearchResponse', 'model/ACAPlan2018SearchResult', 'model/ACAPlan2018ShowResponse', 'model/ACAPlanPre2018', 'model/ACAPlanPre2018SearchResponse', 'model/ACAPlanPre2018SearchResult', 'model/ACAPlanPre2018ShowResponse', 'model/Base', 'model/BasePlanSearchResponse', 'model/Carrier', 'model/CarrierGroupRequest', 'model/CarrierRequest', 'model/CarrierSubsidiary', 'model/County', 'model/CountyBulk', 'model/DentalPlan', 'model/DentalPlanBenefits', 'model/DentalPlanShowResponse', 'model/DentalPlanUpdate', 'model/DentalPlanUpdateRequest', 'model/Drug', 'model/DrugCoverage', 'model/DrugCoverageResponse', 'model/DrugPackage', 'model/DrugSearchResponse', 'model/Formulary', 'model/FormularyDrugPackageResponse', 'model/FormularyResponse', 'model/IssuerRequest', 'model/Meta', 'model/MetaPlanSearchResponse', 'model/Network', 'model/NetworkComparison', 'model/NetworkComparisonRequest', 'model/NetworkComparisonResponse', 'model/NetworkDetails', 'model/NetworkDetailsResponse', 'model/NetworkSearchResponse', 'model/NetworkSize', 'model/NotificationSubscription', 'model/NotificationSubscriptionResponse', 'model/Plan', 'model/PlanCounty', 'model/PlanCountyBulk', 'model/PlanDeleted', 'model/PlanIdentifier', 'model/PlanMedicare', 'model/PlanMedicareBulk', 'model/PlanPricingMedicare', 'model/PlanSearchResponse', 'model/PlanShowResponse', 'model/Provider', 'model/ProviderDetails', 'model/ProviderGeocode', 'model/ProviderNetworkEventNotification', 'model/ProviderShowResponse', 'model/ProvidersGeocodeResponse', 'model/ProvidersSearchResponse', 'model/RateRequest', 'model/RatingArea', 'model/RequestPlanFind', 'model/RequestPlanFindApplicant', 'model/RequestPlanFindDrugPackage', 'model/RequestPlanFindProvider', 'model/RequestProviderNotificationSubscription', 'model/RequestProvidersSearch', 'model/RxCuiIdentifier', 'model/RxCuiIdentifierSearchResponse', 'model/ServiceArea', 'model/ServiceAreaZipCounty', 'model/State', 'model/StateNetworkSizeRequest', 'model/StateNetworkSizeResponse', 'model/VisionPlan', 'model/VisionPlanBenefits', 'model/VisionPlanShowResponse', 'model/VisionPlanUpdate', 'model/VisionPlanUpdateRequest', 'model/ZipCode', 'model/ZipCountiesResponse', 'model/ZipCounty', 'model/ZipCountyBulk', 'model/ZipCountyResponse', 'api/DrugCoveragesApi', 'api/DrugPackagesApi', 'api/DrugsApi', 'api/FormulariesApi', 'api/MedicalPlansApi', 'api/NetworkSizesApi', 'api/NetworksApi', 'api/PlansApi', 'api/ProviderNotificationSubscriptionsApi', 'api/ProvidersApi', 'api/ZipCountiesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ACAPlan'), require('./model/ACAPlan2018'), require('./model/ACAPlan2018SearchResponse'), require('./model/ACAPlan2018SearchResult'), require('./model/ACAPlan2018ShowResponse'), require('./model/ACAPlanPre2018'), require('./model/ACAPlanPre2018SearchResponse'), require('./model/ACAPlanPre2018SearchResult'), require('./model/ACAPlanPre2018ShowResponse'), require('./model/Applicant'), require('./model/Base'), require('./model/BasePlanSearchResponse'), require('./model/Carrier'), require('./model/CarrierSubsidiary'), require('./model/County'), require('./model/CountyBulk'), require('./model/Drug'), require('./model/DrugCoverage'), require('./model/DrugCoverageResponse'), require('./model/DrugPackage'), require('./model/DrugSearchResponse'), require('./model/Formulary'), require('./model/FormularyDrugPackageResponse'), require('./model/FormularyResponse'), require('./model/Meta'), require('./model/MetaPlanSearchResponse'), require('./model/Network'), require('./model/NetworkComparison'), require('./model/NetworkComparisonRequest'), require('./model/NetworkComparisonResponse'), require('./model/NetworkDetails'), require('./model/NetworkDetailsResponse'), require('./model/NetworkSearchResponse'), require('./model/NetworkSize'), require('./model/NotificationSubscription'), require('./model/NotificationSubscriptionResponse'), require('./model/Plan'), require('./model/PlanCounty'), require('./model/PlanCountyBulk'), require('./model/PlanDeleted'), require('./model/PlanIdentifier'), require('./model/PlanMedicare'), require('./model/PlanMedicareBulk'), require('./model/PlanPricingMedicare'), require('./model/PlanSearchResponse'), require('./model/PlanShowResponse'), require('./model/Provider'), require('./model/ProviderDetails'), require('./model/ProviderGeocode'), require('./model/ProviderNetworkEventNotification'), require('./model/ProviderShowResponse'), require('./model/ProvidersGeocodeResponse'), require('./model/ProvidersSearchResponse'), require('./model/RatingArea'), require('./model/RequestPlanFind'), require('./model/RequestPlanFindApplicant'), require('./model/RequestPlanFindDrugPackage'), require('./model/RequestPlanFindProvider'), require('./model/RequestProviderNotificationSubscription'), require('./model/RequestProvidersSearch'), require('./model/RxCuiIdentifier'), require('./model/RxCuiIdentifierSearchResponse'), require('./model/ServiceArea'), require('./model/ServiceAreaZipCounty'), require('./model/State'), require('./model/StateNetworkSizeRequest'), require('./model/StateNetworkSizeResponse'), require('./model/ZipCode'), require('./model/ZipCountiesResponse'), require('./model/ZipCounty'), require('./model/ZipCountyBulk'), require('./model/ZipCountyResponse'), require('./api/DrugCoveragesApi'), require('./api/DrugPackagesApi'), require('./api/DrugsApi'), require('./api/FormulariesApi'), require('./api/NetworkSizesApi'), require('./api/NetworksApi'), require('./api/PlansApi'), require('./api/ProviderNotificationSubscriptionsApi'), require('./api/ProvidersApi'), require('./api/ZipCountiesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ACAPlan'), require('./model/ACAPlan2018'), require('./model/ACAPlan2018SearchResponse'), require('./model/ACAPlan2018SearchResult'), require('./model/ACAPlan2018ShowResponse'), require('./model/ACAPlanPre2018'), require('./model/ACAPlanPre2018SearchResponse'), require('./model/ACAPlanPre2018SearchResult'), require('./model/ACAPlanPre2018ShowResponse'), require('./model/Base'), require('./model/BasePlanSearchResponse'), require('./model/Carrier'), require('./model/CarrierGroupRequest'), require('./model/CarrierRequest'), require('./model/CarrierSubsidiary'), require('./model/County'), require('./model/CountyBulk'), require('./model/DentalPlan'), require('./model/DentalPlanBenefits'), require('./model/DentalPlanShowResponse'), require('./model/DentalPlanUpdate'), require('./model/DentalPlanUpdateRequest'), require('./model/Drug'), require('./model/DrugCoverage'), require('./model/DrugCoverageResponse'), require('./model/DrugPackage'), require('./model/DrugSearchResponse'), require('./model/Formulary'), require('./model/FormularyDrugPackageResponse'), require('./model/FormularyResponse'), require('./model/IssuerRequest'), require('./model/Meta'), require('./model/MetaPlanSearchResponse'), require('./model/Network'), require('./model/NetworkComparison'), require('./model/NetworkComparisonRequest'), require('./model/NetworkComparisonResponse'), require('./model/NetworkDetails'), require('./model/NetworkDetailsResponse'), require('./model/NetworkSearchResponse'), require('./model/NetworkSize'), require('./model/NotificationSubscription'), require('./model/NotificationSubscriptionResponse'), require('./model/Plan'), require('./model/PlanCounty'), require('./model/PlanCountyBulk'), require('./model/PlanDeleted'), require('./model/PlanIdentifier'), require('./model/PlanMedicare'), require('./model/PlanMedicareBulk'), require('./model/PlanPricingMedicare'), require('./model/PlanSearchResponse'), require('./model/PlanShowResponse'), require('./model/Provider'), require('./model/ProviderDetails'), require('./model/ProviderGeocode'), require('./model/ProviderNetworkEventNotification'), require('./model/ProviderShowResponse'), require('./model/ProvidersGeocodeResponse'), require('./model/ProvidersSearchResponse'), require('./model/RateRequest'), require('./model/RatingArea'), require('./model/RequestPlanFind'), require('./model/RequestPlanFindApplicant'), require('./model/RequestPlanFindDrugPackage'), require('./model/RequestPlanFindProvider'), require('./model/RequestProviderNotificationSubscription'), require('./model/RequestProvidersSearch'), require('./model/RxCuiIdentifier'), require('./model/RxCuiIdentifierSearchResponse'), require('./model/ServiceArea'), require('./model/ServiceAreaZipCounty'), require('./model/State'), require('./model/StateNetworkSizeRequest'), require('./model/StateNetworkSizeResponse'), require('./model/VisionPlan'), require('./model/VisionPlanBenefits'), require('./model/VisionPlanShowResponse'), require('./model/VisionPlanUpdate'), require('./model/VisionPlanUpdateRequest'), require('./model/ZipCode'), require('./model/ZipCountiesResponse'), require('./model/ZipCounty'), require('./model/ZipCountyBulk'), require('./model/ZipCountyResponse'), require('./api/DrugCoveragesApi'), require('./api/DrugPackagesApi'), require('./api/DrugsApi'), require('./api/FormulariesApi'), require('./api/MedicalPlansApi'), require('./api/NetworkSizesApi'), require('./api/NetworksApi'), require('./api/PlansApi'), require('./api/ProviderNotificationSubscriptionsApi'), require('./api/ProvidersApi'), require('./api/ZipCountiesApi'));
   }
-}(function(ApiClient, ACAPlan, ACAPlan2018, ACAPlan2018SearchResponse, ACAPlan2018SearchResult, ACAPlan2018ShowResponse, ACAPlanPre2018, ACAPlanPre2018SearchResponse, ACAPlanPre2018SearchResult, ACAPlanPre2018ShowResponse, Applicant, Base, BasePlanSearchResponse, Carrier, CarrierSubsidiary, County, CountyBulk, Drug, DrugCoverage, DrugCoverageResponse, DrugPackage, DrugSearchResponse, Formulary, FormularyDrugPackageResponse, FormularyResponse, Meta, MetaPlanSearchResponse, Network, NetworkComparison, NetworkComparisonRequest, NetworkComparisonResponse, NetworkDetails, NetworkDetailsResponse, NetworkSearchResponse, NetworkSize, NotificationSubscription, NotificationSubscriptionResponse, Plan, PlanCounty, PlanCountyBulk, PlanDeleted, PlanIdentifier, PlanMedicare, PlanMedicareBulk, PlanPricingMedicare, PlanSearchResponse, PlanShowResponse, Provider, ProviderDetails, ProviderGeocode, ProviderNetworkEventNotification, ProviderShowResponse, ProvidersGeocodeResponse, ProvidersSearchResponse, RatingArea, RequestPlanFind, RequestPlanFindApplicant, RequestPlanFindDrugPackage, RequestPlanFindProvider, RequestProviderNotificationSubscription, RequestProvidersSearch, RxCuiIdentifier, RxCuiIdentifierSearchResponse, ServiceArea, ServiceAreaZipCounty, State, StateNetworkSizeRequest, StateNetworkSizeResponse, ZipCode, ZipCountiesResponse, ZipCounty, ZipCountyBulk, ZipCountyResponse, DrugCoveragesApi, DrugPackagesApi, DrugsApi, FormulariesApi, NetworkSizesApi, NetworksApi, PlansApi, ProviderNotificationSubscriptionsApi, ProvidersApi, ZipCountiesApi) {
+}(function(ApiClient, ACAPlan, ACAPlan2018, ACAPlan2018SearchResponse, ACAPlan2018SearchResult, ACAPlan2018ShowResponse, ACAPlanPre2018, ACAPlanPre2018SearchResponse, ACAPlanPre2018SearchResult, ACAPlanPre2018ShowResponse, Base, BasePlanSearchResponse, Carrier, CarrierGroupRequest, CarrierRequest, CarrierSubsidiary, County, CountyBulk, DentalPlan, DentalPlanBenefits, DentalPlanShowResponse, DentalPlanUpdate, DentalPlanUpdateRequest, Drug, DrugCoverage, DrugCoverageResponse, DrugPackage, DrugSearchResponse, Formulary, FormularyDrugPackageResponse, FormularyResponse, IssuerRequest, Meta, MetaPlanSearchResponse, Network, NetworkComparison, NetworkComparisonRequest, NetworkComparisonResponse, NetworkDetails, NetworkDetailsResponse, NetworkSearchResponse, NetworkSize, NotificationSubscription, NotificationSubscriptionResponse, Plan, PlanCounty, PlanCountyBulk, PlanDeleted, PlanIdentifier, PlanMedicare, PlanMedicareBulk, PlanPricingMedicare, PlanSearchResponse, PlanShowResponse, Provider, ProviderDetails, ProviderGeocode, ProviderNetworkEventNotification, ProviderShowResponse, ProvidersGeocodeResponse, ProvidersSearchResponse, RateRequest, RatingArea, RequestPlanFind, RequestPlanFindApplicant, RequestPlanFindDrugPackage, RequestPlanFindProvider, RequestProviderNotificationSubscription, RequestProvidersSearch, RxCuiIdentifier, RxCuiIdentifierSearchResponse, ServiceArea, ServiceAreaZipCounty, State, StateNetworkSizeRequest, StateNetworkSizeResponse, VisionPlan, VisionPlanBenefits, VisionPlanShowResponse, VisionPlanUpdate, VisionPlanUpdateRequest, ZipCode, ZipCountiesResponse, ZipCounty, ZipCountyBulk, ZipCountyResponse, DrugCoveragesApi, DrugPackagesApi, DrugsApi, FormulariesApi, MedicalPlansApi, NetworkSizesApi, NetworksApi, PlansApi, ProviderNotificationSubscriptionsApi, ProvidersApi, ZipCountiesApi) {
   'use strict';
 
   /**
@@ -258,7 +258,7 @@ space                     ::= /[ \t]/+
    * </pre>
    * </p>
    * @module index
-   * @version 0.0.10
+   * @version 0.0.11
    */
   var exports = {
     /**
@@ -312,11 +312,6 @@ space                     ::= /[ \t]/+
      */
     ACAPlanPre2018ShowResponse: ACAPlanPre2018ShowResponse,
     /**
-     * The Applicant model constructor.
-     * @property {module:model/Applicant}
-     */
-    Applicant: Applicant,
-    /**
      * The Base model constructor.
      * @property {module:model/Base}
      */
@@ -332,6 +327,16 @@ space                     ::= /[ \t]/+
      */
     Carrier: Carrier,
     /**
+     * The CarrierGroupRequest model constructor.
+     * @property {module:model/CarrierGroupRequest}
+     */
+    CarrierGroupRequest: CarrierGroupRequest,
+    /**
+     * The CarrierRequest model constructor.
+     * @property {module:model/CarrierRequest}
+     */
+    CarrierRequest: CarrierRequest,
+    /**
      * The CarrierSubsidiary model constructor.
      * @property {module:model/CarrierSubsidiary}
      */
@@ -346,6 +351,31 @@ space                     ::= /[ \t]/+
      * @property {module:model/CountyBulk}
      */
     CountyBulk: CountyBulk,
+    /**
+     * The DentalPlan model constructor.
+     * @property {module:model/DentalPlan}
+     */
+    DentalPlan: DentalPlan,
+    /**
+     * The DentalPlanBenefits model constructor.
+     * @property {module:model/DentalPlanBenefits}
+     */
+    DentalPlanBenefits: DentalPlanBenefits,
+    /**
+     * The DentalPlanShowResponse model constructor.
+     * @property {module:model/DentalPlanShowResponse}
+     */
+    DentalPlanShowResponse: DentalPlanShowResponse,
+    /**
+     * The DentalPlanUpdate model constructor.
+     * @property {module:model/DentalPlanUpdate}
+     */
+    DentalPlanUpdate: DentalPlanUpdate,
+    /**
+     * The DentalPlanUpdateRequest model constructor.
+     * @property {module:model/DentalPlanUpdateRequest}
+     */
+    DentalPlanUpdateRequest: DentalPlanUpdateRequest,
     /**
      * The Drug model constructor.
      * @property {module:model/Drug}
@@ -386,6 +416,11 @@ space                     ::= /[ \t]/+
      * @property {module:model/FormularyResponse}
      */
     FormularyResponse: FormularyResponse,
+    /**
+     * The IssuerRequest model constructor.
+     * @property {module:model/IssuerRequest}
+     */
+    IssuerRequest: IssuerRequest,
     /**
      * The Meta model constructor.
      * @property {module:model/Meta}
@@ -532,6 +567,11 @@ space                     ::= /[ \t]/+
      */
     ProvidersSearchResponse: ProvidersSearchResponse,
     /**
+     * The RateRequest model constructor.
+     * @property {module:model/RateRequest}
+     */
+    RateRequest: RateRequest,
+    /**
      * The RatingArea model constructor.
      * @property {module:model/RatingArea}
      */
@@ -602,6 +642,31 @@ space                     ::= /[ \t]/+
      */
     StateNetworkSizeResponse: StateNetworkSizeResponse,
     /**
+     * The VisionPlan model constructor.
+     * @property {module:model/VisionPlan}
+     */
+    VisionPlan: VisionPlan,
+    /**
+     * The VisionPlanBenefits model constructor.
+     * @property {module:model/VisionPlanBenefits}
+     */
+    VisionPlanBenefits: VisionPlanBenefits,
+    /**
+     * The VisionPlanShowResponse model constructor.
+     * @property {module:model/VisionPlanShowResponse}
+     */
+    VisionPlanShowResponse: VisionPlanShowResponse,
+    /**
+     * The VisionPlanUpdate model constructor.
+     * @property {module:model/VisionPlanUpdate}
+     */
+    VisionPlanUpdate: VisionPlanUpdate,
+    /**
+     * The VisionPlanUpdateRequest model constructor.
+     * @property {module:model/VisionPlanUpdateRequest}
+     */
+    VisionPlanUpdateRequest: VisionPlanUpdateRequest,
+    /**
      * The ZipCode model constructor.
      * @property {module:model/ZipCode}
      */
@@ -646,6 +711,11 @@ space                     ::= /[ \t]/+
      * @property {module:api/FormulariesApi}
      */
     FormulariesApi: FormulariesApi,
+    /**
+     * The MedicalPlansApi service constructor.
+     * @property {module:api/MedicalPlansApi}
+     */
+    MedicalPlansApi: MedicalPlansApi,
     /**
      * The NetworkSizesApi service constructor.
      * @property {module:api/NetworkSizesApi}

@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RequestProviderNotificationSubscription model module.
    * @module model/RequestProviderNotificationSubscription
-   * @version 0.0.10
+   * @version 0.0.11
    */
 
   /**
