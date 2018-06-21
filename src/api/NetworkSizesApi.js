@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * NetworkSizes service.
    * @module api/NetworkSizesApi
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The CarrierGroupRequest model module.
    * @module model/CarrierGroupRequest
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

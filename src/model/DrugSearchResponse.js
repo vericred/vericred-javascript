@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DrugSearchResponse model module.
    * @module model/DrugSearchResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

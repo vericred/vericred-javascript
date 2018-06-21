@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The CarrierSubsidiary model module.
    * @module model/CarrierSubsidiary
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

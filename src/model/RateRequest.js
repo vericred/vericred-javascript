@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RateRequest model module.
    * @module model/RateRequest
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

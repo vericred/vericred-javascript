@@ -273,6 +273,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property premiumTaxCredit (base name: "premium_tax_credit")', function() {
+      // uncomment below and update the code to test the property premiumTaxCredit
+      //var instane = new vericredClient.MetaPlanSearchResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

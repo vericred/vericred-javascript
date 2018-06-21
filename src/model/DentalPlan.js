@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DentalPlan model module.
    * @module model/DentalPlan
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**
@@ -251,6 +251,9 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -287,6 +290,9 @@ space                     ::= /[ \t]/+
       if (data.hasOwnProperty('audience')) {
         obj['audience'] = ApiClient.convertToType(data['audience'], 'String');
       }
+      if (data.hasOwnProperty('benefits_summary_url')) {
+        obj['benefits_summary_url'] = ApiClient.convertToType(data['benefits_summary_url'], 'String');
+      }
       if (data.hasOwnProperty('logo_url')) {
         obj['logo_url'] = ApiClient.convertToType(data['logo_url'], 'String');
       }
@@ -304,6 +310,12 @@ space                     ::= /[ \t]/+
       }
       if (data.hasOwnProperty('benefits')) {
         obj['benefits'] = DentalPlanBenefits.constructFromObject(data['benefits']);
+      }
+      if (data.hasOwnProperty('premium')) {
+        obj['premium'] = ApiClient.convertToType(data['premium'], 'Number');
+      }
+      if (data.hasOwnProperty('premium_source')) {
+        obj['premium_source'] = ApiClient.convertToType(data['premium_source'], 'String');
       }
     }
     return obj;
@@ -329,6 +341,11 @@ space                     ::= /[ \t]/+
    * @member {String} audience
    */
   exports.prototype['audience'] = undefined;
+  /**
+   * Link to the summary of benefits and coverage (SBC) document.
+   * @member {String} benefits_summary_url
+   */
+  exports.prototype['benefits_summary_url'] = undefined;
   /**
    * Link to a copy of the insurance carrier's logo
    * @member {String} logo_url
@@ -359,6 +376,16 @@ space                     ::= /[ \t]/+
    * @member {module:model/DentalPlanBenefits} benefits
    */
   exports.prototype['benefits'] = undefined;
+  /**
+   * Cumulative premium amount
+   * @member {Number} premium
+   */
+  exports.prototype['premium'] = undefined;
+  /**
+   * Source of the base pricing data
+   * @member {String} premium_source
+   */
+  exports.prototype['premium_source'] = undefined;
 
 
 

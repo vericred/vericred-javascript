@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DentalPlanBenefits model module.
    * @module model/DentalPlanBenefits
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

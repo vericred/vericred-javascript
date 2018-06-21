@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The PlanSearchResponse model module.
    * @module model/PlanSearchResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

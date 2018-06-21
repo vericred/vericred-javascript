@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The Meta model module.
    * @module model/Meta
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

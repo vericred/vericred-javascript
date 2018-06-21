@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The IssuerRequest model module.
    * @module model/IssuerRequest
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

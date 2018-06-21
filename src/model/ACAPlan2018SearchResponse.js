@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ACAPlan2018SearchResponse model module.
    * @module model/ACAPlan2018SearchResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

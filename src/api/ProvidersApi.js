@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * Providers service.
    * @module api/ProvidersApi
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

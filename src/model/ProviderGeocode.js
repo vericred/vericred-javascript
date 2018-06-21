@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ProviderGeocode model module.
    * @module model/ProviderGeocode
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

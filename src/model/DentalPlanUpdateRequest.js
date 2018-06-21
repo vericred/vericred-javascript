@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DentalPlanUpdateRequest model module.
    * @module model/DentalPlanUpdateRequest
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

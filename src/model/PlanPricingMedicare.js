@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The PlanPricingMedicare model module.
    * @module model/PlanPricingMedicare
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

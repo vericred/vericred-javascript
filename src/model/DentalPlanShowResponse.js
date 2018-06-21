@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DentalPlanShowResponse model module.
    * @module model/DentalPlanShowResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

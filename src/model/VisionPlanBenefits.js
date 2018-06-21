@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The VisionPlanBenefits model module.
    * @module model/VisionPlanBenefits
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **name** | **String** | The vision plan name | [optional] 
 **issuerVericredId** | **String** | The issuer vericred id | [optional] 
 **audience** | **String** | The vision plan audience | [optional] 
+**benefitsSummaryUrl** | **String** | Link to the summary of benefits and coverage (SBC) document. | [optional] 
 **planType** | **String** | The vision plan type | [optional] 
 **standAlone** | **Boolean** | Stand alone flag for vision plan | [optional] 
 **source** | **String** | The vision plan source | [optional] 

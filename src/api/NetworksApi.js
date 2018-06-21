@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * Networks service.
    * @module api/NetworksApi
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

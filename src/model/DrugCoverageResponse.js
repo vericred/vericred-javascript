@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The DrugCoverageResponse model module.
    * @module model/DrugCoverageResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

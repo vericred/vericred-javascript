@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ProviderDetails model module.
    * @module model/ProviderDetails
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

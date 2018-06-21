@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ServiceArea model module.
    * @module model/ServiceArea
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

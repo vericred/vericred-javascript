@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The ZipCountyResponse model module.
    * @module model/ZipCountyResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

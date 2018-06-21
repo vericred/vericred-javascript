@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * MedicalPlans service.
    * @module api/MedicalPlansApi
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

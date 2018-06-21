@@ -285,6 +285,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property benefitsSummaryUrl (base name: "benefits_summary_url")', function() {
+      // uncomment below and update the code to test the property benefitsSummaryUrl
+      //var instane = new vericredClient.VisionPlan();
+      //expect(instance).to.be();
+    });
+
     it('should have the property logoUrl (base name: "logo_url")', function() {
       // uncomment below and update the code to test the property logoUrl
       //var instane = new vericredClient.VisionPlan();

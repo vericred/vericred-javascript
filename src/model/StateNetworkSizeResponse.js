@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The StateNetworkSizeResponse model module.
    * @module model/StateNetworkSizeResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

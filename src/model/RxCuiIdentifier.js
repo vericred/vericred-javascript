@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RxCuiIdentifier model module.
    * @module model/RxCuiIdentifier
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

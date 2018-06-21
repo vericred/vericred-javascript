@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RequestPlanFindApplicant model module.
    * @module model/RequestPlanFindApplicant
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The VisionPlanUpdate model module.
    * @module model/VisionPlanUpdate
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**
@@ -251,6 +251,7 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -281,6 +282,9 @@ space                     ::= /[ \t]/+
       }
       if (data.hasOwnProperty('audience')) {
         obj['audience'] = ApiClient.convertToType(data['audience'], 'String');
+      }
+      if (data.hasOwnProperty('benefits_summary_url')) {
+        obj['benefits_summary_url'] = ApiClient.convertToType(data['benefits_summary_url'], 'String');
       }
       if (data.hasOwnProperty('plan_type')) {
         obj['plan_type'] = ApiClient.convertToType(data['plan_type'], 'String');
@@ -316,6 +320,11 @@ space                     ::= /[ \t]/+
    * @member {String} audience
    */
   exports.prototype['audience'] = undefined;
+  /**
+   * Link to the summary of benefits and coverage (SBC) document.
+   * @member {String} benefits_summary_url
+   */
+  exports.prototype['benefits_summary_url'] = undefined;
   /**
    * The vision plan type
    * @member {String} plan_type

@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The NetworkComparison model module.
    * @module model/NetworkComparison
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

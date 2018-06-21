@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RequestProvidersSearch model module.
    * @module model/RequestProvidersSearch
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

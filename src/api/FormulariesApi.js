@@ -238,7 +238,7 @@ space                     ::= /[ \t]/+
   /**
    * Formularies service.
    * @module api/FormulariesApi
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The MetaPlanSearchResponse model module.
    * @module model/MetaPlanSearchResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**
@@ -251,6 +251,7 @@ space                     ::= /[ \t]/+
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -273,6 +274,9 @@ space                     ::= /[ \t]/+
       if (data.hasOwnProperty('eligible_for_chip_medicaid')) {
         obj['eligible_for_chip_medicaid'] = ApiClient.convertToType(data['eligible_for_chip_medicaid'], 'Boolean');
       }
+      if (data.hasOwnProperty('premium_tax_credit')) {
+        obj['premium_tax_credit'] = ApiClient.convertToType(data['premium_tax_credit'], 'Number');
+      }
     }
     return obj;
   }
@@ -287,6 +291,11 @@ space                     ::= /[ \t]/+
    * @member {Boolean} eligible_for_chip_medicaid
    */
   exports.prototype['eligible_for_chip_medicaid'] = undefined;
+  /**
+   * The premium tax credit amount calculated for the applicants in the request.
+   * @member {Number} premium_tax_credit
+   */
+  exports.prototype['premium_tax_credit'] = undefined;
 
 
 

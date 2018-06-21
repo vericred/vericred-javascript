@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The RequestPlanFindDrugPackage model module.
    * @module model/RequestPlanFindDrugPackage
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

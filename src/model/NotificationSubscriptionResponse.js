@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The NotificationSubscriptionResponse model module.
    * @module model/NotificationSubscriptionResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

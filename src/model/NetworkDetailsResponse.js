@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The NetworkDetailsResponse model module.
    * @module model/NetworkDetailsResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

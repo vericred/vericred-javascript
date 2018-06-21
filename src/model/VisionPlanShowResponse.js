@@ -241,7 +241,7 @@ space                     ::= /[ \t]/+
   /**
    * The VisionPlanShowResponse model module.
    * @module model/VisionPlanShowResponse
-   * @version 0.0.11
+   * @version 0.0.12
    */
 
   /**

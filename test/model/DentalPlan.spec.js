@@ -285,6 +285,12 @@ space                     ::= /[ \t]/+
       //expect(instance).to.be();
     });
 
+    it('should have the property benefitsSummaryUrl (base name: "benefits_summary_url")', function() {
+      // uncomment below and update the code to test the property benefitsSummaryUrl
+      //var instane = new vericredClient.DentalPlan();
+      //expect(instance).to.be();
+    });
+
     it('should have the property logoUrl (base name: "logo_url")', function() {
       // uncomment below and update the code to test the property logoUrl
       //var instane = new vericredClient.DentalPlan();
@@ -317,6 +323,18 @@ space                     ::= /[ \t]/+
 
     it('should have the property benefits (base name: "benefits")', function() {
       // uncomment below and update the code to test the property benefits
+      //var instane = new vericredClient.DentalPlan();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property premium (base name: "premium")', function() {
+      // uncomment below and update the code to test the property premium
+      //var instane = new vericredClient.DentalPlan();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property premiumSource (base name: "premium_source")', function() {
+      // uncomment below and update the code to test the property premiumSource
       //var instane = new vericredClient.DentalPlan();
       //expect(instance).to.be();
     });
